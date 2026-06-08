@@ -504,25 +504,33 @@
         </div>
       </div>
       <div class="arch-diagram">
-        <div class="arch-stack-label">Prioritization Engine · Concept</div>
+        <div class="arch-stack-label">Prioritization Engine · Planned Architecture</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Input · Scoring & Assumptions</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot integration"></span><span class="arch-layer-title">MCP Integration Layer</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip blue">Initiative list + stakeholder scores</span>
-            <span class="arch-chip blue">Underlying assumptions surfaced</span>
+            <span class="arch-chip green">Project management MCP (Linear / Jira)</span>
+            <span class="arch-chip green">Stakeholder input via structured form</span>
+          </div>
+        </div>
+        <div class="arch-flow-arrow">↓ live org data — no manual export</div>
+        <div class="arch-layer">
+          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Skill · Assumption Extraction</span></div>
+          <div class="arch-layer-body">
+            <span class="arch-chip blue">Score divergence detection</span>
+            <span class="arch-chip blue">Hidden assumption surfacing</span>
+            <span class="arch-chip blue">Stakeholder weight mapping</span>
           </div>
         </div>
         <div class="arch-flow-arrow">↓</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Reasoning · Disagreement Detection</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Reasoning · Disagreement Report (Claude Sonnet)</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip red">Where do scores diverge?</span>
-            <span class="arch-chip red">What assumptions are contested?</span>
-            <span class="arch-chip red">Force the real conversation</span>
+            <span class="arch-chip red">Contested assumption report</span>
+            <span class="arch-chip red">Forced tradeoff articulation</span>
+            <span class="arch-chip red">Decision prompt for leadership</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓</div>
-        <div class="arch-loop-wrap">
+        <div class="arch-loop-wrap" style="margin-top:6px">
           <div class="arch-loop-wrap-label">↺ Human Calibration Loop</div>
           <div class="arch-layer-body" style="padding:0; gap:4px; flex-wrap:wrap; display:flex;">
             <span class="arch-chip">Assumptions revised</span>
@@ -530,7 +538,9 @@
           </div>
         </div>
         <div class="arch-stack-row">
-          <span class="arch-stack-chip">Architecture in development</span>
+          <span class="arch-stack-chip">MCP servers</span>
+          <span class="arch-stack-chip">Claude Sonnet</span>
+          <span class="arch-stack-chip">Streamlit</span>
         </div>
       </div>
     </div>
@@ -549,32 +559,45 @@
         </div>
       </div>
       <div class="arch-diagram">
-        <div class="arch-stack-label">Eval Harness · Concept</div>
+        <div class="arch-stack-label">Eval Harness · Planned Architecture</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Input · Outputs + Outcomes</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Eval Suite · Defined Before Build</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip blue">Tool outputs across sessions</span>
-            <span class="arch-chip blue">Real decision outcomes as ground truth</span>
+            <span class="arch-chip blue">10 targeted evals per tool</span>
+            <span class="arch-chip blue">LLM-as-judge scoring (Claude Sonnet)</span>
+            <span class="arch-chip blue">Adversarial synthetic inputs</span>
+            <span class="arch-chip blue">Regression suite — score before/after every change</span>
+          </div>
+        </div>
+        <div class="arch-flow-arrow">↓ evals defined first — not after</div>
+        <div class="arch-layer">
+          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Skill · Output Quality Scoring</span></div>
+          <div class="arch-layer-body">
+            <span class="arch-chip red">Does output surface the right decision?</span>
+            <span class="arch-chip red">Hallucination detection</span>
+            <span class="arch-chip red">Edge case flagging vs. auto-deciding</span>
           </div>
         </div>
         <div class="arch-flow-arrow">↓</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Reasoning · Quality Evaluation</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot persistence"></span><span class="arch-layer-title">Trace Log · Supabase</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip red">Did the output improve decision quality?</span>
-            <span class="arch-chip red">Where is the system drifting?</span>
+            <span class="arch-chip purple">Agent run trace · planned</span>
+            <span class="arch-chip purple">Score tracked over time</span>
+            <span class="arch-chip purple">Drift detection across sessions</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓</div>
-        <div class="arch-loop-wrap">
+        <div class="arch-loop-wrap" style="margin-top:6px">
           <div class="arch-loop-wrap-label">↺ The Loop That Keeps the System Honest</div>
           <div class="arch-layer-body" style="padding:0; gap:4px; flex-wrap:wrap; display:flex;">
             <span class="arch-chip red">Prompts updated</span>
-            <span class="arch-chip blue">Next session re-evaluated</span>
+            <span class="arch-chip blue">Re-eval → score change tracked</span>
           </div>
         </div>
         <div class="arch-stack-row">
-          <span class="arch-stack-chip">Architecture in development</span>
+          <span class="arch-stack-chip">Claude Sonnet (judge)</span>
+          <span class="arch-stack-chip">Supabase</span>
+          <span class="arch-stack-chip">CLI-driven iteration</span>
         </div>
       </div>
     </div>
@@ -708,8 +731,8 @@
 </section>
 
 <footer>
-  <p>Thomas Meerschwam · NYC · Open to relocation for the right role</p>
-  <p><a href="#">Download Resume</a> · Updated June 2026</p>
+  <p>Thomas Meerschwam · NYC</p>
+  <p><a href="assets/Thomas_Meerschwam_Resume.pdf" target="_blank" rel="noopener">Download Resume</a> · Updated June 2026</p>
 </footer>
 
 <script>
