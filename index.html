@@ -46,18 +46,18 @@
     /* HERO */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 300px;
+      grid-template-columns: 1fr 320px;
       gap: 80px;
       align-items: center;
-      padding: 140px 60px 100px;
+      padding: 120px 60px 72px;
       max-width: 1100px;
       margin: 0 auto;
     }
     .hero-inner { max-width: 620px; }
     .hero-photo-col { display: flex; flex-direction: column; align-items: center; gap: 20px; }
     .hero-headshot {
-      width: 280px; height: 340px;
-      object-fit: cover; object-position: center top;
+      width: 320px; height: 400px;
+      object-fit: cover; object-position: center 15%;
       border-radius: 4px;
       border: 1px solid var(--rule);
       display: block;
@@ -106,7 +106,7 @@
 
     /* TOOLS */
     .tools-grid { display: flex; flex-direction: column; }
-    .tool-item { display: grid; grid-template-columns: 1fr 300px; gap: 60px; align-items: start; padding: 52px 0; border-top: 1px solid var(--rule); }
+    .tool-item { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; padding: 52px 0; border-top: 1px solid var(--rule); }
     .tool-item:last-child { border-bottom: 1px solid var(--rule); }
     .tool-number { font-family: 'Playfair Display', serif; font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 14px; }
     .tool-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.2; }
@@ -709,7 +709,7 @@
 
 <footer>
   <p>Thomas Meerschwam · NYC · Open to relocation for the right role</p>
-  <a href="assets/Thomas_Meerschwam_Resume.pdf" target="_blank" rel="noopener">Download Resume</a> · Updated June 2026</p>
+  <p><a href="#">Download Resume</a> · Updated June 2026</p>
 </footer>
 
 <script>
