@@ -35,34 +35,17 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: rgba(250,249,246,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
     .nav-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--accent); }
-
     /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 80px;
-      align-items: center;
-      padding: 120px 60px 72px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .hero { display: grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: center; padding: 120px 60px 72px; max-width: 1100px; margin: 0 auto; }
     .hero-inner { max-width: 620px; }
     .hero-photo-col { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-    .hero-headshot {
-      width: 320px; height: 400px;
-      object-fit: cover; object-position: center 15%;
-      border-radius: 4px;
-      border: 1px solid var(--rule);
-      display: block;
-    }
-    .hero-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; }
+    .hero-headshot { width: 320px; height: 400px; object-fit: cover; object-position: center 15%; border-radius: 4px; border: 1px solid var(--rule); display: block; }
     .hero-thesis { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.2vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 10px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
     .hero-thesis-line2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.2vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
     .hero-thesis-line2 em { font-style: italic; color: var(--accent); }
@@ -74,7 +57,6 @@
     .hero-links { display: flex; gap: 16px; flex-wrap: wrap; }
     .hero-links a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
     .hero-links a:hover { color: var(--accent); }
-
     /* SECTIONS */
     section { padding: 72px 60px; max-width: 1100px; margin: 0 auto; }
     section + section { border-top: 1px solid var(--rule); }
@@ -82,7 +64,6 @@
     .section-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 400; line-height: 1.3; color: var(--ink); margin-bottom: 32px; max-width: 680px; }
     .section-body { font-size: 1rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; max-width: 680px; }
     .section-body p + p { margin-top: 20px; }
-
     /* PROGRESSION */
     .tool-progression { display: flex; align-items: flex-start; margin-bottom: 56px; overflow-x: auto; padding-bottom: 4px; }
     .progression-step { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 110px; }
@@ -98,12 +79,10 @@
     .progression-dot.building { background: var(--accent); animation: pulse 2s ease-in-out infinite; }
     .progression-status-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
     .progression-arrow { font-size: 0.7rem; color: var(--rule); padding: 0 4px; flex-shrink: 0; margin-top: 28px; }
-
     /* SYSTEM INTRO */
     .system-intro { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; padding: 36px 44px; margin-bottom: 48px; max-width: 760px; }
     .system-intro-heading { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; color: var(--ink); margin-bottom: 12px; }
     .system-intro p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.8; }
-
     /* TOOLS */
     .tools-grid { display: flex; flex-direction: column; }
     .tool-item { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; padding: 52px 0; border-top: 1px solid var(--rule); }
@@ -123,75 +102,30 @@
     .btn-primary:hover { background: var(--accent); }
     .btn-secondary { border: 1px solid var(--rule); color: var(--ink-soft); background: transparent; }
     .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
     /* ARCHITECTURE DIAGRAMS */
-    .arch-diagram {
-      border: 1px solid var(--rule); border-radius: 4px;
-      background: var(--paper-warm); padding: 20px 16px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .arch-stack-label {
-      font-size: 0.58rem; font-weight: 500; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--ink-faint);
-      text-align: center; margin-bottom: 14px;
-    }
-    /* a horizontal layer row */
-    .arch-layer {
-      background: white; border: 1px solid var(--rule);
-      border-radius: 3px; margin-bottom: 6px; overflow: hidden;
-    }
-    .arch-layer-header {
-      display: flex; align-items: center; gap: 7px;
-      padding: 5px 10px; border-bottom: 1px solid var(--rule);
-      background: var(--paper-warm);
-    }
+    .arch-diagram { border: 1px solid var(--rule); border-radius: 4px; background: var(--paper-warm); padding: 20px 16px; font-family: 'DM Sans', sans-serif; }
+    .arch-stack-label { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); text-align: center; margin-bottom: 14px; }
+    .arch-layer { background: white; border: 1px solid var(--rule); border-radius: 3px; margin-bottom: 6px; overflow: hidden; }
+    .arch-layer-header { display: flex; align-items: center; gap: 7px; padding: 5px 10px; border-bottom: 1px solid var(--rule); background: var(--paper-warm); }
     .arch-layer-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
     .arch-layer-dot.deterministic { background: var(--blue); }
-    .arch-layer-dot.reasoning    { background: var(--accent); }
-    .arch-layer-dot.persistence  { background: var(--purple); }
-    .arch-layer-dot.integration  { background: var(--green); }
-    .arch-layer-dot.frontend     { background: var(--ink-faint); }
+    .arch-layer-dot.reasoning { background: var(--accent); }
+    .arch-layer-dot.persistence { background: var(--purple); }
+    .arch-layer-dot.integration { background: var(--green); }
+    .arch-layer-dot.frontend { background: var(--ink-faint); }
     .arch-layer-title { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
     .arch-layer-body { padding: 7px 10px; display: flex; flex-wrap: wrap; gap: 5px; }
-    .arch-chip {
-      font-size: 0.61rem; font-weight: 400; padding: 2px 7px;
-      border-radius: 2px; border: 1px solid var(--rule);
-      background: white; color: var(--ink-soft); white-space: normal;
-    }
-    .arch-chip.blue   { border-color: var(--blue);   color: var(--blue);   background: var(--blue-soft); }
-    .arch-chip.red    { border-color: var(--accent);  color: var(--accent);  background: var(--accent-soft); }
-    .arch-chip.purple { border-color: var(--purple);  color: var(--purple);  background: var(--purple-soft); }
-    .arch-chip.green  { border-color: var(--green);   color: var(--green);   background: var(--green-soft); }
-    /* flow arrow between layers */
+    .arch-chip { font-size: 0.61rem; font-weight: 400; padding: 2px 7px; border-radius: 2px; border: 1px solid var(--rule); background: white; color: var(--ink-soft); white-space: normal; }
+    .arch-chip.blue { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+    .arch-chip.red { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+    .arch-chip.purple { border-color: var(--purple); color: var(--purple); background: var(--purple-soft); }
+    .arch-chip.green { border-color: var(--green); color: var(--green); background: var(--green-soft); }
     .arch-flow-arrow { text-align: center; font-size: 0.65rem; color: var(--ink-faint); margin: 2px 0; line-height: 1; }
-    /* stack label at bottom */
     .arch-stack-row { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
     .arch-stack-chip { font-size: 0.58rem; color: var(--ink-faint); background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 2px; padding: 2px 6px; }
-
-    /* feedback loop arrow */
-    .arch-loop {
-      display: flex; align-items: center; gap: 6px;
-      margin: 6px 0 2px; padding: 0 6px;
-    }
-    .arch-loop-line {
-      flex: 1; height: 1px; background: var(--accent); opacity: 0.4;
-    }
-    .arch-loop-label {
-      font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--accent); opacity: 0.7;
-      white-space: nowrap;
-    }
-    .arch-loop-arrow { font-size: 0.65rem; color: var(--accent); opacity: 0.7; }
-    .arch-loop-wrap {
-      border: 1px dashed rgba(200,70,10,0.25); border-radius: 3px;
-      padding: 4px 6px; margin-top: 6px;
-    }
-    .arch-loop-wrap-label {
-      font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--accent); opacity: 0.6;
-      text-align: center; margin-bottom: 4px;
-    }
-
+    .arch-loop-wrap { border: 1px dashed rgba(200,70,10,0.25); border-radius: 3px; padding: 4px 6px; margin-top: 6px; }
+    .arch-loop-wrap-label { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); opacity: 0.6; text-align: center; margin-bottom: 4px; }
+    /* TIMELINE */
     .timeline { margin-top: 56px; display: flex; flex-direction: column; }
     .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 40px; padding: 40px 0; border-top: 1px solid var(--rule); }
     .timeline-item:last-child { border-bottom: none; }
@@ -209,13 +143,11 @@
     .metric { display: flex; flex-direction: column; }
     .metric-num { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); line-height: 1; }
     .metric-label { font-size: 0.7rem; color: var(--ink-faint); letter-spacing: 0.04em; margin-top: 4px; }
-
     /* THESIS */
     .thesis-block { max-width: 720px; }
     .thesis-block p { font-size: 1rem; font-weight: 300; color: var(--ink-soft); line-height: 1.85; margin-bottom: 20px; }
     .thesis-block p:last-child { margin-bottom: 0; }
     .thesis-pull { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--ink); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 24px; margin: 32px 0; }
-
     /* CONTACT */
     .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .contact-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--ink); margin-bottom: 16px; }
@@ -227,19 +159,16 @@
     .contact-link-label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); transition: color 0.15s; }
     .contact-link-value { font-size: 0.82rem; color: var(--ink-faint); }
     .contact-link-arrow { font-size: 0.82rem; color: var(--ink-faint); transition: all 0.15s; }
-
     /* FOOTER */
     footer { border-top: 1px solid var(--rule); padding: 24px 60px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
     footer p { font-size: 0.72rem; color: var(--ink-faint); font-weight: 300; }
     footer a { color: var(--ink-faint); text-decoration: none; }
     footer a:hover { color: var(--accent); }
-
     /* ANIMATIONS */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
-
     /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -254,33 +183,43 @@
       .contact-inner { grid-template-columns: 1fr; gap: 40px; }
       footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
       .progression-step { min-width: 90px; }
-
-      .system-header { flex-direction: column; gap: 20px; }
-      .section-tab-toggle { align-self: flex-start; }
-
     }
+    .hero-pull {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.4;
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+      margin: 28px 0;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.5s forwards;
+      max-width: 520px;
+    }
+    .hero-pain { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.65; margin-bottom: 0; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; max-width: 520px; }
+    .hero-cite { color: var(--ink-soft); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 2px; transition: color 0.2s; }
+    .hero-cite:hover { color: var(--accent); }
+    .hero-operator { margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; }
+    .hero-aspirational { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.65; margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; max-width: 520px; }
   </style>
 </head>
 <body>
-
 <nav>
   <a href="#" class="nav-name">Thomas Meerschwam</a>
   <ul class="nav-links">
-    <li><a href="#story">Story</a></li>
     <li><a href="#system">The System</a></li>
+    <li><a href="#story">Story</a></li>
     <li><a href="#thesis">Thesis</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Strategy & Operations · Operator & Builder</div>
-    <h1 class="hero-thesis">Organizations don't lack information.</h1>
-    <h1 class="hero-thesis-line2">They lack <em>judgment infrastructure.</em></h1>
-    <p class="hero-sub">
-      Every company I've worked at had a presenting problem and a real problem. They were never the same thing. The real one was always structural — one layer underneath, in how information became decisions and how those decisions held. I find that layer and build the fix. The tools below are one version of that work.
-    </p>
+    <p class="hero-operator"><strong style="color: var(--accent); font-weight: 500;">I'm an operator &amp; builder helping growth-stage companies turn data and narratives into decisions, faster.</strong></p>
+    <p class="hero-aspirational">The best-run organizations I've seen share one trait: everyone maintains a clear, shared picture of reality — what's decided, what's true, and who owns what. When that's true, decisions get made faster and stay made. Priorities don't need to be re-litigated. The gap between what was agreed in the room and what actually happened closes. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/healthy-organizations-keep-winning-but-the-rules-are-changing-fast" target="_blank" rel="noopener" class="hero-cite">McKinsey's research</a> puts a number on it: companies with strong alignment deliver three times the shareholder returns of those without it.</p>
+    <p class="hero-pain">Most organizations aren't there. <a href="https://hbr.org/2023/05/is-your-company-as-strategically-aligned-as-you-think-it-is" target="_blank" rel="noopener" class="hero-cite">Harvard Business Review found</a> that executives report 82% strategic alignment within their companies — but when researchers measured actual alignment, it was closer to 23%. The gap is invisible from inside. Goals multiply without hierarchy. Meetings generate discussion but not decisions anyone acts on. Ownership becomes implicit. The organization keeps functioning — but on informal memory and repeated clarification rather than a shared picture of reality.</p>
+    <div class="hero-pull">"Organizations don't lack information. They lack judgment infrastructure."</div>
     <div class="hero-identity">
       <div>
         <div class="hero-name">Thomas Meerschwam</div>
@@ -300,103 +239,27 @@
     <img src="assets/headshot.jpg" alt="Thomas Meerschwam" class="hero-headshot" />
   </div>
 </div>
-
-<section id="story">
-  <div class="section-label">The Arc</div>
-  <h2 class="section-heading fade-in">Three companies.<br>One pattern underneath all of them.</h2>
-  <div class="section-body fade-in">
-    <p>Six years. Three companies. The function shifted — Revenue Ops to Product. The problem I kept finding didn't.</p>
-  </div>
-  <div class="timeline">
-
-    <div class="timeline-item fade-in">
-      <div class="timeline-meta">
-        <div class="timeline-company">Braze</div>
-        <div class="timeline-period">2024 – 2025</div>
-        <div class="timeline-tag">Scale through complexity</div>
-      </div>
-      <div class="timeline-content">
-        <h4>Product Manager, SMS & RCS · $3.5B public company</h4>
-        <p>Owned GTM strategy for a high-eight-figure ARR product line and led an 11-market RCS launch — 40 enterprise customers in 90 days, <strong>Google's first official RCS for Business partner</strong>, 50%+ YoY ARR growth.</p>
-        <div class="timeline-beat">
-          <div class="timeline-beat-label">The more durable proof point</div>
-          <p>Support cases were growing faster than revenue. 100 tickets per quarter, consuming 10% of engineering bandwidth. Most people saw a staffing problem. The real problem was that no one could see patterns beneath the volume — so every fix was reactive and the underlying causes stayed invisible. Built a lightweight tagging framework (under 30 seconds per ticket), ran root cause analysis, isolated the 20% of issues driving 80% of volume, and fixed those specifically. Baked into how the team hit goals. <span class="leverage-proof">Process continued after I left.</span></p>
-        </div>
-        <div class="timeline-metrics">
-          <div class="metric"><span class="metric-num">11</span><span class="metric-label">Markets launched</span></div>
-          <div class="metric"><span class="metric-num">40</span><span class="metric-label">Enterprise customers, 90 days</span></div>
-          <div class="metric"><span class="metric-num">6 wks</span><span class="metric-label">Text-only MVP vs. 4-month alternative</span></div>
-          <div class="metric"><span class="metric-num">50%+</span><span class="metric-label">YoY ARR growth</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-item fade-in">
-      <div class="timeline-meta">
-        <div class="timeline-company">ASAPP</div>
-        <div class="timeline-period">2022 – 2023</div>
-        <div class="timeline-tag">Align competing worlds</div>
-      </div>
-      <div class="timeline-content">
-        <h4>Product Manager & Strategic Advisor to CPO · Conversational AI, Fortune 500</h4>
-        <p>The structural tension at ASAPP: enterprise customers needed deep customization; the product needed coherent architecture. I operated at that seam — making the product decisions that kept both sides intact. When a large F500 customer threatened churn over a critical configuration requirement, I worked with engineering to modularize the core product rather than build a one-off fix — virtualizing the state layer in a way that protected the account, closed the expansion, and created a reusable configuration pattern for future customers.</p>
-        <div class="timeline-metrics">
-          <div class="metric"><span class="metric-num">2M</span><span class="metric-label">Users in 30 days</span></div>
-          <div class="metric"><span class="metric-num">F500</span><span class="metric-label">Enterprise accounts retained and expanded</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-item fade-in">
-      <div class="timeline-meta">
-        <div class="timeline-company">Artsy</div>
-        <div class="timeline-period">2020 – 2022</div>
-        <div class="timeline-tag">Built the infrastructure from scratch</div>
-      </div>
-      <div class="timeline-content">
-        <h4>Revenue Operations & Product · Fine art marketplace</h4>
-        <p>The revenue infrastructure had been patched for years — 15+ fragmented data sources, no single source of truth. Built three things that didn't exist:</p>
-        <p><strong>Revenue intelligence dashboard</strong> — consolidated the data layer and cut board prep from days to hours.</p>
-        <p><strong>Contract management system</strong> — automated approval logic that ended the Sales/Finance conflict and cut contract management time by 50%.</p>
-        <p><strong>Commissions analytics</strong> — a daily ETL pipeline from Redshift into Salesforce that let 65+ reps model "if I close these three deals, I earn $X" in real time. <span style="font-style:italic; color:var(--ink)">Reps changed behavior because they could finally see reality.</span></p>
-        <div class="timeline-metrics">
-          <div class="metric"><span class="metric-num">15+</span><span class="metric-label">Data sources consolidated</span></div>
-          <div class="metric"><span class="metric-num">50%</span><span class="metric-label">Reduction in contract mgmt time</span></div>
-          <div class="metric"><span class="metric-num">100+</span><span class="metric-label">Hours/quarter saved</span></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- THESIS -->
-<section id="system">
+<section id="system" style="border-top: 1px solid var(--rule);">
   <div class="section-label">Active Building</div>
   <h2 class="section-heading fade-in">The Ground Truth Decisioning System</h2>
-
   <div class="tool-progression fade-in">
-  <div class="progression-step"><div class="progression-num">01</div><div class="progression-box live"><div class="progression-question">What happened?</div><div class="progression-name">WBR Generator</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-  <div class="progression-arrow">→</div>
-  <div class="progression-step"><div class="progression-num">02</div><div class="progression-box live"><div class="progression-question">What was decided?</div><div class="progression-name">Meeting Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-  <div class="progression-arrow">→</div>
-  <div class="progression-step"><div class="progression-num">03</div><div class="progression-box live"><div class="progression-question">What will happen?</div><div class="progression-name">Pipeline Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-  <div class="progression-arrow">→</div>
-  <div class="progression-step"><div class="progression-num">04</div><div class="progression-box queued"><div class="progression-question">What is getting done?</div><div class="progression-name">Initiative Intelligence</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
-  <div class="progression-arrow">→</div>
-  <div class="progression-step"><div class="progression-num">05</div><div class="progression-box queued"><div class="progression-question">What matters now?</div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
-</div>
-
+    <div class="progression-step"><div class="progression-num">01</div><div class="progression-box live"><div class="progression-question">What happened?</div><div class="progression-name">WBR Generator</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+    <div class="progression-arrow">→</div>
+    <div class="progression-step"><div class="progression-num">02</div><div class="progression-box live"><div class="progression-question">What was decided?</div><div class="progression-name">Meeting Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+    <div class="progression-arrow">→</div>
+    <div class="progression-step"><div class="progression-num">03</div><div class="progression-box live"><div class="progression-question">What will happen?</div><div class="progression-name">Pipeline Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+    <div class="progression-arrow">→</div>
+    <div class="progression-step"><div class="progression-num">04</div><div class="progression-box queued"><div class="progression-question">What is getting done?</div><div class="progression-name">Initiative Intelligence</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
+    <div class="progression-arrow">→</div>
+    <div class="progression-step"><div class="progression-num">05</div><div class="progression-box queued"><div class="progression-question">What matters now?</div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
+  </div>
   <div class="system-intro fade-in">
-  <div class="system-intro-heading">Five tools. One system.</div>
-  <p>Most organizations have systems for capturing information — almost none for turning it into coherent judgment. The result is predictable: metrics live in dashboards, decisions disappear into meeting notes, pipeline risk hides inside CRM reports, strategic drift accumulates quietly inside roadmaps.</p>
-  <p style="margin-top:12px">The problem isn't information. The problem is synthesis.</p>
-  <p style="margin-top:12px">The first four tools collect and interpret signals from different parts of the organization. The fifth synthesizes them into a single view of reality. Together they form an early prototype of what I believe is missing from the modern software stack: infrastructure for turning information into durable judgment.</p>
-</div>
-
+    <div class="system-intro-heading">Five tools. One system.</div>
+    <p>Most organizations have systems for capturing information — almost none for turning it into coherent judgment. The result is predictable: metrics live in dashboards, decisions disappear into meeting notes, pipeline risk hides inside CRM reports, strategic drift accumulates quietly inside roadmaps.</p>
+    <p style="margin-top:12px">The problem isn't information. The problem is synthesis.</p>
+    <p style="margin-top:12px">The first four tools collect and interpret signals from different parts of the organization. The fifth synthesizes them into a single view of reality. Together they form an early prototype of what I believe is missing from the modern software stack: infrastructure for turning information into durable judgment.</p>
+  </div>
   <div class="tools-grid">
-
-    <!-- 01 WBR -->
     <div class="tool-item fade-in">
       <div>
         <div class="tool-number">01</div>
@@ -412,7 +275,6 @@
       </div>
       <div class="arch-diagram">
         <div class="arch-stack-label">WBR Generator · Architecture</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot frontend"></span><span class="arch-layer-title">Input · Streamlit UI</span></div>
           <div class="arch-layer-body">
@@ -422,7 +284,6 @@
           </div>
         </div>
         <div class="arch-flow-arrow">↓</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Deterministic Analysis (analysis.py)</span></div>
           <div class="arch-layer-body">
@@ -435,7 +296,6 @@
           </div>
         </div>
         <div class="arch-flow-arrow">↓ structured facts only — no raw numbers passed</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Reasoning (Claude Sonnet · prompt.py)</span></div>
           <div class="arch-layer-body">
@@ -445,7 +305,6 @@
             <span class="arch-chip red">Streaming output</span>
           </div>
         </div>
-
         <div class="arch-stack-row">
           <span class="arch-stack-chip">Python · Pandas · NumPy</span>
           <span class="arch-stack-chip">Anthropic API</span>
@@ -453,8 +312,6 @@
         </div>
       </div>
     </div>
-
-    <!-- 02 Meeting Intelligence -->
     <div class="tool-item fade-in">
       <div>
         <div class="tool-number">02</div>
@@ -470,7 +327,6 @@
       </div>
       <div class="arch-diagram">
         <div class="arch-stack-label">Meeting Intelligence · Architecture</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Preprocessing (preprocessing.py)</span></div>
           <div class="arch-layer-body">
@@ -481,7 +337,6 @@
           </div>
         </div>
         <div class="arch-flow-arrow">↓</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Two-Pass Reasoning (Claude Sonnet · structured tool use)</span></div>
           <div class="arch-layer-body">
@@ -491,7 +346,6 @@
           </div>
         </div>
         <div class="arch-flow-arrow">↓ structured output only — raw transcripts never written</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot persistence"></span><span class="arch-layer-title">Layer 3 · Cross-Session Persistence (storage.py · Supabase)</span></div>
           <div class="arch-layer-body">
@@ -501,7 +355,6 @@
             <span class="arch-chip purple">Org Friction Report</span>
           </div>
         </div>
-
         <div class="arch-stack-row">
           <span class="arch-stack-chip">Python 3.11</span>
           <span class="arch-stack-chip">Anthropic API</span>
@@ -510,12 +363,10 @@
         </div>
       </div>
     </div>
-
-    <!-- 03 Pipeline -->
     <div class="tool-item fade-in">
       <div>
         <div class="tool-number">03</div>
-        <div class="tool-name">Pipeline & Forecast Synthesizer</div>
+        <div class="tool-name">Pipeline &amp; Forecast Synthesizer</div>
         <div class="tool-tagline">What will happen?</div>
         <div class="tool-status"><span class="status-dot live"></span> Live</div>
         <p class="tool-desc">CRMs capture activity. They don't capture judgment. The Pipeline Synthesizer connects directly to HubSpot via REST API — resolving owner IDs to rep names and internal stage IDs to human-readable labels — then runs deterministic preprocessing before Claude sees anything: concentration analysis, slippage detection, deal age, days since last activity, weighted pipeline by stage probability. Claude then reasons like a CRO preparing for a board meeting, producing six structured sections via forced tool use: executive summary, forecast confidence, revenue risks, revenue opportunities, rep insights, and leadership actions.</p>
@@ -527,7 +378,6 @@
       </div>
       <div class="arch-diagram">
         <div class="arch-stack-label">Pipeline Synthesizer · Architecture</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot integration"></span><span class="arch-layer-title">Input · Dual Path</span></div>
           <div class="arch-layer-body">
@@ -536,7 +386,6 @@
           </div>
         </div>
         <div class="arch-flow-arrow">↓ both paths → same DataFrame schema</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Deterministic Preprocessing (preprocessing.py)</span></div>
           <div class="arch-layer-body">
@@ -547,7 +396,6 @@
           </div>
         </div>
         <div class="arch-flow-arrow">↓ structured metrics only — no raw CRM data passed</div>
-
         <div class="arch-layer">
           <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Six-Section Reasoning (Claude Sonnet · forced tool use)</span></div>
           <div class="arch-layer-body">
@@ -556,7 +404,6 @@
             <span class="arch-chip red">Rep insights · Leadership actions</span>
           </div>
         </div>
-
         <div class="arch-stack-row">
           <span class="arch-stack-chip">Python · Pandas</span>
           <span class="arch-stack-chip">HubSpot CRM API v3</span>
@@ -565,8 +412,6 @@
         </div>
       </div>
     </div>
-
-    <!-- 04 Initiative Intelligence -->
     <div class="tool-item fade-in">
       <div>
         <div class="tool-number">04</div>
@@ -616,8 +461,6 @@
         </div>
       </div>
     </div>
-
-    <!-- 05 Executive Attention Synthesizer -->
     <div class="tool-item fade-in">
       <div>
         <div class="tool-number">05</div>
@@ -666,11 +509,72 @@
         </div>
       </div>
     </div>
-
   </div>
-
 </section>
-
+<section id="story">
+  <div class="section-label">The Arc</div>
+  <h2 class="section-heading fade-in">Three companies.<br>One pattern underneath all of them.</h2>
+  <div class="section-body fade-in">
+    <p>Every company I've worked at had a presenting problem and a real problem. They were never the same thing. The real one was always structural — one layer underneath, in how information became decisions and how those decisions held. Six years. Three companies. The function shifted — Revenue Ops to Product. The problem I kept finding didn't.</p>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item fade-in">
+      <div class="timeline-meta">
+        <div class="timeline-company">Braze</div>
+        <div class="timeline-period">2024 – 2025</div>
+        <div class="timeline-tag">Scale through complexity</div>
+      </div>
+      <div class="timeline-content">
+        <h4>Product Manager, SMS &amp; RCS · $3.5B public company</h4>
+        <p>Owned GTM strategy for a high-eight-figure ARR product line and led an 11-market RCS launch — 40 enterprise customers in 90 days, <strong>Google's first official RCS for Business partner</strong>, 50%+ YoY ARR growth.</p>
+        <div class="timeline-beat">
+          <div class="timeline-beat-label">The more durable proof point</div>
+          <p>Support cases were growing faster than revenue. 100 tickets per quarter, consuming 10% of engineering bandwidth. Most people saw a staffing problem. The real problem was that no one could see patterns beneath the volume — so every fix was reactive and the underlying causes stayed invisible. Built a lightweight tagging framework (under 30 seconds per ticket), ran root cause analysis, isolated the 20% of issues driving 80% of volume, and fixed those specifically. Baked into how the team hit goals. <span class="leverage-proof">Process continued after I left.</span></p>
+        </div>
+        <div class="timeline-metrics">
+          <div class="metric"><span class="metric-num">11</span><span class="metric-label">Markets launched</span></div>
+          <div class="metric"><span class="metric-num">40</span><span class="metric-label">Enterprise customers, 90 days</span></div>
+          <div class="metric"><span class="metric-num">6 wks</span><span class="metric-label">Text-only MVP vs. 4-month alternative</span></div>
+          <div class="metric"><span class="metric-num">50%+</span><span class="metric-label">YoY ARR growth</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div class="timeline-meta">
+        <div class="timeline-company">ASAPP</div>
+        <div class="timeline-period">2022 – 2023</div>
+        <div class="timeline-tag">Align competing worlds</div>
+      </div>
+      <div class="timeline-content">
+        <h4>Product Manager &amp; Strategic Advisor to CPO · Conversational AI, Fortune 500</h4>
+        <p>The structural tension at ASAPP: enterprise customers needed deep customization; the product needed coherent architecture. I operated at that seam — making the product decisions that kept both sides intact. When a large F500 customer threatened churn over a critical configuration requirement, I worked with engineering to modularize the core product rather than build a one-off fix — virtualizing the state layer in a way that protected the account, closed the expansion, and created a reusable configuration pattern for future customers.</p>
+        <div class="timeline-metrics">
+          <div class="metric"><span class="metric-num">2M</span><span class="metric-label">Users in 30 days</span></div>
+          <div class="metric"><span class="metric-num">F500</span><span class="metric-label">Enterprise accounts retained and expanded</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div class="timeline-meta">
+        <div class="timeline-company">Artsy</div>
+        <div class="timeline-period">2020 – 2022</div>
+        <div class="timeline-tag">Built the infrastructure from scratch</div>
+      </div>
+      <div class="timeline-content">
+        <h4>Revenue Operations &amp; Product · Fine art marketplace</h4>
+        <p>The revenue infrastructure had been patched for years — 15+ fragmented data sources, no single source of truth. Built three things that didn't exist:</p>
+        <p><strong>Revenue intelligence dashboard</strong> — consolidated the data layer and cut board prep from days to hours.</p>
+        <p><strong>Contract management system</strong> — automated approval logic that ended the Sales/Finance conflict and cut contract management time by 50%.</p>
+        <p><strong>Commissions analytics</strong> — a daily ETL pipeline from Redshift into Salesforce that let 65+ reps model "if I close these three deals, I earn $X" in real time. <span style="font-style:italic; color:var(--ink)">Reps changed behavior because they could finally see reality.</span></p>
+        <div class="timeline-metrics">
+          <div class="metric"><span class="metric-num">15+</span><span class="metric-label">Data sources consolidated</span></div>
+          <div class="metric"><span class="metric-num">50%</span><span class="metric-label">Reduction in contract mgmt time</span></div>
+          <div class="metric"><span class="metric-num">100+</span><span class="metric-label">Hours/quarter saved</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="thesis">
   <div class="section-label">The Argument</div>
   <h2 class="section-heading fade-in">Why organizations accumulate execution debt despite having more information than ever</h2>
@@ -683,8 +587,6 @@
     <p>Organizations have systems of record for data, communication, and tasks. For direction, state, and accountability — the three things that determine whether work actually happens — they have fragments. Static, decentralized, and out of sync the moment reality moves. That's what I'm building.</p>
   </div>
 </section>
-
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
     <div>
@@ -724,26 +626,15 @@
     </div>
   </div>
 </section>
-
 <footer>
   <p>Thomas Meerschwam · NYC</p>
   <p><a href="assets/Thomas_Meerschwam_Resume.pdf" target="_blank" rel="noopener">Download Resume</a> · Updated June 2026</p>
 </footer>
-
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
   }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  function switchTab(name, btn) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
-    document.querySelectorAll('.section-tab').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + name).style.display = 'block';
-    btn.classList.add('active');
-    var heading = btn.getAttribute('data-heading');
-    if (heading) document.getElementById('system-heading').textContent = heading;
-  }
 </script>
 </body>
 </html>
