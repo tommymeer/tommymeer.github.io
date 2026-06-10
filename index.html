@@ -254,6 +254,10 @@
       .contact-inner { grid-template-columns: 1fr; gap: 40px; }
       footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
       .progression-step { min-width: 90px; }
+
+      .system-header { flex-direction: column; gap: 20px; }
+      .section-tab-toggle { align-self: flex-start; }
+
     }
   </style>
 </head>
@@ -263,7 +267,7 @@
   <a href="#" class="nav-name">Thomas Meerschwam</a>
   <ul class="nav-links">
     <li><a href="#story">Story</a></li>
-    <li><a href="#system">Ground Truth System</a></li>
+    <li><a href="#system">The System</a></li>
     <li><a href="#thesis">Thesis</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -372,23 +376,23 @@
   <h2 class="section-heading fade-in">The Ground Truth Decisioning System</h2>
 
   <div class="tool-progression fade-in">
-    <div class="progression-step"><div class="progression-num">01</div><div class="progression-box live"><div class="progression-question">What happened?</div><div class="progression-name">WBR Generator</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">02</div><div class="progression-box live"><div class="progression-question">What was decided?</div><div class="progression-name">Meeting Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">03</div><div class="progression-box live"><div class="progression-question">What will happen?</div><div class="progression-name">Pipeline Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">04</div><div class="progression-box queued"><div class="progression-question">What matters most?</div><div class="progression-name">Prioritization Engine</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">05</div><div class="progression-box queued"><div class="progression-question">Is it working?</div><div class="progression-name">Eval Harness</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
-  </div>
+  <div class="progression-step"><div class="progression-num">01</div><div class="progression-box live"><div class="progression-question">What happened?</div><div class="progression-name">WBR Generator</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+  <div class="progression-arrow">→</div>
+  <div class="progression-step"><div class="progression-num">02</div><div class="progression-box live"><div class="progression-question">What was decided?</div><div class="progression-name">Meeting Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+  <div class="progression-arrow">→</div>
+  <div class="progression-step"><div class="progression-num">03</div><div class="progression-box live"><div class="progression-question">What will happen?</div><div class="progression-name">Pipeline Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+  <div class="progression-arrow">→</div>
+  <div class="progression-step"><div class="progression-num">04</div><div class="progression-box queued"><div class="progression-question">What is getting done?</div><div class="progression-name">Initiative Intelligence</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
+  <div class="progression-arrow">→</div>
+  <div class="progression-step"><div class="progression-num">05</div><div class="progression-box queued"><div class="progression-question">What matters now?</div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
+</div>
 
   <div class="system-intro fade-in">
-    <div class="system-intro-heading">Five tools. One argument.</div>
-    <p>Most organizations can't answer five basic questions about themselves right now: What actually happened last week? What got decided? What will happen next quarter? What should we focus on? Is any of this working?</p>
-    <p style="margin-top:12px">The reason isn't a lack of tools. Jira tracks tasks. Google Docs holds decisions. Spreadsheets hold goals. But these are static, decentralized, and fragmenting — they capture a moment and immediately fall behind reality. For the three things that actually determine whether work happens — direction, state, and accountability — organizations have fragments, not systems.</p>
-    <p style="margin-top:12px">Each tool here addresses one of those questions. Together they're a maintained picture of where an organization actually stands: not a snapshot, but a system that updates as reality moves.</p>
-  </div>
+  <div class="system-intro-heading">Five tools. One system.</div>
+  <p>Most organizations have systems for capturing information — almost none for turning it into coherent judgment. The result is predictable: metrics live in dashboards, decisions disappear into meeting notes, pipeline risk hides inside CRM reports, strategic drift accumulates quietly inside roadmaps.</p>
+  <p style="margin-top:12px">The problem isn't information. The problem is synthesis.</p>
+  <p style="margin-top:12px">The first four tools collect and interpret signals from different parts of the organization. The fifth synthesizes them into a single view of reality. Together they form an early prototype of what I believe is missing from the modern software stack: infrastructure for turning information into durable judgment.</p>
+</div>
 
   <div class="tools-grid">
 
@@ -562,122 +566,111 @@
       </div>
     </div>
 
-    <!-- 04 Prioritization -->
+    <!-- 04 Initiative Intelligence -->
     <div class="tool-item fade-in">
       <div>
         <div class="tool-number">04</div>
-        <div class="tool-name">Prioritization Engine</div>
-        <div class="tool-tagline">What matters most?</div>
+        <div class="tool-name">Initiative Intelligence</div>
+        <div class="tool-tagline">What is getting done?</div>
         <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-        <p class="tool-desc">Prioritization fails not because teams lack frameworks but because the assumptions driving scores are invisible and uncontested. This engine makes tradeoffs explicit — surfacing the disagreements hidden inside prioritization scores and forcing the real strategic conversation rather than deferring it into a spreadsheet.</p>
-        <p class="tool-insight">"A prioritization matrix that everyone agrees on is usually a sign that no real decision got made."</p>
+        <p class="tool-desc">Most roadmaps don't fail from a lack of ideas — they fail because no one notices when the work and the strategy drift apart. Initiative Intelligence ingests a CSV export from any project management tool (Linear, Jira, Asana, Notion) and produces three layered outputs: a deterministic portfolio snapshot of what exists and who owns it; an execution risk surface identifying blocked, stalled, and single-owner dependencies; and a strategic drift analysis — the centerpiece — that maps active work against the stated quarterly strategy and surfaces the delta. What percentage of effort connects to the stated priority? What's consuming resources with no visible strategic connection? What's missing entirely?</p>
+        <p class="tool-insight">"Organizations don't suffer from a shortage of initiatives. They suffer from an inability to distinguish motion from strategic progress."</p>
         <div class="tool-links">
           <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
         </div>
       </div>
       <div class="arch-diagram">
-        <div class="arch-stack-label">Prioritization Engine · Planned Architecture</div>
+        <div class="arch-stack-label">Initiative Intelligence · Planned Architecture</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot integration"></span><span class="arch-layer-title">MCP Integration Layer</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot frontend"></span><span class="arch-layer-title">Input · CSV + Strategy Statement</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip green">Project management MCP (Linear / Jira)</span>
-            <span class="arch-chip green">Stakeholder input via structured form</span>
-          </div>
-        </div>
-        <div class="arch-flow-arrow">↓ live org data — no manual export</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Skill · Assumption Extraction</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip blue">Score divergence detection</span>
-            <span class="arch-chip blue">Hidden assumption surfacing</span>
-            <span class="arch-chip blue">Stakeholder weight mapping</span>
+            <span class="arch-chip">Linear · Jira · Asana · Notion export</span>
+            <span class="arch-chip">Fuzzy column mapping to standard schema</span>
+            <span class="arch-chip">2-3 sentence strategy statement</span>
           </div>
         </div>
         <div class="arch-flow-arrow">↓</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Reasoning · Disagreement Report (Claude Sonnet)</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Portfolio Snapshot (deterministic)</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip red">Contested assumption report</span>
-            <span class="arch-chip red">Forced tradeoff articulation</span>
-            <span class="arch-chip red">Decision prompt for leadership</span>
+            <span class="arch-chip blue">Initiative count by status · owner load</span>
+            <span class="arch-chip blue">Stale initiatives (no activity X days)</span>
+            <span class="arch-chip blue">Blocked count · blockers named</span>
+            <span class="arch-chip blue">Resource concentration by owner</span>
           </div>
         </div>
-        <div class="arch-loop-wrap" style="margin-top:6px">
-          <div class="arch-loop-wrap-label">↺ Human Calibration Loop</div>
-          <div class="arch-layer-body" style="padding:0; gap:4px; flex-wrap:wrap; display:flex;">
-            <span class="arch-chip">Assumptions revised</span>
-            <span class="arch-chip red">Re-score → new divergence map</span>
+        <div class="arch-flow-arrow">↓</div>
+        <div class="arch-layer">
+          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Strategic Drift Analysis (Claude Sonnet)</span></div>
+          <div class="arch-layer-body">
+            <span class="arch-chip red">% active work tied to stated strategy</span>
+            <span class="arch-chip red">Work consuming resources with no strategic connection</span>
+            <span class="arch-chip red">What's missing — expected but absent</span>
+            <span class="arch-chip red">Execution risk severity reasoning</span>
           </div>
         </div>
         <div class="arch-stack-row">
-          <span class="arch-stack-chip">MCP servers</span>
-          <span class="arch-stack-chip">Claude Sonnet</span>
+          <span class="arch-stack-chip">Python · Pandas</span>
+          <span class="arch-stack-chip">Anthropic API</span>
           <span class="arch-stack-chip">Streamlit</span>
         </div>
       </div>
     </div>
 
-    <!-- 05 Eval -->
+    <!-- 05 Executive Attention Synthesizer -->
     <div class="tool-item fade-in">
       <div>
         <div class="tool-number">05</div>
-        <div class="tool-name">Eval Harness</div>
-        <div class="tool-tagline">Is it working?</div>
+        <div class="tool-name">Executive Attention Synthesizer</div>
+        <div class="tool-tagline">What matters now?</div>
         <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-        <p class="tool-desc">The meta-tool. An evaluation framework for assessing whether the outputs of the other four tools are actually improving organizational decision quality over time — not just generating more structure. The loop that keeps the system honest.</p>
-        <p class="tool-insight">"Any system that can't measure its own impact will eventually become another ritual."</p>
+        <p class="tool-desc">The first four tools each process one organizational domain into structured judgment. The Executive Attention Synthesizer reads across all four simultaneously — metrics signal, decision signal, revenue signal, execution signal — and surfaces the patterns no individual system can see. Three signals in isolation are manageable. Four signals pointing at the same underlying problem from different directions is a diagnosis. The output answers the three questions a leadership team actually needs answered: what requires attention now, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
+        <p class="tool-insight">"Every system tells a different story. The job isn't collecting more stories. It's finding the one they're all trying to tell."</p>
         <div class="tool-links">
           <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
         </div>
       </div>
       <div class="arch-diagram">
-        <div class="arch-stack-label">Eval Harness · Planned Architecture</div>
+        <div class="arch-stack-label">Executive Attention Synthesizer · Planned Architecture</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Eval Suite · Defined Before Build</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot integration"></span><span class="arch-layer-title">Input · Four Signal Streams</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip blue">10 targeted evals per tool</span>
-            <span class="arch-chip blue">LLM-as-judge scoring (Claude Sonnet)</span>
-            <span class="arch-chip blue">Adversarial synthetic inputs</span>
-            <span class="arch-chip blue">Regression suite — score before/after every change</span>
+            <span class="arch-chip green">WBR output → performance signal</span>
+            <span class="arch-chip green">Meeting Intelligence → decision signal</span>
+            <span class="arch-chip green">Pipeline Synthesizer → revenue signal</span>
+            <span class="arch-chip green">Initiative Intelligence → execution signal</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓ evals defined first — not after</div>
+        <div class="arch-flow-arrow">↓ cross-signal pattern detection</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Skill · Output Quality Scoring</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Synthesis · Organizational Diagnosis (Claude Sonnet)</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip red">Does output surface the right decision?</span>
-            <span class="arch-chip red">Hallucination detection</span>
-            <span class="arch-chip red">Edge case flagging vs. auto-deciding</span>
+            <span class="arch-chip red">What requires attention now? — converging signals</span>
+            <span class="arch-chip red">What is consuming attention unnecessarily?</span>
+            <span class="arch-chip red">What decision cannot be postponed?</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓</div>
+        <div class="arch-flow-arrow">↓ qualitatively different with all four inputs present</div>
         <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot persistence"></span><span class="arch-layer-title">Trace Log · Supabase</span></div>
+          <div class="arch-layer-header"><span class="arch-layer-dot persistence"></span><span class="arch-layer-title">Output · Executive Attention Report</span></div>
           <div class="arch-layer-body">
-            <span class="arch-chip purple">Agent run trace · planned</span>
-            <span class="arch-chip purple">Score tracked over time</span>
-            <span class="arch-chip purple">Drift detection across sessions</span>
-          </div>
-        </div>
-        <div class="arch-loop-wrap" style="margin-top:6px">
-          <div class="arch-loop-wrap-label">↺ The Loop That Keeps the System Honest</div>
-          <div class="arch-layer-body" style="padding:0; gap:4px; flex-wrap:wrap; display:flex;">
-            <span class="arch-chip red">Prompts updated</span>
-            <span class="arch-chip blue">Re-eval → score change tracked</span>
+            <span class="arch-chip purple">Signal chain justifying each intervention</span>
+            <span class="arch-chip purple">Named decisions with named owners</span>
+            <span class="arch-chip purple">Logged to Supabase for drift tracking</span>
           </div>
         </div>
         <div class="arch-stack-row">
-          <span class="arch-stack-chip">Claude Sonnet (judge)</span>
+          <span class="arch-stack-chip">Python</span>
+          <span class="arch-stack-chip">Anthropic API</span>
           <span class="arch-stack-chip">Supabase</span>
-          <span class="arch-stack-chip">CLI-driven iteration</span>
         </div>
       </div>
     </div>
 
   </div>
+
 </section>
 
-<!-- STORY -->
 <section id="thesis">
   <div class="section-label">The Argument</div>
   <h2 class="section-heading fade-in">Why organizations accumulate execution debt despite having more information than ever</h2>
@@ -742,6 +735,15 @@
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
   }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  function switchTab(name, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.section-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).style.display = 'block';
+    btn.classList.add('active');
+    var heading = btn.getAttribute('data-heading');
+    if (heading) document.getElementById('system-heading').textContent = heading;
+  }
 </script>
 </body>
 </html>
