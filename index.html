@@ -202,6 +202,188 @@
     .hero-cite:hover { color: var(--accent); }
     .hero-operator { margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; }
     .hero-aspirational { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.65; margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; max-width: 520px; }
+
+    /* OUTPUT CARDS */
+    .output-card {
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: white;
+      overflow: hidden;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .output-card-label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      background: var(--paper-warm);
+      border-bottom: 1px solid var(--rule);
+      padding: 8px 16px;
+    }
+    .output-card-meta {
+      font-size: 0.72rem;
+      color: var(--ink-faint);
+      padding: 10px 16px 0;
+    }
+    .output-card-tabs {
+      display: flex;
+      gap: 0;
+      padding: 10px 16px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .output-tab {
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: var(--ink-faint);
+      padding: 4px 12px 8px 0;
+      margin-right: 12px;
+      cursor: default;
+    }
+    .output-tab.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      font-weight: 500;
+    }
+    .output-decision-list {
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .output-decision {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .output-decision-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+      min-width: 18px;
+    }
+    .output-decision-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .output-decision-dot.green { background: var(--green); }
+    .output-decision-dot.amber { background: #d97706; }
+    .output-decision p {
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .output-owner {
+      font-size: 0.68rem;
+      color: var(--ink-faint);
+      font-style: italic;
+      margin-top: 2px;
+      display: block;
+    }
+    .output-blocker {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 16px;
+      background: rgba(200,70,10,0.04);
+      border-top: 1px solid var(--rule);
+    }
+    .output-blocker p {
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .output-blocker-badge {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .output-blocker-badge.high {
+      background: rgba(200,70,10,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(200,70,10,0.2);
+    }
+    .output-card-footer {
+      font-size: 0.65rem;
+      color: var(--ink-faint);
+      padding: 8px 16px;
+      border-top: 1px solid var(--rule);
+      background: var(--paper-warm);
+    }
+    /* Pipeline output */
+    .output-pipeline-metrics {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .output-pipeline-stat {
+      flex: 1;
+      padding: 14px 16px;
+      border-right: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .output-pipeline-stat:last-child { border-right: none; }
+    .output-pipeline-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .output-pipeline-stat.danger .output-pipeline-num { color: var(--accent); }
+    .output-pipeline-label {
+      font-size: 0.62rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.04em;
+    }
+    .output-narrative {
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .output-risk-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 16px;
+    }
+    .output-risk-row p {
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* DRIFT BAR */
+    .output-drift-bar-section { padding: 14px 16px 10px; border-bottom: 1px solid var(--rule); }
+    .output-drift-label { font-size: 0.68rem; color: var(--ink-soft); margin-bottom: 5px; }
+    .output-drift-bar-wrap { display: flex; align-items: center; gap: 8px; }
+    .output-drift-bar { height: 6px; border-radius: 3px; background: var(--green); }
+    .output-drift-bar.danger { background: var(--accent); }
+    .output-drift-pct { font-size: 0.68rem; font-weight: 500; color: var(--ink-soft); }
+    /* EXEC QUESTIONS */
+    .output-exec-question { padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+    .output-exec-q-label { font-size: 0.68rem; font-weight: 500; color: var(--ink); margin-bottom: 5px; letter-spacing: 0.02em; }
+    .output-exec-question p { font-size: 0.75rem; color: var(--ink-soft); line-height: 1.55; margin: 0 0 7px; }
+    .output-exec-signals { display: flex; gap: 5px; flex-wrap: wrap; }
+    .output-signal-tag { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; background: var(--paper-warm); border: 1px solid var(--rule); color: var(--ink-faint); }
   </style>
 </head>
 <body>
@@ -266,50 +448,31 @@
         <div class="tool-name">WBR Generator</div>
         <div class="tool-tagline">What happened?</div>
         <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Most Weekly Business Reviews are rituals, not diagnostics. The WBR Generator deliberately separates two layers: a deterministic Pandas pipeline computes what actually happened — week-over-week changes, 4-week trend slopes, derived ratios, and z-score anomaly detection against historical baseline. The reasoning layer (Claude Sonnet) receives only structured facts — never raw numbers — and is explicitly instructed not to summarize, not to hallucinate absent fields, and to produce decisions required this week and non-obvious leadership questions. A DATA AVAILABILITY block prevents hallucination on fields that aren't in the CSV.</p>
+        <p class="tool-desc">Most Weekly Business Reviews are rituals, not diagnostics. Upload your metrics CSV and three sentences of leadership context. The tool separates what actually happened (computed deterministically) from what it means (reasoned by Claude) — and outputs the decisions required this week, not a summary of numbers you already have.</p>
         <p class="tool-insight">"The bottleneck isn't data — it's interpretation. Dashboards can't solve a judgment problem."</p>
         <div class="tool-links">
           <a href="https://wbr-generator.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/wbr-generator" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <div class="arch-diagram">
-        <div class="arch-stack-label">WBR Generator · Architecture</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot frontend"></span><span class="arch-layer-title">Input · Streamlit UI</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip">Metrics CSV upload</span>
-            <span class="arch-chip">Fuzzy column mapping</span>
-            <span class="arch-chip">Leadership context (3 sentences)</span>
+      <div class="output-card">
+        <div class="output-card-label">Sample Output · Decisions Required</div>
+        <div class="output-card-meta">WBR — June 10, 2026 · Leadership Briefing</div>
+        <div class="output-decision-list">
+          <div class="output-decision">
+            <span class="output-decision-num">01</span>
+            <p>Decide whether to formally pause new AI feature rollout until P1 incidents reach a defined threshold — or explicitly accept the reliability risk and continue on schedule. Not making this decision is itself a choice that engineering will interpret inconsistently.</p>
+          </div>
+          <div class="output-decision">
+            <span class="output-decision-num">02</span>
+            <p>Decide whether to assign a dedicated resource to unblock the three $650K legal-stuck deals this week, or accept that Q2 bookings will fall short. These require active intervention, not passive follow-up.</p>
+          </div>
+          <div class="output-decision">
+            <span class="output-decision-num">03</span>
+            <p>Decide whether governance and compliance features get added to the Q3 roadmap with a delivery commitment, or whether Sales is authorized to make explicit trade-offs with enterprise customers in renewal conversations.</p>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Deterministic Analysis (analysis.py)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip blue">WoW Δ · 4-wk trend slopes</span>
-            <span class="arch-chip blue">Pipeline coverage ratio</span>
-            <span class="arch-chip blue">Z-score anomaly (|z|≥2.0)</span>
-            <span class="arch-chip blue">Business logic heuristics</span>
-            <span class="arch-chip blue">Runway / churn / CAC flags</span>
-            <span class="arch-chip blue">DATA AVAILABILITY block</span>
-          </div>
-        </div>
-        <div class="arch-flow-arrow">↓ structured facts only — no raw numbers passed</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Reasoning (Claude Sonnet · prompt.py)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip red">Decisions required this week</span>
-            <span class="arch-chip red">Anomaly mechanism (not just flag)</span>
-            <span class="arch-chip red">Non-obvious leadership questions</span>
-            <span class="arch-chip red">Streaming output</span>
-          </div>
-        </div>
-        <div class="arch-stack-row">
-          <span class="arch-stack-chip">Python · Pandas · NumPy</span>
-          <span class="arch-stack-chip">Anthropic API</span>
-          <span class="arch-stack-chip">Streamlit Cloud</span>
-        </div>
+        <div class="output-card-footer">5 decisions · 7 leadership questions · 3 anomalies flagged</div>
       </div>
     </div>
     <div class="tool-item fade-in">
@@ -318,49 +481,48 @@
         <div class="tool-name">Meeting Intelligence</div>
         <div class="tool-tagline">What was decided?</div>
         <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">The gap between what got decided in a meeting and what anyone acts on is where execution debt is born. Meeting Intelligence runs deterministic preprocessing before Claude sees anything — timestamp stripping, speaker normalization, commitment detection, decision signal scoring. Then a two-pass Claude API call using structured tool use: Pass 1 extracts decisions, open items, blockers, and unresolved questions with confidence scoring; Pass 2 drafts a follow-up from structured output only — raw transcripts never reach the follow-up pass. Name a recurring series and the tool tracks patterns across sessions via Supabase, surfacing what keeps getting left unresolved week over week.</p>
+        <p class="tool-desc">Paste in a meeting transcript. The tool extracts what was actually decided, who owns what, what's blocked, and what questions were left unresolved — with a follow-up email drafted and ready to send. Name a recurring series and it tracks what keeps getting deferred week over week.</p>
         <p class="tool-insight">"Anyone can summarize a meeting. The judgment is in knowing what a decision actually looks like versus a discussion."</p>
         <div class="tool-links">
           <a href="https://meeting-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/meeting-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <div class="arch-diagram">
-        <div class="arch-stack-label">Meeting Intelligence · Architecture</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Preprocessing (preprocessing.py)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip blue">Timestamp strip · speaker norm</span>
-            <span class="arch-chip blue">Commitment detection</span>
-            <span class="arch-chip blue">Decision signal scoring</span>
-            <span class="arch-chip blue">Quality gate (min 200 words)</span>
+      <div class="output-card">
+        <div class="output-card-label">Sample Output · Q3 Planning Sync</div>
+        <div class="output-card-tabs">
+          <span class="output-tab active">Decisions</span>
+          <span class="output-tab">Open Items</span>
+          <span class="output-tab">Blockers</span>
+        </div>
+        <div class="output-decision-list">
+          <div class="output-decision">
+            <span class="output-decision-dot green"></span>
+            <div>
+              <p>Salesforce integration is unblocked and moves into Q3 sprint one.</p>
+              <span class="output-owner">Owner: Marcus Webb</span>
+            </div>
+          </div>
+          <div class="output-decision">
+            <span class="output-decision-dot green"></span>
+            <div>
+              <p>Amplitude selected over Mixpanel as the analytics vendor.</p>
+              <span class="output-owner">Owner: Sarah Chen</span>
+            </div>
+          </div>
+          <div class="output-decision">
+            <span class="output-decision-dot amber"></span>
+            <div>
+              <p>Q3 OKR alignment discussion deferred to next week's recurring meeting.</p>
+              <span class="output-owner">Owner: unassigned</span>
+            </div>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Two-Pass Reasoning (Claude Sonnet · structured tool use)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip red">Pass 1 — extract: decisions, open items, blockers, questions + confidence</span>
-            <span class="arch-chip red">Pass 2 — follow-up draft from structured output only</span>
-            <span class="arch-chip red">Ownership vacuum · circular dependency detection</span>
-          </div>
+        <div class="output-blocker">
+          <span class="output-blocker-badge high">High</span>
+          <p>PM job description blocked on legal sign-off — usual contact is out, no coverage identified.</p>
         </div>
-        <div class="arch-flow-arrow">↓ structured output only — raw transcripts never written</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot persistence"></span><span class="arch-layer-title">Layer 3 · Cross-Session Persistence (storage.py · Supabase)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip purple">Meeting Series tracking</span>
-            <span class="arch-chip purple">Fuzzy token-overlap pattern match</span>
-            <span class="arch-chip purple">Weighted execution debt score</span>
-            <span class="arch-chip purple">Org Friction Report</span>
-          </div>
-        </div>
-        <div class="arch-stack-row">
-          <span class="arch-stack-chip">Python 3.11</span>
-          <span class="arch-stack-chip">Anthropic API</span>
-          <span class="arch-stack-chip">Supabase (Postgres)</span>
-          <span class="arch-stack-chip">pypdf</span>
-        </div>
+        <div class="output-card-footer">3 decisions · 5 open items · 3 blockers · follow-up draft ready</div>
       </div>
     </div>
     <div class="tool-item fade-in">
@@ -369,47 +531,37 @@
         <div class="tool-name">Pipeline &amp; Forecast Synthesizer</div>
         <div class="tool-tagline">What will happen?</div>
         <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">CRMs capture activity. They don't capture judgment. The Pipeline Synthesizer connects directly to HubSpot via REST API — resolving owner IDs to rep names and internal stage IDs to human-readable labels — then runs deterministic preprocessing before Claude sees anything: concentration analysis, slippage detection, deal age, days since last activity, weighted pipeline by stage probability. Claude then reasons like a CRO preparing for a board meeting, producing six structured sections via forced tool use: executive summary, forecast confidence, revenue risks, revenue opportunities, rep insights, and leadership actions.</p>
+        <p class="tool-desc">Connect HubSpot directly or upload a CRM export. The tool reasons like a CRO preparing for a board meeting — surfacing concentration risk, stalled deals, single-rep dependencies, and the three leadership actions that would actually change the quarter's outcome.</p>
         <p class="tool-insight">"3.2x coverage is a signal. 'The forecast risk is concentration, not volume' is judgment. This tool produces the latter."</p>
         <div class="tool-links">
           <a href="https://pipeline-forecast-synthesizer.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/pipeline-forecast-synthesizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <div class="arch-diagram">
-        <div class="arch-stack-label">Pipeline Synthesizer · Architecture</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot integration"></span><span class="arch-layer-title">Input · Dual Path</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip green">HubSpot REST API — owner ID resolve · stage label resolve · deal pagination</span>
-            <span class="arch-chip">CSV upload — Salesforce · Attio · any CRM</span>
+      <div class="output-card">
+        <div class="output-card-label">Sample Output · Q2 Forecast</div>
+        <div class="output-pipeline-metrics">
+          <div class="output-pipeline-stat">
+            <span class="output-pipeline-num">$622K</span>
+            <span class="output-pipeline-label">In-Quarter Pipeline</span>
+          </div>
+          <div class="output-pipeline-stat">
+            <span class="output-pipeline-num">68.3%</span>
+            <span class="output-pipeline-label">Top 3 Concentration</span>
+          </div>
+          <div class="output-pipeline-stat danger">
+            <span class="output-pipeline-num">🔴 Low</span>
+            <span class="output-pipeline-label">Forecast Confidence</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓ both paths → same DataFrame schema</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Deterministic Preprocessing (preprocessing.py)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip blue">Stage normalization · probability weighting</span>
-            <span class="arch-chip blue">Concentration analysis (top N as % ARR)</span>
-            <span class="arch-chip blue">Slippage detection · deal age · staleness</span>
-            <span class="arch-chip blue">Coverage ratio · single-rep dependency</span>
-          </div>
+        <div class="output-narrative">
+          The single most important thing leadership needs to know: all six in-quarter deals are owned by one rep, making this quarter's number entirely dependent on his execution with no organizational redundancy. The two largest deals ($327K combined) show no recorded activity with 20 days remaining.
         </div>
-        <div class="arch-flow-arrow">↓ structured metrics only — no raw CRM data passed</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Six-Section Reasoning (Claude Sonnet · forced tool use)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip red">Executive summary · Forecast confidence</span>
-            <span class="arch-chip red">Revenue risks · Revenue opportunities</span>
-            <span class="arch-chip red">Rep insights · Leadership actions</span>
-          </div>
+        <div class="output-risk-row">
+          <span class="output-blocker-badge high">High</span>
+          <p>100% single-rep concentration — zero pipeline redundancy if execution slips.</p>
         </div>
-        <div class="arch-stack-row">
-          <span class="arch-stack-chip">Python · Pandas</span>
-          <span class="arch-stack-chip">HubSpot CRM API v3</span>
-          <span class="arch-stack-chip">Anthropic API</span>
-          <span class="arch-stack-chip">Streamlit Cloud</span>
-        </div>
+        <div class="output-card-footer">6 deals · 3 leadership actions · 4 revenue risks surfaced</div>
       </div>
     </div>
     <div class="tool-item fade-in">
@@ -418,47 +570,37 @@
         <div class="tool-name">Initiative Intelligence</div>
         <div class="tool-tagline">What is getting done?</div>
         <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-        <p class="tool-desc">Most roadmaps don't fail from a lack of ideas — they fail because no one notices when the work and the strategy drift apart. Initiative Intelligence ingests a CSV export from any project management tool (Linear, Jira, Asana, Notion) and produces three layered outputs: a deterministic portfolio snapshot of what exists and who owns it; an execution risk surface identifying blocked, stalled, and single-owner dependencies; and a strategic drift analysis — the centerpiece — that maps active work against the stated quarterly strategy and surfaces the delta. What percentage of effort connects to the stated priority? What's consuming resources with no visible strategic connection? What's missing entirely?</p>
+        <p class="tool-desc">Export your roadmap from Linear, Jira, Asana, or Notion — and add two sentences describing your stated quarterly strategy. The tool maps what you're actually working on against what you said matters, and surfaces the delta: what's aligned, what's consuming resources with no strategic connection, and what's missing entirely.</p>
         <p class="tool-insight">"Organizations don't suffer from a shortage of initiatives. They suffer from an inability to distinguish motion from strategic progress."</p>
         <div class="tool-links">
           <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
         </div>
       </div>
-      <div class="arch-diagram">
-        <div class="arch-stack-label">Initiative Intelligence · Planned Architecture</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot frontend"></span><span class="arch-layer-title">Input · CSV + Strategy Statement</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip">Linear · Jira · Asana · Notion export</span>
-            <span class="arch-chip">Fuzzy column mapping to standard schema</span>
-            <span class="arch-chip">2-3 sentence strategy statement</span>
+      <div class="output-card">
+        <div class="output-card-label">Output Shape · Strategic Drift Analysis</div>
+        <div class="output-drift-bar-section">
+          <div class="output-drift-label">Active work tied to stated strategy</div>
+          <div class="output-drift-bar-wrap">
+            <div class="output-drift-bar" style="width: 34%"></div>
+            <span class="output-drift-pct">34%</span>
+          </div>
+          <div class="output-drift-label" style="margin-top:8px">Strategic drift — work with no visible connection</div>
+          <div class="output-drift-bar-wrap">
+            <div class="output-drift-bar danger" style="width: 41%"></div>
+            <span class="output-drift-pct">41%</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot deterministic"></span><span class="arch-layer-title">Layer 1 · Portfolio Snapshot (deterministic)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip blue">Initiative count by status · owner load</span>
-            <span class="arch-chip blue">Stale initiatives (no activity X days)</span>
-            <span class="arch-chip blue">Blocked count · blockers named</span>
-            <span class="arch-chip blue">Resource concentration by owner</span>
+        <div class="output-decision-list" style="padding-top:0">
+          <div class="output-decision">
+            <span class="output-blocker-badge high" style="margin-top:2px">Gap</span>
+            <p>Enterprise retention playbook — expected given stated Q3 priority, not present in active roadmap.</p>
+          </div>
+          <div class="output-decision">
+            <span class="output-blocker-badge high" style="margin-top:2px">Drift</span>
+            <p>7 active initiatives tied to SMB onboarding — no strategic connection to stated enterprise expansion priority.</p>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Layer 2 · Strategic Drift Analysis (Claude Sonnet)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip red">% active work tied to stated strategy</span>
-            <span class="arch-chip red">Work consuming resources with no strategic connection</span>
-            <span class="arch-chip red">What's missing — expected but absent</span>
-            <span class="arch-chip red">Execution risk severity reasoning</span>
-          </div>
-        </div>
-        <div class="arch-stack-row">
-          <span class="arch-stack-chip">Python · Pandas</span>
-          <span class="arch-stack-chip">Anthropic API</span>
-          <span class="arch-stack-chip">Streamlit</span>
-        </div>
+        <div class="output-card-footer">In development · planned input: Linear / Jira / Asana CSV</div>
       </div>
     </div>
     <div class="tool-item fade-in">
@@ -467,46 +609,40 @@
         <div class="tool-name">Executive Attention Synthesizer</div>
         <div class="tool-tagline">What matters now?</div>
         <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-        <p class="tool-desc">The first four tools each process one organizational domain into structured judgment. The Executive Attention Synthesizer reads across all four simultaneously — metrics signal, decision signal, revenue signal, execution signal — and surfaces the patterns no individual system can see. Three signals in isolation are manageable. Four signals pointing at the same underlying problem from different directions is a diagnosis. The output answers the three questions a leadership team actually needs answered: what requires attention now, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
+        <p class="tool-desc">Feed it outputs from the first four tools and it reads across all four simultaneously — metrics, decisions, pipeline, initiatives. What no single system can see, the pattern across all of them reveals. The output answers three questions: what requires attention now, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
         <p class="tool-insight">"Every system tells a different story. The job isn't collecting more stories. It's finding the one they're all trying to tell."</p>
         <div class="tool-links">
           <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
         </div>
       </div>
-      <div class="arch-diagram">
-        <div class="arch-stack-label">Executive Attention Synthesizer · Planned Architecture</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot integration"></span><span class="arch-layer-title">Input · Four Signal Streams</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip green">WBR output → performance signal</span>
-            <span class="arch-chip green">Meeting Intelligence → decision signal</span>
-            <span class="arch-chip green">Pipeline Synthesizer → revenue signal</span>
-            <span class="arch-chip green">Initiative Intelligence → execution signal</span>
+      <div class="output-card">
+        <div class="output-card-label">Output Shape · Executive Attention Report</div>
+        <div class="output-exec-question">
+          <div class="output-exec-q-label">What requires attention now?</div>
+          <p>Engineering capacity and pipeline close risk are converging on the same two-week window. Three signals point here: P1 incidents rising, two Negotiation-stage deals with no activity, and the Q3 feature roadmap still unresourced.</p>
+          <div class="output-exec-signals">
+            <span class="output-signal-tag">WBR</span>
+            <span class="output-signal-tag">Pipeline</span>
+            <span class="output-signal-tag">Meetings</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓ cross-signal pattern detection</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot reasoning"></span><span class="arch-layer-title">Synthesis · Organizational Diagnosis (Claude Sonnet)</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip red">What requires attention now? — converging signals</span>
-            <span class="arch-chip red">What is consuming attention unnecessarily?</span>
-            <span class="arch-chip red">What decision cannot be postponed?</span>
+        <div class="output-exec-question">
+          <div class="output-exec-q-label">What is consuming attention unnecessarily?</div>
+          <p>SMB onboarding discussions — three staff meetings flagged this topic. Pipeline and initiative data show no SMB deals in-quarter and no SMB initiatives on the strategic roadmap.</p>
+          <div class="output-exec-signals">
+            <span class="output-signal-tag">Meetings</span>
+            <span class="output-signal-tag">Initiatives</span>
           </div>
         </div>
-        <div class="arch-flow-arrow">↓ qualitatively different with all four inputs present</div>
-        <div class="arch-layer">
-          <div class="arch-layer-header"><span class="arch-layer-dot persistence"></span><span class="arch-layer-title">Output · Executive Attention Report</span></div>
-          <div class="arch-layer-body">
-            <span class="arch-chip purple">Signal chain justifying each intervention</span>
-            <span class="arch-chip purple">Named decisions with named owners</span>
-            <span class="arch-chip purple">Logged to Supabase for drift tracking</span>
+        <div class="output-exec-question" style="border-bottom:none">
+          <div class="output-exec-q-label">What decision cannot be postponed?</div>
+          <p>Whether to assign executive coverage to the two Negotiation-stage deals before June 25. Every week of delay reduces close probability with no recovery path.</p>
+          <div class="output-exec-signals">
+            <span class="output-signal-tag">Pipeline</span>
+            <span class="output-signal-tag">WBR</span>
           </div>
         </div>
-        <div class="arch-stack-row">
-          <span class="arch-stack-chip">Python</span>
-          <span class="arch-stack-chip">Anthropic API</span>
-          <span class="arch-stack-chip">Supabase</span>
-        </div>
+        <div class="output-card-footer">In development · requires all four signal inputs</div>
       </div>
     </div>
   </div>
