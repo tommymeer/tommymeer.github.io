@@ -384,6 +384,83 @@
     .output-exec-question p { font-size: 0.75rem; color: var(--ink-soft); line-height: 1.55; margin: 0 0 7px; }
     .output-exec-signals { display: flex; gap: 5px; flex-wrap: wrap; }
     .output-signal-tag { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; background: var(--paper-warm); border: 1px solid var(--rule); color: var(--ink-faint); }
+
+    /* RECRUITER BLOCK */
+    .hero-recruiter {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      max-width: 520px;
+    }
+    .hero-recruiter p {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+    .hero-recruiter p:last-child { margin-bottom: 0; }
+    .hero-recruiter-roles {
+      font-size: 0.72rem !important;
+      color: var(--ink-faint) !important;
+      letter-spacing: 0.04em;
+    }
+    /* SYSTEM SUBTITLE */
+    .system-subtitle {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      margin-top: -24px;
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+    /* TOOL PRIVACY NOTE */
+    .tool-privacy {
+      font-size: 0.68rem;
+      color: var(--ink-faint);
+      margin-top: 8px;
+      line-height: 1.5;
+      font-style: italic;
+    }
+    /* TIMELINE THROUGHLINE */
+    .timeline-throughline {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--ink);
+      border-left: 2px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 16px;
+      line-height: 1.65;
+    }
+
+    .hero-operator-line2 {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.15s forwards;
+      max-width: 520px;
+    }
+    .contact-role-signal {
+      font-size: 0.88rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink-faint);
+      line-height: 1.65;
+      margin-top: 8px;
+    }
+
+    .hero-name-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; opacity: 0; animation: fadeUp 0.8s ease 0.05s forwards; }
+    .hero-subtitle { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.06em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 24px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; }
+    .hero-fit { font-size: 0.88rem; font-weight: 300; font-style: italic; color: var(--ink-soft); margin-top: 4px; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s ease 0.55s forwards; max-width: 520px; }
+    .contact-fit { font-size: 0.85rem; font-weight: 300; font-style: italic; color: var(--ink-soft); margin-top: 12px; line-height: 1.6; }
+    .contact-fastest { font-size: 0.82rem; color: var(--ink-faint); margin-top: 8px; }
+
+    .progression-sub { font-size: 0.58rem; color: var(--ink-faint); display: block; margin-top: 2px; font-style: normal; }
   </style>
 </head>
 <body>
@@ -398,9 +475,11 @@
 </nav>
 <div class="hero">
   <div class="hero-inner">
-    <p class="hero-operator"><strong style="color: var(--accent); font-weight: 500;">I'm an operator &amp; builder helping growth-stage companies turn data and narratives into decisions, faster.</strong></p>
-    <p class="hero-aspirational">The best-run organizations I've seen share one trait: everyone maintains a clear, shared picture of reality — what's decided, what's true, and who owns what. When that's true, decisions get made faster and stay made. Priorities don't need to be re-litigated. The gap between what was agreed in the room and what actually happened closes. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/healthy-organizations-keep-winning-but-the-rules-are-changing-fast" target="_blank" rel="noopener" class="hero-cite">McKinsey's research</a> puts a number on it: companies with strong alignment deliver three times the shareholder returns of those without it.</p>
-    <p class="hero-pain">Most organizations aren't there. <a href="https://hbr.org/2023/05/is-your-company-as-strategically-aligned-as-you-think-it-is" target="_blank" rel="noopener" class="hero-cite">Harvard Business Review found</a> that executives report 82% strategic alignment within their companies — but when researchers measured actual alignment, it was closer to 23%. The gap is invisible from inside. Goals multiply without hierarchy. Meetings generate discussion but not decisions anyone acts on. Ownership becomes implicit. The organization keeps functioning — but on informal memory and repeated clarification rather than a shared picture of reality.</p>
+    <p class="hero-aspirational">The best organizations run on a single, continuously updated picture of reality: what was decided, what is actually true, and who owns what. When that picture is clear and shared, decisions stick, priorities stay sharp, and execution matches intent.</p>
+    <p class="hero-aspirational" style="margin-top:16px">Most companies don't have it.</p>
+    <p class="hero-aspirational" style="margin-top:16px">They have dashboards, transcripts, wikis, and Slack threads but no reliable system that keeps everything connected and truthful as reality changes. The result is drift: decisions get re-litigated, priorities multiply, and the organization slowly loses its grip on what matters.</p>
+    <p class="hero-operator" style="margin-top:24px"><strong style="color: var(--accent); font-weight: 500;">I help growth-stage and AI-native companies (Series B–E) design internal operating systems that preserve this clarity as they scale.</strong></p>
+    <p class="hero-operator-line2">In practice, this shows up in Chief of Staff, Strategy &amp; Operations, and Business Operations roles inside companies building or adopting AI systems.</p>
     <div class="hero-pull">"Organizations don't lack information. They lack judgment infrastructure."</div>
     <div class="hero-identity">
       <div>
@@ -415,8 +494,7 @@
         <a href="https://github.com/tommymeer" target="_blank" rel="noopener">GitHub</a>
         <a href="https://thomasmeerschwam.substack.com" target="_blank" rel="noopener">Substack</a>
       </div>
-    </div>
-  </div>
+    </div></div>
   <div class="hero-photo-col">
     <img src="assets/headshot.jpg" alt="Thomas Meerschwam" class="hero-headshot" />
   </div>
@@ -424,22 +502,23 @@
 <section id="system" style="border-top: 1px solid var(--rule);">
   <div class="section-label">Active Building</div>
   <h2 class="section-heading fade-in">The Ground Truth Decisioning System</h2>
+  <p class="system-subtitle fade-in">A pattern I've seen across companies: teams don't lack tools. They lack a connected layer that turns fragmented signals into shared operational context.</p>
   <div class="tool-progression fade-in">
-    <div class="progression-step"><div class="progression-num">01</div><div class="progression-box live"><div class="progression-question">What happened?</div><div class="progression-name">WBR Generator</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+    <div class="progression-step"><div class="progression-num">01</div><div class="progression-box live"><div class="progression-question">Signal · What happened? <span class="progression-sub">(performance + metrics)</span></div><div class="progression-name">WBR Generator</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
     <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">02</div><div class="progression-box live"><div class="progression-question">What was decided?</div><div class="progression-name">Meeting Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+    <div class="progression-step"><div class="progression-num">02</div><div class="progression-box live"><div class="progression-question">Decision · What was agreed? <span class="progression-sub">(meetings + ownership)</span></div><div class="progression-name">Meeting Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
     <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">03</div><div class="progression-box live"><div class="progression-question">What will happen?</div><div class="progression-name">Pipeline Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
+    <div class="progression-step"><div class="progression-num">03</div><div class="progression-box live"><div class="progression-question">Forecast · What will happen? <span class="progression-sub">(pipeline + risk)</span></div><div class="progression-name">Pipeline Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
     <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">04</div><div class="progression-box queued"><div class="progression-question">What is getting done?</div><div class="progression-name">Initiative Intelligence</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
+    <div class="progression-step"><div class="progression-num">04</div><div class="progression-box queued"><div class="progression-question">Execution · What is being worked on? <span class="progression-sub">(roadmaps + tasks)</span></div><div class="progression-name">Initiative Intelligence</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
     <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">05</div><div class="progression-box queued"><div class="progression-question">What matters now?</div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
+    <div class="progression-step"><div class="progression-num">05</div><div class="progression-box queued"><div class="progression-question">Attention · What matters now? <span class="progression-sub">(cross-system synthesis)</span></div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
   </div>
   <div class="system-intro fade-in">
-    <div class="system-intro-heading">Five tools. One system.</div>
-    <p>Most organizations have systems for capturing information — almost none for turning it into coherent judgment. The result is predictable: metrics live in dashboards, decisions disappear into meeting notes, pipeline risk hides inside CRM reports, strategic drift accumulates quietly inside roadmaps.</p>
-    <p style="margin-top:12px">The problem isn't information. The problem is synthesis.</p>
-    <p style="margin-top:12px">The first four tools collect and interpret signals from different parts of the organization. The fifth synthesizes them into a single view of reality. Together they form an early prototype of what I believe is missing from the modern software stack: infrastructure for turning information into durable judgment.</p>
+    <div class="system-intro-heading">Selected work proof of how I think.</div>
+    <p>These tools are prototypes that demonstrate how I approach organizational problems: identify where decision-making breaks down, trace it to missing or fragmented context, and build the mechanism that reconnects it.</p>
+    <p style="margin-top:12px"><strong>These are working prototypes of an internal operating layer, not standalone products.</strong></p>
+    <p style="margin-top:12px">In practice, these capabilities would be embedded directly into the systems teams already use: Salesforce, Linear, Notion, Slack, and meeting systems, surfacing insights inside existing workflows rather than as separate applications.</p>
   </div>
   <div class="tools-grid">
     <div class="tool-item fade-in">
@@ -448,12 +527,13 @@
         <div class="tool-name">WBR Generator</div>
         <div class="tool-tagline">What happened?</div>
         <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Most Weekly Business Reviews are rituals, not diagnostics. Upload your metrics CSV and three sentences of leadership context. The tool separates what actually happened (computed deterministically) from what it means (reasoned by Claude) — and outputs the decisions required this week, not a summary of numbers you already have.</p>
+        <p class="tool-desc">Most companies already have the data they need to understand performance but not the structure to interpret it consistently. This tool separates signal from interpretation so leadership decisions don't rely on narrative drift.</p>
         <p class="tool-insight">"The bottleneck isn't data — it's interpretation. Dashboards can't solve a judgment problem."</p>
         <div class="tool-links">
           <a href="https://wbr-generator.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/wbr-generator" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        
+        <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p></div>
       </div>
       <div class="output-card">
         <div class="output-card-label">Sample Output · Decisions Required</div>
@@ -481,12 +561,13 @@
         <div class="tool-name">Meeting Intelligence</div>
         <div class="tool-tagline">What was decided?</div>
         <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Paste in a meeting transcript. The tool extracts what was actually decided, who owns what, what's blocked, and what questions were left unresolved — with a follow-up email drafted and ready to send. Name a recurring series and it tracks what keeps getting deferred week over week.</p>
+        <p class="tool-desc">Meetings produce decisions in theory, but in practice they produce discussion artifacts that decay immediately. This extracts durable decisions, ownership, and unresolved tension and tracks what keeps getting deferred across sessions.</p>
         <p class="tool-insight">"Anyone can summarize a meeting. The judgment is in knowing what a decision actually looks like versus a discussion."</p>
         <div class="tool-links">
           <a href="https://meeting-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/meeting-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        
+        <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p></div>
       </div>
       <div class="output-card">
         <div class="output-card-label">Sample Output · Q3 Planning Sync</div>
@@ -531,12 +612,13 @@
         <div class="tool-name">Pipeline &amp; Forecast Synthesizer</div>
         <div class="tool-tagline">What will happen?</div>
         <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Connect HubSpot directly or upload a CRM export. The tool reasons like a CRO preparing for a board meeting — surfacing concentration risk, stalled deals, single-rep dependencies, and the three leadership actions that would actually change the quarter's outcome.</p>
+        <p class="tool-desc">Forecasts fail less from math and more from hidden structural risk concentration, stall patterns, and dependency on individuals. This surfaces those patterns so leadership acts on the real constraint, not the reported number.</p>
         <p class="tool-insight">"3.2x coverage is a signal. 'The forecast risk is concentration, not volume' is judgment. This tool produces the latter."</p>
         <div class="tool-links">
           <a href="https://pipeline-forecast-synthesizer.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/pipeline-forecast-synthesizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        
+        <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p></div>
       </div>
       <div class="output-card">
         <div class="output-card-label">Sample Output · Q2 Forecast</div>
@@ -570,7 +652,7 @@
         <div class="tool-name">Initiative Intelligence</div>
         <div class="tool-tagline">What is getting done?</div>
         <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-        <p class="tool-desc">Export your roadmap from Linear, Jira, Asana, or Notion — and add two sentences describing your stated quarterly strategy. The tool maps what you're actually working on against what you said matters, and surfaces the delta: what's aligned, what's consuming resources with no strategic connection, and what's missing entirely.</p>
+        <p class="tool-desc">Most roadmaps describe activity, not alignment. This compares stated strategy against actual execution to reveal drift what's connected to the priority, what's consuming resources without a clear link, and what's missing entirely.</p>
         <p class="tool-insight">"Organizations don't suffer from a shortage of initiatives. They suffer from an inability to distinguish motion from strategic progress."</p>
         <div class="tool-links">
           <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
@@ -609,7 +691,7 @@
         <div class="tool-name">Executive Attention Synthesizer</div>
         <div class="tool-tagline">What matters now?</div>
         <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-        <p class="tool-desc">Feed it outputs from the first four tools and it reads across all four simultaneously — metrics, decisions, pipeline, initiatives. What no single system can see, the pattern across all of them reveals. The output answers three questions: what requires attention now, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
+        <p class="tool-desc">Leadership doesn't lack information it lacks prioritization across systems. This synthesizes signals across performance, decisions, pipeline, and execution into a single attention model that answers what requires action, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
         <p class="tool-insight">"Every system tells a different story. The job isn't collecting more stories. It's finding the one they're all trying to tell."</p>
         <div class="tool-links">
           <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
@@ -651,7 +733,9 @@
   <div class="section-label">The Arc</div>
   <h2 class="section-heading fade-in">Three companies.<br>One pattern underneath all of them.</h2>
   <div class="section-body fade-in">
-    <p>Every company I've worked at had a presenting problem and a real problem. They were never the same thing. The real one was always structural — one layer underneath, in how information became decisions and how those decisions held. Six years. Three companies. The function shifted — Revenue Ops to Product. The problem I kept finding didn't.</p>
+    <p>Across Artsy, ASAPP, and Braze, the surface problems changed. The underlying pattern didn't.</p>
+    <p>Each company had strong people, strong tools, and strong data. And still struggled with alignment over time.</p>
+    <p>In every case, the constraint wasn't information or intelligence. It was that context lived in fragments. Different teams saw different versions of truth, and there was no system that continuously reconciled them.</p>
   </div>
   <div class="timeline">
     <div class="timeline-item fade-in">
@@ -665,7 +749,7 @@
         <p>Owned GTM strategy for a high-eight-figure ARR product line and led an 11-market RCS launch — 40 enterprise customers in 90 days, <strong>Google's first official RCS for Business partner</strong>, 50%+ YoY ARR growth.</p>
         <div class="timeline-beat">
           <div class="timeline-beat-label">The more durable proof point</div>
-          <p>Support cases were growing faster than revenue. 100 tickets per quarter, consuming 10% of engineering bandwidth. Most people saw a staffing problem. The real problem was that no one could see patterns beneath the volume — so every fix was reactive and the underlying causes stayed invisible. Built a lightweight tagging framework (under 30 seconds per ticket), ran root cause analysis, isolated the 20% of issues driving 80% of volume, and fixed those specifically. Baked into how the team hit goals. <span class="leverage-proof">Process continued after I left.</span></p>
+          <p>Support volume was growing faster than revenue, and the team treated it as a resourcing problem. The real issue was structural: no one could see patterns across tickets. I built a lightweight tagging system that made those patterns visible in under 30 seconds per ticket. Once we could see the distribution of issues clearly, we identified a small set of root causes driving most of the volume — and fixed those directly. <span class="leverage-proof">The system stayed in place after I left.</span></p>
         </div>
         <div class="timeline-metrics">
           <div class="metric"><span class="metric-num">11</span><span class="metric-label">Markets launched</span></div>
@@ -683,6 +767,7 @@
       </div>
       <div class="timeline-content">
         <h4>Product Manager &amp; Strategic Advisor to CPO · Conversational AI, Fortune 500</h4>
+        <p class="timeline-throughline">At ASAPP, I worked on high-velocity enterprise AI systems where I first saw how fragmented context across teams and tools led to inconsistent decision-making even in highly data-rich environments.</p>
         <p>The structural tension at ASAPP: enterprise customers needed deep customization; the product needed coherent architecture. I operated at that seam — making the product decisions that kept both sides intact. When a large F500 customer threatened churn over a critical configuration requirement, I worked with engineering to modularize the core product rather than build a one-off fix — virtualizing the state layer in a way that protected the account, closed the expansion, and created a reusable configuration pattern for future customers.</p>
         <div class="timeline-metrics">
           <div class="metric"><span class="metric-num">2M</span><span class="metric-label">Users in 30 days</span></div>
@@ -698,6 +783,7 @@
       </div>
       <div class="timeline-content">
         <h4>Revenue Operations &amp; Product · Fine art marketplace</h4>
+        <p class="timeline-throughline">At Artsy, working across product and operations, I saw the same issue in a more ambiguous environment: teams were making strong local decisions, but lacked a shared system for translating information into coordinated action.</p>
         <p>The revenue infrastructure had been patched for years — 15+ fragmented data sources, no single source of truth. Built three things that didn't exist:</p>
         <p><strong>Revenue intelligence dashboard</strong> — consolidated the data layer and cut board prep from days to hours.</p>
         <p><strong>Contract management system</strong> — automated approval logic that ended the Sales/Finance conflict and cut contract management time by 50%.</p>
@@ -715,21 +801,23 @@
   <div class="section-label">The Argument</div>
   <h2 class="section-heading fade-in">Why organizations accumulate execution debt despite having more information than ever</h2>
   <div class="thesis-block fade-in">
-    <p>Over the last two decades, companies built extraordinary infrastructure for capturing information — dashboards, CRMs, project tools, meeting transcripts, knowledge bases. The assumption was that access to data was the binding constraint. It wasn't.</p>
+    <p>The assumption was that access to information would solve alignment. Companies now have more data than ever, but decision quality hasn't improved at the same rate.</p>
     <div class="thesis-pull">"The real constraint is what happens after information appears: how it is interpreted, turned into decisions, assigned ownership, and kept aligned as reality changes. On that front, we built almost nothing."</div>
-    <p>Why? Because decision infrastructure is hard to sell. The value of a CRM is legible: here are your contacts, your pipeline, your history. The value of a system that maintains organizational decision state is diffuse, slow to show up in metrics, and politically uncomfortable. Genuine clarity exposes misalignment and accountability gaps that organizations have strong incentives to keep ambiguous. So the market built what was measurable and avoided what was necessary.</p>
-    <p>The failure mode is predictable. Goals multiply without hierarchy. Metrics proliferate but lose trust. Meetings generate discussion but not decisions anyone acts on. Ownership becomes implicit. Companies stop running on a shared picture of reality and start running on informal memory and repeated clarification — still functioning, but no longer synchronized.</p>
-    <p>AI makes this gap decisive. As the cost of generating outputs collapses, the bottleneck shifts from production to coherence. More analysis, more content, more code — producing entropy at higher velocity without a layer to hold it together.</p>
-    <p>Organizations have systems of record for data, communication, and tasks. For direction, state, and accountability — the three things that determine whether work actually happens — they have fragments. Static, decentralized, and out of sync the moment reality moves. That's what I'm building.</p>
+    <p>The real constraint is how information is interpreted, how decisions are made, how ownership is assigned, and how alignment is maintained as conditions change. Most companies have built systems to store information, but few have built systems to act on it consistently.</p>
+    <p>As a result, goals multiply without hierarchy, metrics proliferate but lose trust, and meetings fail to generate decisions people act on. Ownership becomes implicit, and companies stop running on a shared picture of reality. Instead, they start running on informal memory and repeated clarification.</p>
+    <p>AI increases the volume of output every team can generate. Without a shared context layer, that only increases fragmentation: more decisions, more artifacts, more systems, but no improvement in coherence. The bottleneck shifts from production to alignment, which is the layer I'm focused on building.</p>
   </div>
 </section>
 <section id="contact">
   <div class="contact-inner">
     <div>
       <div class="section-label">Get in Touch</div>
-      <h2 class="contact-heading fade-in">If this resonates,<br><em style="font-style:italic; color:var(--accent)">let's talk.</em></h2>
-      <p class="contact-sub fade-in">If you're building something where organizational clarity is the constraint, or if you need an operator who stays in until it's solved, I'd like to hear from you.</p>
-      <a href="mailto:thomasmeerschwam@gmail.com" class="btn btn-primary" style="display:inline-block">Send an email</a>
+      <h2 class="contact-heading fade-in">Get in touch.</h2>
+      <p class="contact-sub fade-in">I enjoy working on problems that sit at the intersection of organizational design, execution, and decision-making.</p>
+      <p class="contact-sub fade-in" style="margin-top:8px">If you're building through complexity, scaling cross-functional teams, or trying to create better organizational alignment, I'd love to connect.</p>
+      <p class="contact-fit fade-in">I work best in Chief of Staff, Strategy &amp; Operations, and Business Operations roles at growth-stage and AI-native companies.</p>
+      <p class="contact-fastest fade-in">The fastest way to reach me is by email.</p>
+      <a href="mailto:thomasmeerschwam@gmail.com" class="btn btn-primary" style="display:inline-block; margin-top:16px">Send an email</a>
     </div>
     <div class="fade-in">
       <div class="contact-links">
