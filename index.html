@@ -85,8 +85,10 @@
     .system-intro p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.8; }
     /* TOOLS */
     .tools-grid { display: flex; flex-direction: column; }
-    .tool-item { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; padding: 52px 0; border-top: 1px solid var(--rule); }
+    .tool-item { display: flex; flex-direction: column; gap: 32px; padding: 52px 0; border-top: 1px solid var(--rule); }
     .tool-item:last-child { border-bottom: none; }
+    .tool-item-cols { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; }
+    .tool-item-image { width: 100%; border: 1px solid var(--rule); border-radius: 4px; display: block; }
     .tool-number { font-family: 'Playfair Display', serif; font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 14px; }
     .tool-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.2; }
     .tool-tagline { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
@@ -177,7 +179,8 @@
       .hero-photo-col { order: -1; align-items: flex-start; }
       .hero-headshot { width: 120px; height: 150px; border-radius: 50%; }
       section { padding: 64px 24px; }
-      .tool-item { grid-template-columns: 1fr; }
+      .tool-item { gap: 20px; }
+      .tool-item-cols { grid-template-columns: 1fr; }
       .arch-diagram { display: none; }
       .timeline-item { grid-template-columns: 1fr; gap: 12px; }
       .contact-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -604,122 +607,120 @@
   </div>
   <div class="tools-grid">
     <div class="tool-item fade-in">
-      <div>
-        <div class="tool-number">01</div>
-        <div class="tool-name">WBR Generator</div>
-        <div class="tool-tagline">What happened?</div>
-        <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Most companies already have the data they need to understand performance but not the structure to interpret it consistently. This tool separates signal from interpretation so leadership decisions don't rely on narrative drift.</p>
-        <p class="tool-insight">"The bottleneck isn't data — it's interpretation. Dashboards can't solve a judgment problem."</p>
-        <div class="tool-links">
-          <a href="https://wbr-generator.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-          <a href="https://github.com/tommymeer/wbr-generator" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-        
-        <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p></div>
-      </div>
-      <div>
-        <div class="output-card-label" style="font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Sample Output · Decisions Required</div>
-        <img src="assets/wbr-output.png" alt="WBR Generator output — Decisions Required panel" style="width:100%;border:1px solid var(--rule);border-radius:4px;display:block;" />
-      </div>
-    </div>
-    <div class="tool-item fade-in">
-      <div>
-        <div class="tool-number">02</div>
-        <div class="tool-name">Meeting Intelligence</div>
-        <div class="tool-tagline">What was decided?</div>
-        <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Meetings produce decisions in theory, but in practice they produce discussion artifacts that decay immediately. This extracts durable decisions, ownership, and unresolved tension and tracks what keeps getting deferred across sessions.</p>
-        <p class="tool-insight">"Anyone can summarize a meeting. The judgment is in knowing what a decision actually looks like versus a discussion."</p>
-        <div class="tool-links">
-          <a href="https://meeting-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-          <a href="https://github.com/tommymeer/meeting-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+      <div class="tool-item-cols">
+        <div>
+          <div class="tool-number">01</div>
+          <div class="tool-name">WBR Generator</div>
+          <div class="tool-tagline">What happened?</div>
+          <div class="tool-status"><span class="status-dot live"></span> Live</div>
+          <p class="tool-desc">Most companies already have the data they need to understand performance but not the structure to interpret it consistently. This tool separates signal from interpretation so leadership decisions don't rely on narrative drift.</p>
+          <p class="tool-insight">"The bottleneck isn't data — it's interpretation. Dashboards can't solve a judgment problem."</p>
+          <div class="tool-links">
+            <a href="https://wbr-generator.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
+            <a href="https://github.com/tommymeer/wbr-generator" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+            <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="output-card-label" style="font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Sample Output · Blockers</div>
-        <img src="assets/meeting-output.png" alt="Meeting Intelligence output — Blockers panel" style="width:100%;border:1px solid var(--rule);border-radius:4px;display:block;" />
-      </div>
+      <img src="assets/wbr-output.png" alt="WBR Generator — Decisions Required output" class="tool-item-image" />
     </div>
     <div class="tool-item fade-in">
-      <div>
-        <div class="tool-number">03</div>
-        <div class="tool-name">Pipeline &amp; Forecast Synthesizer</div>
-        <div class="tool-tagline">What will happen?</div>
-        <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Forecasts fail less from math and more from hidden structural risk concentration, stall patterns, and dependency on individuals. This surfaces those patterns so leadership acts on the real constraint, not the reported number.</p>
-        <p class="tool-insight">"3.2x coverage is a signal. 'The forecast risk is concentration, not volume' is judgment. This tool produces the latter."</p>
-        <div class="tool-links">
-          <a href="https://pipeline-forecast-synthesizer.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-          <a href="https://github.com/tommymeer/pipeline-forecast-synthesizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+      <div class="tool-item-cols">
+        <div>
+          <div class="tool-number">02</div>
+          <div class="tool-name">Meeting Intelligence</div>
+          <div class="tool-tagline">What was decided?</div>
+          <div class="tool-status"><span class="status-dot live"></span> Live</div>
+          <p class="tool-desc">Meetings produce decisions in theory, but in practice they produce discussion artifacts that decay immediately. This extracts durable decisions, ownership, and unresolved tension and tracks what keeps getting deferred across sessions.</p>
+          <p class="tool-insight">"Anyone can summarize a meeting. The judgment is in knowing what a decision actually looks like versus a discussion."</p>
+          <div class="tool-links">
+            <a href="https://meeting-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
+            <a href="https://github.com/tommymeer/meeting-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="output-card-label" style="font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Sample Output · Executive Summary</div>
-        <img src="assets/pipeline-output.png" alt="Pipeline Synthesizer output — Executive Summary panel" style="width:100%;border:1px solid var(--rule);border-radius:4px;display:block;" />
+      <img src="assets/meeting-output.png" alt="Meeting Intelligence — Blockers output" class="tool-item-image" />
+    </div>
+    <div class="tool-item fade-in">
+      <div class="tool-item-cols">
+        <div>
+          <div class="tool-number">03</div>
+          <div class="tool-name">Pipeline &amp; Forecast Synthesizer</div>
+          <div class="tool-tagline">What will happen?</div>
+          <div class="tool-status"><span class="status-dot live"></span> Live</div>
+          <p class="tool-desc">Forecasts fail less from math and more from hidden structural risk concentration, stall patterns, and dependency on individuals. This surfaces those patterns so leadership acts on the real constraint, not the reported number.</p>
+          <p class="tool-insight">"3.2x coverage is a signal. 'The forecast risk is concentration, not volume' is judgment. This tool produces the latter."</p>
+          <div class="tool-links">
+            <a href="https://pipeline-forecast-synthesizer.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
+            <a href="https://github.com/tommymeer/pipeline-forecast-synthesizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
       </div>
+      <img src="assets/pipeline-output.png" alt="Pipeline Synthesizer — Executive Summary output" class="tool-item-image" />
     </div>
 
-    <!-- TOOL 04 — Initiative Intelligence — UPDATED -->
+    <!-- TOOL 04 — Initiative Intelligence -->
     <div class="tool-item fade-in">
-      <div>
-        <div class="tool-number">04</div>
-        <div class="tool-name">Initiative Intelligence</div>
-        <div class="tool-tagline">Are we doing what we said we'd do?</div>
-        <div class="tool-status"><span class="status-dot live"></span> Live</div>
-        <p class="tool-desc">Every organization above fifteen people has two artifacts that are never compared: a strategy document and a project management system. This tool compares them — uploading a CSV from Jira, Linear, Asana, or Notion against five strategy questions and producing a structured audit of where execution still reflects intent, and where it doesn't.</p>
-        <p class="tool-insight">"Organizations don't suffer from a shortage of initiatives. They suffer from an inability to distinguish motion from strategic progress."</p>
-        <div class="tool-links">
-          <a href="https://initiative-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-          <a href="https://github.com/tommymeer/initiative-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+      <div class="tool-item-cols">
+        <div>
+          <div class="tool-number">04</div>
+          <div class="tool-name">Initiative Intelligence</div>
+          <div class="tool-tagline">Are we doing what we said we'd do?</div>
+          <div class="tool-status"><span class="status-dot live"></span> Live</div>
+          <p class="tool-desc">Every organization above fifteen people has two artifacts that are never compared: a strategy document and a project management system. This tool compares them — uploading a CSV from Jira, Linear, Asana, or Notion against five strategy questions and producing a structured audit of where execution still reflects intent, and where it doesn't.</p>
+          <p class="tool-insight">"Organizations don't suffer from a shortage of initiatives. They suffer from an inability to distinguish motion from strategic progress."</p>
+          <div class="tool-links">
+            <a href="https://initiative-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
+            <a href="https://github.com/tommymeer/initiative-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="output-card-label" style="font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Sample Output · Drift Analysis</div>
-        <img src="assets/initiative-output.png" alt="Initiative Intelligence output — Drift Analysis panel" style="width:100%;border:1px solid var(--rule);border-radius:4px;display:block;" />
-      </div>
+      <img src="assets/initiative-output.png" alt="Initiative Intelligence — Drift Analysis output" class="tool-item-image" />
     </div>
     <!-- END TOOL 04 -->
 
     <div class="tool-item fade-in">
-      <div>
-        <div class="tool-number">05</div>
-        <div class="tool-name">Executive Attention Synthesizer</div>
-        <div class="tool-tagline">What matters now?</div>
-        <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-        <p class="tool-desc">Leadership doesn't lack information, it lacks prioritization across systems. This synthesizes signals across performance, decisions, pipeline, and execution into a single attention model that answers what requires action, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
-        <p class="tool-insight">"Every system tells a different story. The job isn't collecting more stories. It's finding the one they're all trying to tell."</p>
-        <div class="tool-links">
-          <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
-        </div>
-      </div>
-      <div class="output-card">
-        <div class="output-card-label">Output Shape · Executive Attention Report</div>
-        <div class="output-exec-question">
-          <div class="output-exec-q-label">What requires attention now?</div>
-          <p>Engineering capacity and pipeline close risk are converging on the same two-week window. Three signals point here: P1 incidents rising, two Negotiation-stage deals with no activity, and the Q3 feature roadmap still unresourced.</p>
-          <div class="output-exec-signals">
-            <span class="output-signal-tag">WBR</span>
-            <span class="output-signal-tag">Pipeline</span>
-            <span class="output-signal-tag">Meetings</span>
+      <div class="tool-item-cols">
+        <div>
+          <div class="tool-number">05</div>
+          <div class="tool-name">Executive Attention Synthesizer</div>
+          <div class="tool-tagline">What matters now?</div>
+          <div class="tool-status"><span class="status-dot building"></span> In Development</div>
+          <p class="tool-desc">Leadership doesn't lack information, it lacks prioritization across systems. This synthesizes signals across performance, decisions, pipeline, and execution into a single attention model that answers what requires action, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
+          <p class="tool-insight">"Every system tells a different story. The job isn't collecting more stories. It's finding the one they're all trying to tell."</p>
+          <div class="tool-links">
+            <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
           </div>
         </div>
-        <div class="output-exec-question">
-          <div class="output-exec-q-label">What is consuming attention unnecessarily?</div>
-          <p>SMB onboarding discussions — three staff meetings flagged this topic. Pipeline and initiative data show no SMB deals in-quarter and no SMB initiatives on the strategic roadmap.</p>
-          <div class="output-exec-signals">
-            <span class="output-signal-tag">Meetings</span>
-            <span class="output-signal-tag">Initiatives</span>
+        <div class="output-card">
+          <div class="output-card-label">Output Shape · Executive Attention Report</div>
+          <div class="output-exec-question">
+            <div class="output-exec-q-label">What requires attention now?</div>
+            <p>Engineering capacity and pipeline close risk are converging on the same two-week window. Three signals point here: P1 incidents rising, two Negotiation-stage deals with no activity, and the Q3 feature roadmap still unresourced.</p>
+            <div class="output-exec-signals">
+              <span class="output-signal-tag">WBR</span>
+              <span class="output-signal-tag">Pipeline</span>
+              <span class="output-signal-tag">Meetings</span>
+            </div>
           </div>
-        </div>
-        <div class="output-exec-question" style="border-bottom:none">
-          <div class="output-exec-q-label">What decision cannot be postponed?</div>
-          <p>Whether to assign executive coverage to the two Negotiation-stage deals before June 25. Every week of delay reduces close probability with no recovery path.</p>
-          <div class="output-exec-signals">
-            <span class="output-signal-tag">Pipeline</span>
-            <span class="output-signal-tag">WBR</span>
+          <div class="output-exec-question">
+            <div class="output-exec-q-label">What is consuming attention unnecessarily?</div>
+            <p>SMB onboarding discussions — three staff meetings flagged this topic. Pipeline and initiative data show no SMB deals in-quarter and no SMB initiatives on the strategic roadmap.</p>
+            <div class="output-exec-signals">
+              <span class="output-signal-tag">Meetings</span>
+              <span class="output-signal-tag">Initiatives</span>
+            </div>
           </div>
+          <div class="output-exec-question" style="border-bottom:none">
+            <div class="output-exec-q-label">What decision cannot be postponed?</div>
+            <p>Whether to assign executive coverage to the two Negotiation-stage deals before June 25. Every week of delay reduces close probability with no recovery path.</p>
+            <div class="output-exec-signals">
+              <span class="output-signal-tag">Pipeline</span>
+              <span class="output-signal-tag">WBR</span>
+            </div>
+          </div>
+          <div class="output-card-footer">In development · requires all four signal inputs</div>
         </div>
-        <div class="output-card-footer">In development · requires all four signal inputs</div>
       </div>
     </div>
   </div>
