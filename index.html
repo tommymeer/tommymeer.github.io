@@ -45,7 +45,7 @@
     .hero { display: grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: center; padding: 120px 60px 72px; max-width: 1100px; margin: 0 auto; }
     .hero-inner { max-width: 620px; }
     .hero-photo-col { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-    .hero-headshot { width: 320px; height: 400px; object-fit: cover; object-position: center 15%; border-radius: 4px; border: 1px solid var(--rule); display: block; }
+    .hero-headshot { width: 320px; height: 400px; object-fit: cover; object-position: center 25%; border-radius: 4px; border: 1px solid var(--rule); display: block; }
     .hero-thesis { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.2vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 10px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
     .hero-thesis-line2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.2vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
     .hero-thesis-line2 em { font-style: italic; color: var(--accent); }
@@ -558,10 +558,10 @@
 </nav>
 <div class="hero">
   <div class="hero-inner">
-    <p class="hero-aspirational">The best organizations run on a shared, continuously updated picture of reality: what's been decided, what's actually true, and who owns what. When that breaks, execution drifts. Decisions get re-litigated, priorities multiply, and teams stop operating from the same understanding of what matters.</p>
-    <p class="hero-aspirational" style="margin-top:16px">Most companies don't fail from a lack of information or talent. They fail because shared context decays. Dashboards, Slack threads, wikis, and meetings accumulate, but there's no reliable system that keeps decisions, signals, and ownership connected as the organization changes.</p>
-    <p class="hero-operator" style="margin-top:24px"><strong style="color: var(--accent); font-weight: 500;">I build systems for growth-stage and AI-native companies (Series B–E) that turn fragmented operational signals into a coherent, durable layer for decision-making and execution.</strong></p>
-    <p class="hero-operator-line2">In practice, this shows up in Chief of Staff, Strategy &amp; Operations, and Business Operations roles inside companies building or adopting AI systems.</p>
+    <p class="hero-aspirational">The best organizations operate from a shared, continuously updated picture of reality: what's been decided, what's true, and who owns what. When that breaks, execution drifts — decisions get re-litigated, priorities multiply, and teams lose alignment on what matters.</p>
+    <p class="hero-aspirational" style="margin-top:16px">Many companies degrade in execution quality because shared context decays over time. As dashboards, Slack threads, wikis, and meetings accumulate, there is no reliable system that keeps decisions, signals, and ownership connected as the organization evolves.</p>
+    <p class="hero-aspirational" style="margin-top:16px; color: var(--accent); font-weight: 400;">I design and build systems that turn fragmented operational data and context into structured understanding — surfacing the signals, decisions, forecasts, and tradeoffs required for execution at scale.</p>
+    <p class="hero-operator-line2" style="margin-top:16px">In practice, this shows up in Chief of Staff, Strategy &amp; Operations, and Business Operations roles inside growth-stage and AI-native companies (Series B–E).</p>
     <div class="hero-pull">"Organizations don't lack information. They lack judgment infrastructure."</div>
     <div class="hero-identity">
       <div>
@@ -648,8 +648,7 @@
         <div class="tool-links">
           <a href="https://meeting-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/meeting-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-        
-        <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p></div>
+        </div>
       </div>
       <div class="output-card">
         <div class="output-card-label">Sample Output · Q3 Planning Sync</div>
@@ -699,8 +698,7 @@
         <div class="tool-links">
           <a href="https://pipeline-forecast-synthesizer.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/pipeline-forecast-synthesizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-        
-        <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p></div>
+        </div>
       </div>
       <div class="output-card">
         <div class="output-card-label">Sample Output · Q2 Forecast</div>
@@ -741,8 +739,7 @@
         <div class="tool-links">
           <a href="https://initiative-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
           <a href="https://github.com/tommymeer/initiative-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-
-        <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p></div>
+        </div>
       </div>
       <div>
         <!-- Real output card from actual app run -->
@@ -921,11 +918,15 @@
   <div class="section-label">The Argument</div>
   <h2 class="section-heading fade-in">Why organizations accumulate execution debt despite having more information than ever</h2>
   <div class="thesis-block fade-in">
-    <p>The assumption was that access to information would solve alignment. Companies now have more data than ever, but decision quality hasn't improved at the same rate.</p>
-    <div class="thesis-pull">"The real constraint is what happens after information appears: how it is interpreted, turned into decisions, assigned ownership, and kept aligned as reality changes. On that front, we built almost nothing."</div>
-    <p>The real constraint is how information is interpreted, how decisions are made, how ownership is assigned, and how alignment is maintained as conditions change. Most companies have built systems to store information, but few have built systems to act on it consistently.</p>
-    <p>As a result, goals multiply without hierarchy, metrics proliferate but lose trust, and meetings fail to generate decisions people act on. Ownership becomes implicit, and companies stop running on a shared picture of reality. Instead, they start running on informal memory and repeated clarification.</p>
-    <p>AI increases the volume of output every team can generate. Without a shared context layer, that only increases fragmentation: more decisions, more artifacts, more systems, but no improvement in coherence. The bottleneck shifts from production to alignment, which is the layer I'm focused on building.</p>
+    <p>Over the last two decades, the tech industry treated organizational alignment as a data problem: if everything could be captured (tasks, metrics, customer data, meetings) then execution would follow. So we built systems of record for nearly everything.</p>
+    <p>Despite this, increasing levels of information did not produce proportional gains in decision quality or execution coherence. This is because the constraint was how the information is interpreted, how decisions are formed, how ownership is assigned, and how alignment is maintained as conditions change.</p>
+    <p>Organizations are therefore not limited by information, but by the absence of a reliable system that converts distributed signals into coordinated action. As complexity increases, direction fragments, decisions get re-litigated, ownership becomes implicit, and teams lose a shared, continuously updated picture of reality.</p>
+    <p>This accumulation of unresolved decisions and disconnected signals is execution debt. It forces organizations to operate on informal memory rather than durable systems of state.</p>
+    <p>And now, with the advent of advanced AI systems, this failure mode is bound to intensify.</p>
+    <p>By reducing the cost of generating analysis, text, and code, AI increases organizational output without improving coherence. More artifacts are produced, but they are harder to reconcile. The bottleneck shifts from production to synthesis: the ability to integrate fragmented signals into a single, actionable understanding of reality.</p>
+    <p>When information becomes effectively infinite, coherence becomes the scarce resource.</p>
+    <p>Across my career in RevOps and Product at Artsy, ASAPP, and Braze, the pattern has been remarkably consistent: strong teams with strong data repeatedly lost alignment as complexity scaled. Internal systems failed to continuously connect signals, decisions, ownership, and intent into a coherent operational model.</p>
+    <p>My work focuses on building a connected decisioning layer that turns fragmented organizational signals into structured reality — infrastructure for organizational coherence embedded directly into the systems companies already use, so alignment is continuously maintained rather than periodically reconstructed.</p>
   </div>
 </section>
 <section id="contact">
