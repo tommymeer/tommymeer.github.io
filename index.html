@@ -585,7 +585,7 @@
   </div>
 </div>
 <section id="system" style="border-top: 1px solid var(--rule);">
-  <div class="section-label">Active Building</div>
+  <div class="section-label">The Work</div>
   <h2 class="section-heading fade-in">The Ground Truth Decisioning System</h2>
   <p class="system-subtitle fade-in">A pattern I've seen across companies: teams don't lack tools. They lack a connected layer that turns fragmented signals into shared operational context.</p>
   <div class="tool-progression fade-in">
@@ -597,13 +597,13 @@
     <div class="progression-arrow">→</div>
     <div class="progression-step"><div class="progression-num">04</div><div class="progression-box live"><div class="progression-question">Execution · What is being worked on? <span class="progression-sub">(roadmaps + tasks)</span></div><div class="progression-name">Initiative Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
     <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">05</div><div class="progression-box queued"><div class="progression-question">Attention · What matters now? <span class="progression-sub">(cross-system synthesis)</span></div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot building"></span><span class="progression-status-label">In dev</span></div></div></div>
+    <div class="progression-step"><div class="progression-num">05</div><div class="progression-box live"><div class="progression-question">Attention · What matters now? <span class="progression-sub">(cross-system synthesis)</span></div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
   </div>
   <div class="system-intro fade-in">
-    <div class="system-intro-heading">Selected work — proof of how I think.</div>
-    <p>These tools are prototypes that demonstrate how I approach organizational problems: identify where decision-making breaks down, trace it to missing or fragmented context, and build the mechanism that reconnects it.</p>
+    <div class="system-intro-heading">Five tools. One argument.</div>
+    <p>Each tool addresses a different gap in how organizations process operational signal into executive judgment. Together they constitute a complete decisioning layer — from what happened, to what was decided, to what will happen, to whether execution still reflects intent, to what all of those are collectively trying to say.</p>
     <p style="margin-top:12px"><strong>These are working prototypes of an internal operating layer, not standalone products.</strong></p>
-    <p style="margin-top:12px">In practice, these capabilities would be embedded directly into the systems teams already use: Salesforce, Linear, Notion, Slack, and meeting systems, surfacing insights inside existing workflows rather than as separate applications.</p>
+    <p style="margin-top:12px">In practice, these capabilities would be embedded directly into the systems teams already use — Salesforce, Linear, Notion, Slack, and meeting systems — surfacing insights inside existing workflows rather than as separate applications.</p>
   </div>
   <div class="tools-grid">
     <div class="tool-item fade-in">
@@ -685,43 +685,16 @@
           <div class="tool-number">05</div>
           <div class="tool-name">Executive Attention Synthesizer</div>
           <div class="tool-tagline">What matters now?</div>
-          <div class="tool-status"><span class="status-dot building"></span> In Development</div>
-          <p class="tool-desc">Leadership doesn't lack information, it lacks prioritization across systems. This synthesizes signals across performance, decisions, pipeline, and execution into a single attention model that answers what requires action, what is consuming attention unnecessarily, and what decision cannot be postponed.</p>
+          <div class="tool-status"><span class="status-dot live"></span> Live</div>
+          <p class="tool-desc">The first four tools create signal — performance, decisions, pipeline, execution. This one triangulates it to determine the most consequential drift. Upload outputs from any combination of the four tools and the Synthesizer identifies where multiple organizational domains are independently pointing at the same underlying problem — the pattern none of them can surface alone.</p>
           <p class="tool-insight">"Every system tells a different story. The job isn't collecting more stories. It's finding the one they're all trying to tell."</p>
           <div class="tool-links">
-            <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">Coming Soon</a>
+            <a href="https://executive-attention.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
+            <a href="https://github.com/tommymeer/executive-attention" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
-        </div>
-        <div class="output-card">
-          <div class="output-card-label">Output Shape · Executive Attention Report</div>
-          <div class="output-exec-question">
-            <div class="output-exec-q-label">What requires attention now?</div>
-            <p>Engineering capacity and pipeline close risk are converging on the same two-week window. Three signals point here: P1 incidents rising, two Negotiation-stage deals with no activity, and the Q3 feature roadmap still unresourced.</p>
-            <div class="output-exec-signals">
-              <span class="output-signal-tag">WBR</span>
-              <span class="output-signal-tag">Pipeline</span>
-              <span class="output-signal-tag">Meetings</span>
-            </div>
-          </div>
-          <div class="output-exec-question">
-            <div class="output-exec-q-label">What is consuming attention unnecessarily?</div>
-            <p>SMB onboarding discussions — three staff meetings flagged this topic. Pipeline and initiative data show no SMB deals in-quarter and no SMB initiatives on the strategic roadmap.</p>
-            <div class="output-exec-signals">
-              <span class="output-signal-tag">Meetings</span>
-              <span class="output-signal-tag">Initiatives</span>
-            </div>
-          </div>
-          <div class="output-exec-question" style="border-bottom:none">
-            <div class="output-exec-q-label">What decision cannot be postponed?</div>
-            <p>Whether to assign executive coverage to the two Negotiation-stage deals before June 25. Every week of delay reduces close probability with no recovery path.</p>
-            <div class="output-exec-signals">
-              <span class="output-signal-tag">Pipeline</span>
-              <span class="output-signal-tag">WBR</span>
-            </div>
-          </div>
-          <div class="output-card-footer">In development · requires all four signal inputs</div>
         </div>
       </div>
+      <img src="assets/executive-attention-output.png" alt="Executive Attention Synthesizer — What the Signals Suggest output" class="tool-item-image" />
     </div>
   </div>
 </section>
