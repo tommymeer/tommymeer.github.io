@@ -84,11 +84,12 @@
     .tool-item-cols { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; }
     .tool-item-image {
       width: 100%;
+      height: auto;
+      max-height: 420px;
       border: 1px solid var(--rule);
       border-radius: 4px;
       display: block;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
+      object-fit: contain;
       background: var(--paper-warm);
     }
     .tool-number { font-family: 'Playfair Display', serif; font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 14px; }
