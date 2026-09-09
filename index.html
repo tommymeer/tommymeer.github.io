@@ -1,20 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thomas Meerschwam</title>
-  <meta property="og:title" content="Thomas Meerschwam" />
-  <meta property="og:description" content="Organizations don't lack information. They lack judgment infrastructure." />
+
+  <title>Thomas Meerschwam | Enterprise AI Deployment</title>
+
+  <meta
+    name="description"
+    content="Thomas Meerschwam builds AI systems for real enterprise workflows, with a focus on workflow design, controls, evals, rollout, and business value."
+  />
+
+  <meta property="og:title" content="Thomas Meerschwam | Enterprise AI Deployment" />
+  <meta
+    property="og:description"
+    content="AI systems for real enterprise workflows. Clear model boundaries, safe actions, useful evals, and rollout plans."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thomasmeerschwam.com" />
+
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@TMeerschwam" />
-  <meta name="twitter:title" content="Thomas Meerschwam" />
-  <meta name="twitter:description" content="Organizations don't lack information. They lack judgment infrastructure." />
+  <meta name="twitter:title" content="Thomas Meerschwam | Enterprise AI Deployment" />
+  <meta
+    name="twitter:description"
+    content="AI systems for real enterprise workflows. Clear model boundaries, safe actions, useful evals, and rollout plans."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
     :root {
       --ink: #1a1a18;
@@ -22,797 +42,1202 @@
       --ink-faint: #8a8a84;
       --paper: #faf9f6;
       --paper-warm: #f2f0eb;
+      --white: #ffffff;
       --rule: #e0ddd6;
       --accent: #c8460a;
-      --accent-soft: rgba(200,70,10,0.08);
-      --green: #2d9e5a;
-      --green-soft: rgba(45,158,90,0.08);
-      --blue: #2b6cb0;
-      --blue-soft: rgba(43,108,176,0.08);
-      --purple: #6b46c1;
-      --purple-soft: rgba(107,70,193,0.08);
+      --accent-soft: rgba(200, 70, 10, 0.08);
+      --green: #2d7d4f;
+      --green-soft: rgba(45, 125, 79, 0.08);
+      --max-width: 1120px;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: rgba(250,249,246,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
-    .nav-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--ink); text-decoration: none; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--accent); }
-    .hero { display: grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: center; padding: 120px 60px 72px; max-width: 1100px; margin: 0 auto; }
-    .hero-inner { max-width: 620px; }
-    .hero-photo-col { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-    .hero-headshot { width: 320px; height: 400px; object-fit: cover; object-position: center 25%; border-radius: 4px; border: 1px solid var(--rule); display: block; background: var(--paper-warm); }
-    .hero-thesis { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.2vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 10px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
-    .hero-thesis-line2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.2vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
-    .hero-thesis-line2 em { font-style: italic; color: var(--accent); }
-    .hero-sub { font-size: 1rem; font-weight: 300; color: var(--ink-soft); line-height: 1.78; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards; }
-    .hero-identity { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease 0.65s forwards; }
-    .hero-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--ink); }
-    .hero-role { font-size: 0.82rem; color: var(--ink-faint); font-weight: 300; }
-    .hero-divider { width: 1px; height: 28px; background: var(--rule); flex-shrink: 0; }
-    .hero-links { display: flex; gap: 16px; flex-wrap: wrap; }
-    .hero-links a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
-    .hero-links a:hover { color: var(--accent); }
-    section { padding: 72px 60px; max-width: 1100px; margin: 0 auto; }
-    section + section { border-top: 1px solid var(--rule); }
-    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 48px; }
-    .section-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 400; line-height: 1.3; color: var(--ink); margin-bottom: 32px; max-width: 680px; }
-    .section-body { font-size: 1rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; max-width: 680px; }
-    .section-body p + p { margin-top: 20px; }
-    .tool-progression { display: flex; align-items: flex-start; margin-bottom: 56px; overflow-x: auto; padding-bottom: 4px; }
-    .progression-step { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 110px; }
-    .progression-num { font-family: 'Playfair Display', serif; font-size: 0.7rem; color: var(--ink-faint); margin-bottom: 6px; }
-    .progression-box { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 10px 12px; text-align: center; width: 100%; }
-    .progression-box.live { border-color: var(--green); background: var(--green-soft); }
-    .progression-box.queued { opacity: 0.5; }
-    .progression-question { font-size: 0.68rem; font-style: italic; color: var(--ink-faint); margin-bottom: 3px; }
-    .progression-name { font-size: 0.75rem; font-weight: 500; color: var(--ink); }
-    .progression-status { display: flex; align-items: center; gap: 4px; margin-top: 5px; justify-content: center; }
-    .progression-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--ink-faint); }
-    .progression-dot.live { background: var(--green); }
-    .progression-dot.building { background: var(--accent); animation: pulse 2s ease-in-out infinite; }
-    .progression-status-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
-    .progression-arrow { font-size: 0.7rem; color: var(--rule); padding: 0 4px; flex-shrink: 0; margin-top: 28px; }
-    .system-intro { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; padding: 36px 44px; margin-bottom: 48px; max-width: 760px; }
-    .system-intro-heading { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; color: var(--ink); margin-bottom: 12px; }
-    .system-intro p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.8; }
-    .tools-grid { display: flex; flex-direction: column; }
-    .tool-item { display: flex; flex-direction: column; gap: 32px; padding: 52px 0; border-top: 1px solid var(--rule); }
-    .tool-item:last-child { border-bottom: none; }
-    .tool-item-cols { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; }
-    .tool-item-image {
-      width: 100%;
-      height: auto;
-      max-height: 420px;
-      border: 1px solid var(--rule);
-      border-radius: 4px;
-      display: block;
-      object-fit: contain;
-      background: var(--paper-warm);
-    }
-    .tool-number { font-family: 'Playfair Display', serif; font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 14px; }
-    .tool-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.2; }
-    .tool-tagline { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
-    .tool-status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 18px; }
-    .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-faint); }
-    .status-dot.live { background: var(--green); }
-    .status-dot.building { background: var(--accent); animation: pulse 2s ease-in-out infinite; }
-    .tool-desc { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; margin-bottom: 20px; }
-    .tool-insight { font-size: 0.88rem; font-style: italic; color: var(--ink-soft); border-left: 2px solid var(--accent); padding-left: 16px; line-height: 1.65; margin-bottom: 24px; }
-    .tool-links { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn { display: inline-block; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 8px 16px; border-radius: 2px; transition: all 0.2s; }
-    .btn-primary { background: var(--ink); color: var(--paper); }
-    .btn-primary:hover { background: var(--accent); }
-    .btn-secondary { border: 1px solid var(--rule); color: var(--ink-soft); background: transparent; }
-    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-    .arch-diagram { border: 1px solid var(--rule); border-radius: 4px; background: var(--paper-warm); padding: 20px 16px; font-family: 'DM Sans', sans-serif; }
-    .arch-stack-label { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); text-align: center; margin-bottom: 14px; }
-    .arch-layer { background: white; border: 1px solid var(--rule); border-radius: 3px; margin-bottom: 6px; overflow: hidden; }
-    .arch-layer-header { display: flex; align-items: center; gap: 7px; padding: 5px 10px; border-bottom: 1px solid var(--rule); background: var(--paper-warm); }
-    .arch-layer-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-    .arch-layer-dot.deterministic { background: var(--blue); }
-    .arch-layer-dot.reasoning { background: var(--accent); }
-    .arch-layer-dot.persistence { background: var(--purple); }
-    .arch-layer-dot.integration { background: var(--green); }
-    .arch-layer-dot.frontend { background: var(--ink-faint); }
-    .arch-layer-title { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
-    .arch-layer-body { padding: 7px 10px; display: flex; flex-wrap: wrap; gap: 5px; }
-    .arch-chip { font-size: 0.61rem; font-weight: 400; padding: 2px 7px; border-radius: 2px; border: 1px solid var(--rule); background: white; color: var(--ink-soft); white-space: normal; }
-    .arch-chip.blue { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
-    .arch-chip.red { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
-    .arch-chip.purple { border-color: var(--purple); color: var(--purple); background: var(--purple-soft); }
-    .arch-chip.green { border-color: var(--green); color: var(--green); background: var(--green-soft); }
-    .arch-flow-arrow { text-align: center; font-size: 0.65rem; color: var(--ink-faint); margin: 2px 0; line-height: 1; }
-    .arch-stack-row { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
-    .arch-stack-chip { font-size: 0.58rem; color: var(--ink-faint); background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 2px; padding: 2px 6px; }
-    .arch-loop-wrap { border: 1px dashed rgba(200,70,10,0.25); border-radius: 3px; padding: 4px 6px; margin-top: 6px; }
-    .arch-loop-wrap-label { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); opacity: 0.6; text-align: center; margin-bottom: 4px; }
-    .timeline { margin-top: 56px; display: flex; flex-direction: column; }
-    .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 40px; padding: 40px 0; border-top: 1px solid var(--rule); }
-    .timeline-item:last-child { border-bottom: none; }
-    .timeline-meta { padding-top: 4px; }
-    .timeline-company { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
-    .timeline-period { font-size: 0.75rem; color: var(--ink-faint); letter-spacing: 0.04em; margin-bottom: 8px; }
-    .timeline-tag { display: inline-block; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 3px 8px; border-radius: 2px; }
-    .timeline-content h4 { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 14px; }
-    .timeline-content p { font-size: 0.93rem; font-weight: 300; color: var(--ink-soft); line-height: 1.78; margin-bottom: 14px; }
-    .timeline-beat { margin: 16px 0; padding: 16px 20px; background: var(--paper-warm); border-radius: 3px; border-left: 2px solid var(--rule); }
-    .timeline-beat-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
-    .timeline-beat p { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 0; line-height: 1.65; }
-    .leverage-proof { font-style: italic; color: var(--ink); }
-    .timeline-metrics { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 16px; }
-    .metric { display: flex; flex-direction: column; }
-    .metric-num { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); line-height: 1; }
-    .metric-label { font-size: 0.7rem; color: var(--ink-faint); letter-spacing: 0.04em; margin-top: 4px; }
-    .thesis-block { max-width: 720px; }
-    .thesis-block p { font-size: 1rem; font-weight: 300; color: var(--ink-soft); line-height: 1.85; margin-bottom: 20px; }
-    .thesis-block p:last-child { margin-bottom: 0; }
-    .thesis-pull { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--ink); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 24px; margin: 32px 0; }
-    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .contact-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--ink); margin-bottom: 16px; }
-    .contact-sub { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; margin-bottom: 28px; }
-    .contact-links { display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
-    .contact-link { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--rule); text-decoration: none; transition: all 0.15s; }
-    .contact-link:hover .contact-link-label { color: var(--accent); }
-    .contact-link:hover .contact-link-arrow { color: var(--accent); transform: translateX(4px); }
-    .contact-link-label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); transition: color 0.15s; }
-    .contact-link-value { font-size: 0.82rem; color: var(--ink-faint); }
-    .contact-link-arrow { font-size: 0.82rem; color: var(--ink-faint); transition: all 0.15s; }
-    footer { border-top: 1px solid var(--rule); padding: 24px 60px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    footer p { font-size: 0.72rem; color: var(--ink-faint); font-weight: 300; }
-    footer a { color: var(--ink-faint); text-decoration: none; }
-    footer a:hover { color: var(--accent); }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 40px; }
-      .hero-photo-col { order: -1; align-items: flex-start; }
-      .hero-headshot { width: 120px; height: 150px; border-radius: 50%; }
-      section { padding: 64px 24px; }
-      .tool-item { gap: 20px; }
-      .tool-item-cols { grid-template-columns: 1fr; }
-      .arch-diagram { display: none; }
-      .timeline-item { grid-template-columns: 1fr; gap: 12px; }
-      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
-      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
-      .progression-step { min-width: 90px; }
-    }
-    .hero-pull {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.1rem, 2vw, 1.35rem);
-      font-style: italic;
+
+    body {
+      background: var(--paper);
       color: var(--ink);
-      line-height: 1.4;
-      border-left: 3px solid var(--accent);
-      padding-left: 20px;
-      margin: 28px 0;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.5s forwards;
-      max-width: 520px;
-    }
-    .hero-pain { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.65; margin-bottom: 0; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; max-width: 520px; }
-    .hero-cite { color: var(--ink-soft); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 2px; transition: color 0.2s; }
-    .hero-cite:hover { color: var(--accent); }
-    .hero-operator { margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; }
-    .hero-aspirational { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.65; margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; max-width: 520px; }
-    .output-card {
-      border: 1px solid var(--rule);
-      border-radius: 4px;
-      background: white;
-      overflow: hidden;
       font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
-    .output-card-label {
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      background: var(--paper-warm);
-      border-bottom: 1px solid var(--rule);
-      padding: 8px 16px;
-    }
-    .output-card-meta {
-      font-size: 0.72rem;
-      color: var(--ink-faint);
-      padding: 10px 16px 0;
-    }
-    .output-card-tabs {
+
+    a { color: inherit; }
+    img { max-width: 100%; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
-      gap: 0;
-      padding: 10px 16px 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .output-tab {
-      font-size: 0.68rem;
-      font-weight: 400;
-      color: var(--ink-faint);
-      padding: 4px 12px 8px 0;
-      margin-right: 12px;
-      cursor: default;
-    }
-    .output-tab.active {
-      color: var(--accent);
-      border-bottom: 2px solid var(--accent);
-      font-weight: 500;
-    }
-    .output-decision-list {
-      padding: 12px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .output-decision {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-    .output-decision-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-      min-width: 18px;
-    }
-    .output-decision-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
-    .output-decision-dot.green { background: var(--green); }
-    .output-decision-dot.amber { background: #d97706; }
-    .output-decision p {
-      font-size: 0.78rem;
-      color: var(--ink-soft);
-      line-height: 1.55;
-      margin: 0;
-    }
-    .output-owner {
-      font-size: 0.68rem;
-      color: var(--ink-faint);
-      font-style: italic;
-      margin-top: 2px;
-      display: block;
-    }
-    .output-blocker {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      padding: 10px 16px;
-      background: rgba(200,70,10,0.04);
-      border-top: 1px solid var(--rule);
-    }
-    .output-blocker p {
-      font-size: 0.75rem;
-      color: var(--ink-soft);
-      line-height: 1.5;
-      margin: 0;
-    }
-    .output-blocker-badge {
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 2px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .output-blocker-badge.high {
-      background: rgba(200,70,10,0.1);
-      color: var(--accent);
-      border: 1px solid rgba(200,70,10,0.2);
-    }
-    .output-card-footer {
-      font-size: 0.65rem;
-      color: var(--ink-faint);
-      padding: 8px 16px;
-      border-top: 1px solid var(--rule);
-      background: var(--paper-warm);
-    }
-    .output-pipeline-metrics {
-      display: flex;
-      gap: 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 60px;
+      background: rgba(250, 249, 246, 0.94);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--rule);
     }
-    .output-pipeline-stat {
-      flex: 1;
-      padding: 14px 16px;
-      border-right: 1px solid var(--rule);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-    .output-pipeline-stat:last-child { border-right: none; }
-    .output-pipeline-num {
+
+    .nav-name {
       font-family: 'Playfair Display', serif;
       font-size: 1rem;
-      font-weight: 600;
-      color: var(--ink);
-      line-height: 1;
+      text-decoration: none;
     }
-    .output-pipeline-stat.danger .output-pipeline-num { color: var(--accent); }
-    .output-pipeline-label {
-      font-size: 0.62rem;
-      color: var(--ink-faint);
-      letter-spacing: 0.04em;
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
     }
-    .output-narrative {
-      font-size: 0.78rem;
+
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      text-decoration: none;
       color: var(--ink-soft);
-      line-height: 1.6;
-      padding: 12px 16px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 84px 60px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-label {
+      margin-bottom: 22px;
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      color: var(--ink-soft);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .btn-primary:hover { background: var(--accent); }
+
+    .btn-secondary {
+      border: 1px solid var(--rule);
+      color: var(--ink-soft);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 88px;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 110px 60px 88px;
+    }
+
+    .hero-kicker {
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 730px;
+      margin-bottom: 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    .hero h1 em {
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .hero-summary {
+      max-width: 650px;
+      margin-bottom: 18px;
+      color: var(--ink-soft);
+      font-size: 1.04rem;
+      line-height: 1.8;
+    }
+
+    .hero-ownership {
+      max-width: 640px;
+      margin-bottom: 18px;
+      padding-left: 16px;
+      border-left: 2px solid var(--accent);
+      color: var(--ink);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .hero-background {
+      max-width: 650px;
+      margin-bottom: 30px;
+      color: var(--ink-faint);
+      font-size: 0.83rem;
+      line-height: 1.65;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-photo {
+      width: 300px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 38%;
+      display: block;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: var(--paper-warm);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      max-width: 690px;
+      color: var(--ink-soft);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .about-copy p + p { margin-top: 20px; }
+
+    .about-facts { border-top: 1px solid var(--rule); }
+
+    .about-fact {
+      padding: 15px 0;
       border-bottom: 1px solid var(--rule);
     }
-    .output-risk-row {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      padding: 10px 16px;
+
+    .about-fact-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink-faint);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
-    .output-risk-row p {
-      font-size: 0.75rem;
+
+    .about-fact-value {
       color: var(--ink-soft);
-      line-height: 1.5;
-      margin: 0;
+      font-size: 0.87rem;
     }
-    .output-drift-bar-section { padding: 14px 16px 10px; border-bottom: 1px solid var(--rule); }
-    .output-drift-label { font-size: 0.68rem; color: var(--ink-soft); margin-bottom: 5px; }
-    .output-drift-bar-wrap { display: flex; align-items: center; gap: 8px; }
-    .output-drift-bar { height: 6px; border-radius: 3px; background: var(--green); }
-    .output-drift-bar.danger { background: var(--accent); }
-    .output-drift-pct { font-size: 0.68rem; font-weight: 500; color: var(--ink-soft); }
-    .output-exec-question { padding: 12px 16px; border-bottom: 1px solid var(--rule); }
-    .output-exec-q-label { font-size: 0.68rem; font-weight: 500; color: var(--ink); margin-bottom: 5px; letter-spacing: 0.02em; }
-    .output-exec-question p { font-size: 0.75rem; color: var(--ink-soft); line-height: 1.55; margin: 0 0 7px; }
-    .output-exec-signals { display: flex; gap: 5px; flex-wrap: wrap; }
-    .output-signal-tag { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; background: var(--paper-warm); border: 1px solid var(--rule); color: var(--ink-faint); }
-    .hero-recruiter {
+
+    .principles {
+      margin-top: 44px;
+      padding: 28px 30px;
+      border: 1px solid var(--rule);
       background: var(--paper-warm);
+      border-radius: 4px;
+    }
+
+    .principles-title {
+      margin-bottom: 16px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .principle {
+      padding: 0 18px;
+      color: var(--ink-soft);
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .principle:first-child { padding-left: 0; }
+
+    .principle + .principle {
+      border-left: 1px solid var(--rule);
+    }
+
+    .principle-num {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .project-category { margin-top: 68px; }
+    .project-category:first-of-type { margin-top: 52px; }
+
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: baseline;
+      padding-bottom: 16px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+    }
+
+    .category-note {
+      color: var(--ink-faint);
+      font-size: 0.78rem;
+    }
+
+    .featured-project {
+      padding: 40px;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      background: var(--white);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 2px;
+      background: var(--paper-warm);
+      color: var(--ink-faint);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .tag-accent {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .featured-project h3 {
+      margin-bottom: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 2.7vw, 2.15rem);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .project-lede {
+      max-width: 820px;
+      margin-bottom: 16px;
+      color: var(--ink-soft);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .simulation-note {
+      max-width: 850px;
+      margin-bottom: 28px;
+      padding: 14px 16px;
       border: 1px solid var(--rule);
       border-radius: 3px;
-      padding: 16px 20px;
-      margin: 24px 0;
-      max-width: 520px;
-    }
-    .hero-recruiter p {
-      font-size: 0.85rem;
-      font-weight: 300;
+      background: var(--paper-warm);
       color: var(--ink-soft);
+      font-size: 0.82rem;
       line-height: 1.6;
-      margin-bottom: 6px;
     }
-    .hero-recruiter p:last-child { margin-bottom: 0; }
-    .hero-recruiter-roles {
-      font-size: 0.72rem !important;
-      color: var(--ink-faint) !important;
-      letter-spacing: 0.04em;
-    }
-    .system-subtitle {
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--ink-soft);
-      margin-top: -24px;
-      margin-bottom: 40px;
-      max-width: 560px;
-    }
-    .tool-privacy {
-      font-size: 0.68rem;
-      color: var(--ink-faint);
-      margin-top: 8px;
-      line-height: 1.5;
-      font-style: italic;
-    }
-    .timeline-throughline {
-      font-size: 0.88rem;
-      font-style: italic;
-      color: var(--ink);
-      border-left: 2px solid var(--accent);
-      padding-left: 14px;
-      margin-bottom: 16px;
-      line-height: 1.65;
-    }
-    .hero-operator-line2 {
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--ink-soft);
-      line-height: 1.65;
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.15s forwards;
-      max-width: 520px;
-    }
-    .contact-role-signal {
-      font-size: 0.88rem;
-      font-weight: 300;
-      font-style: italic;
-      color: var(--ink-faint);
-      line-height: 1.65;
-      margin-top: 8px;
-    }
-    .hero-name-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; opacity: 0; animation: fadeUp 0.8s ease 0.05s forwards; }
-    .hero-subtitle { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.06em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 24px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; }
-    .hero-fit { font-size: 0.88rem; font-weight: 300; font-style: italic; color: var(--ink-soft); margin-top: 4px; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s ease 0.55s forwards; max-width: 520px; }
-    .contact-fit { font-size: 0.85rem; font-weight: 300; font-style: italic; color: var(--ink-soft); margin-top: 12px; line-height: 1.6; }
-    .contact-fastest { font-size: 0.82rem; color: var(--ink-faint); margin-top: 8px; }
-    .progression-sub { font-size: 0.58rem; color: var(--ink-faint); display: block; margin-top: 2px; font-style: normal; }
-    .output-confidence-row {
-      display: flex;
+
+    .simulation-note strong { color: var(--ink); }
+
+    .project-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 0;
+      margin: 32px 0;
+      border-top: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
     }
-    .output-confidence-cell {
-      flex: 1;
-      padding: 10px 14px;
-      border-right: 1px solid var(--rule);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
+
+    .project-summary-item {
+      padding: 22px 24px 22px 0;
     }
-    .output-confidence-cell:last-child { border-right: none; }
-    .output-confidence-label {
-      font-size: 0.58rem;
-      font-weight: 500;
+
+    .project-summary-item + .project-summary-item {
+      padding-left: 24px;
+      border-left: 1px solid var(--rule);
+    }
+
+    .project-summary-label {
+      margin-bottom: 7px;
+      color: var(--accent);
+      font-size: 0.65rem;
+      font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--ink-faint);
     }
-    .output-confidence-val {
-      display: flex;
-      align-items: center;
-      gap: 5px;
+
+    .project-summary-item p {
+      color: var(--ink-soft);
+      font-size: 0.86rem;
+      line-height: 1.65;
     }
-    .output-confidence-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      flex-shrink: 0;
+
+    .business-case {
+      margin: 28px 0;
+      padding: 20px 22px;
+      border-left: 3px solid var(--green);
+      background: var(--green-soft);
     }
-    .output-confidence-dot.high { background: var(--green); }
-    .output-confidence-dot.partial { background: #d97706; }
-    .output-confidence-text {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--ink);
+
+    .business-case-title {
+      margin-bottom: 6px;
+      color: var(--green);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
-    .output-alloc-row {
-      display: flex;
-      gap: 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .output-alloc-cell {
-      flex: 1;
-      padding: 10px 12px;
-      border-right: 1px solid var(--rule);
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .output-alloc-cell:last-child { border-right: none; }
-    .output-alloc-num {
+
+    .business-case-question {
+      margin-bottom: 8px;
       font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--ink);
-      line-height: 1;
     }
-    .output-alloc-cell.warn .output-alloc-num { color: var(--accent); }
-    .output-alloc-sublabel {
-      font-size: 0.58rem;
-      color: var(--ink-faint);
-      line-height: 1.3;
-      letter-spacing: 0.02em;
-    }
-    .output-drift-finding {
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--rule);
-      display: flex;
-      gap: 9px;
-      align-items: flex-start;
-    }
-    .output-drift-finding p {
-      font-size: 0.74rem;
+
+    .business-case p {
+      max-width: 850px;
       color: var(--ink-soft);
-      line-height: 1.5;
+      font-size: 0.84rem;
+      line-height: 1.65;
+    }
+
+    .business-case strong { color: var(--ink); }
+
+    .project-thesis {
+      max-width: 820px;
+      margin: 26px 0 12px;
+      padding-left: 18px;
+      border-left: 2px solid var(--accent);
+      color: var(--ink);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.08rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .project-thesis-explain {
+      max-width: 800px;
+      margin-bottom: 26px;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .project-signals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 26px;
+    }
+
+    .signal {
+      padding: 5px 9px;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      color: var(--ink-soft);
+      background: var(--paper);
+      font-size: 0.67rem;
+      font-weight: 500;
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 38px;
+    }
+
+    .screenshot-primary,
+    .screenshot-secondary figure {
       margin: 0;
     }
-    .output-drift-finding-evidence {
-      font-size: 0.65rem;
-      color: var(--ink-faint);
-      font-style: italic;
-      margin-top: 3px;
-      line-height: 1.4;
+
+    .screenshot-primary img,
+    .screenshot-secondary img {
+      width: 100%;
       display: block;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: var(--paper-warm);
+    }
+
+    .screenshot-primary figcaption,
+    .screenshot-secondary figcaption {
+      margin-top: 8px;
+      color: var(--ink-faint);
+      font-size: 0.7rem;
+      line-height: 1.55;
+    }
+
+    .screenshot-secondary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .screenshot-caption-title {
+      display: block;
+      color: var(--ink);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .other-projects-intro {
+      max-width: 760px;
+      margin-bottom: 22px;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .other-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .small-project {
+      display: flex;
+      flex-direction: column;
+      min-height: 230px;
+      padding: 25px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: var(--white);
+    }
+
+    .small-project-type {
+      margin-bottom: 9px;
+      color: var(--ink-faint);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .small-project h3 {
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .small-project p {
+      flex: 1;
+      margin-bottom: 20px;
+      color: var(--ink-soft);
+      font-size: 0.83rem;
+      line-height: 1.65;
+    }
+
+    .small-project-links {
+      display: flex;
+      gap: 14px;
+    }
+
+    .small-project-links a {
+      color: var(--ink-soft);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .small-project-links a:hover { color: var(--accent); }
+
+    .github-more {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+
+    .github-more a {
+      font-weight: 500;
+      text-decoration-color: var(--rule);
+      text-underline-offset: 3px;
+    }
+
+    .github-more a:hover { color: var(--accent); }
+
+    .next-project {
+      padding: 30px 32px;
+      border: 1px dashed var(--rule);
+      border-radius: 4px;
+      background: var(--paper-warm);
+    }
+
+    .next-project-status {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .next-project h3 {
+      margin-bottom: 9px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+
+    .next-project p {
+      max-width: 730px;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .next-project-test {
+      margin-top: 12px;
+      color: var(--ink);
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .contact-copy p {
+      max-width: 530px;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .contact-links {
+      border-top: 1px solid var(--rule);
+    }
+
+    .contact-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink-soft);
+      text-decoration: none;
+    }
+
+    .contact-link:hover { color: var(--accent); }
+
+    .contact-link-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .contact-link-value {
+      color: var(--ink-faint);
+      font-size: 0.8rem;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 26px 60px;
+      border-top: 1px solid var(--rule);
+      color: var(--ink-faint);
+      font-size: 0.7rem;
+    }
+
+    @media (max-width: 800px) {
+      nav { padding: 15px 24px; }
+      .nav-links { display: none; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding: 78px 24px 64px;
+      }
+
+      .hero-photo {
+        width: 130px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-position: center 35%;
+      }
+
+      .hero-photo-wrap { order: -1; }
+
+      section { padding: 64px 24px; }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .principles-grid { grid-template-columns: 1fr; }
+
+      .principle { padding: 14px 0; }
+
+      .principle + .principle {
+        border-left: none;
+        border-top: 1px solid var(--rule);
+      }
+
+      .project-summary-grid { grid-template-columns: 1fr; }
+
+      .project-summary-item { padding: 18px 0; }
+
+      .project-summary-item + .project-summary-item {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--rule);
+      }
+
+      .featured-project { padding: 26px 20px; }
+
+      .screenshot-secondary,
+      .other-projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-header { display: block; }
+
+      .category-note { margin-top: 5px; }
+
+      footer {
+        flex-direction: column;
+        gap: 4px;
+        padding: 22px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
+
 <nav>
   <a href="#" class="nav-name">Thomas Meerschwam</a>
   <ul class="nav-links">
-    <li><a href="#system">The System</a></li>
-    <li><a href="#story">Story</a></li>
-    <li><a href="#thesis">Thesis</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="assets/Thomas_Meerschwam_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-<div class="hero">
-  <div class="hero-inner">
-    <p class="hero-aspirational">Companies rarely fail because they lack information. They often fail because shared context breaks down. As organizations scale, decisions get buried in meetings, metrics live in disconnected dashboards, customer feedback disappears into Slack, and plans drift across docs. Teams end up spending more time reconstructing what's happening than acting on it.</p>
-    <p class="hero-aspirational" style="margin-top:16px; color: var(--accent); font-weight: 400;">After six years across Revenue Operations and Product, I've seen this from multiple angles. I build systems that pull these signals together—surfacing what changed, what matters, what was decided, and what needs attention next.</p>
-    <p class="hero-operator-line2" style="margin-top:16px">In practice, this shows up in Chief of Staff, Strategy &amp; Operations, and Business Operations roles inside growth-stage and AI-native companies (Series B–E).</p>
-    <div class="hero-pull">"Organizations don't lack information. They lack judgment infrastructure."</div>
-    <div class="hero-identity">
-      <div>
-        <div class="hero-name">Thomas Meerschwam</div>
-        <div class="hero-role">ex-Braze · ASAPP · Artsy · NYC</div>
-      </div>
-      <div class="hero-divider"></div>
-      <div class="hero-links">
-        <a href="mailto:thomasmeerschwam@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/thomasmeerschwam" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://x.com/TMeerschwam" target="_blank" rel="noopener">X</a>
-        <a href="https://github.com/tommymeer" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://thomasmeerschwam.substack.com" target="_blank" rel="noopener">Substack</a>
-      </div>
-    </div></div>
-  <div class="hero-photo-col">
-    <img src="assets/headshot.jpg" alt="Thomas Meerschwam" class="hero-headshot" loading="eager" decoding="async" />
-  </div>
-</div>
-<section id="system" style="border-top: 1px solid var(--rule);">
-  <div class="section-label">The Work</div>
-  <h2 class="section-heading fade-in">The Ground Truth Decisioning System</h2>
-  <p class="system-subtitle fade-in">A pattern I've seen across companies: teams don't lack tools. They lack a connected layer that turns fragmented signals into shared operational context.</p>
-  <div class="tool-progression fade-in">
-    <div class="progression-step"><div class="progression-num">01</div><div class="progression-box live"><div class="progression-question">Signal · What happened? <span class="progression-sub">(performance + metrics)</span></div><div class="progression-name">WBR Generator</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">02</div><div class="progression-box live"><div class="progression-question">Decision · What was agreed? <span class="progression-sub">(meetings + ownership)</span></div><div class="progression-name">Meeting Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">03</div><div class="progression-box live"><div class="progression-question">Forecast · What will happen? <span class="progression-sub">(pipeline + risk)</span></div><div class="progression-name">Pipeline Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">04</div><div class="progression-box live"><div class="progression-question">Execution · What is being worked on? <span class="progression-sub">(roadmaps + tasks)</span></div><div class="progression-name">Initiative Intelligence</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-    <div class="progression-arrow">→</div>
-    <div class="progression-step"><div class="progression-num">05</div><div class="progression-box live"><div class="progression-question">Attention · What matters now? <span class="progression-sub">(cross-system synthesis)</span></div><div class="progression-name">Executive Attention Synthesizer</div><div class="progression-status"><span class="progression-dot live"></span><span class="progression-status-label">Live</span></div></div></div>
-  </div>
-  <div class="system-intro fade-in">
-    <div class="system-intro-heading">Five tools. One argument.</div>
-    <p>Each tool addresses a different gap in how organizations process operational signal into executive judgment. Together they constitute a complete decisioning layer — from what happened, to what was decided, to what will happen, to whether execution still reflects intent, to what all of those are collectively trying to say.</p>
-    <p style="margin-top:12px"><strong>These are working prototypes of an internal operating layer, not standalone products.</strong></p>
-    <p style="margin-top:12px">In practice, these capabilities would be embedded directly into the systems teams already use — Salesforce, Linear, Notion, Slack, and meeting systems — surfacing insights inside existing workflows rather than as separate applications.</p>
-  </div>
-  <div class="tools-grid">
-    <div class="tool-item fade-in">
-      <div class="tool-item-cols">
-        <div>
-          <div class="tool-number">01</div>
-          <div class="tool-name">WBR Generator</div>
-          <div class="tool-tagline">What happened?</div>
-          <div class="tool-status"><span class="status-dot live"></span> Live</div>
-          <p class="tool-desc">Most companies already have the data they need to understand performance but not the structure to interpret it consistently. This tool separates signal from interpretation so leadership decisions don't rely on narrative drift.</p>
-          <p class="tool-insight">"The bottleneck isn't data — it's interpretation. Dashboards can't solve a judgment problem."</p>
-          <div class="tool-links">
-            <a href="https://wbr-generator.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-            <a href="https://github.com/tommymeer/wbr-generator" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-            <p class="tool-privacy">Built for demonstration and pilot use. Treat as a prototype before sharing sensitive company data.</p>
-          </div>
-        </div>
-      </div>
-      <img src="assets/wbr-output.png" alt="WBR Generator — Decisions Required output" class="tool-item-image" loading="eager" decoding="async" />
-    </div>
-    <div class="tool-item fade-in">
-      <div class="tool-item-cols">
-        <div>
-          <div class="tool-number">02</div>
-          <div class="tool-name">Meeting Intelligence</div>
-          <div class="tool-tagline">What was decided?</div>
-          <div class="tool-status"><span class="status-dot live"></span> Live</div>
-          <p class="tool-desc">Meetings produce decisions in theory, but in practice they produce discussion artifacts that decay immediately. This extracts durable decisions, ownership, and unresolved tension and tracks what keeps getting deferred across sessions.</p>
-          <p class="tool-insight">"Anyone can summarize a meeting. The judgment is in knowing what a decision actually looks like versus a discussion."</p>
-          <div class="tool-links">
-            <a href="https://meeting-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-            <a href="https://github.com/tommymeer/meeting-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <img src="assets/meeting-output.png" alt="Meeting Intelligence — Blockers output" class="tool-item-image" loading="eager" decoding="async" />
-    </div>
-    <div class="tool-item fade-in">
-      <div class="tool-item-cols">
-        <div>
-          <div class="tool-number">03</div>
-          <div class="tool-name">Pipeline &amp; Forecast Synthesizer</div>
-          <div class="tool-tagline">What will happen?</div>
-          <div class="tool-status"><span class="status-dot live"></span> Live</div>
-          <p class="tool-desc">Forecasts fail less from math and more from hidden structural risk concentration, stall patterns, and dependency on individuals. This surfaces those patterns so leadership acts on the real constraint, not the reported number.</p>
-          <p class="tool-insight">"3.2x coverage is a signal. 'The forecast risk is concentration, not volume' is judgment. This tool produces the latter."</p>
-          <div class="tool-links">
-            <a href="https://pipeline-forecast-synthesizer.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-            <a href="https://github.com/tommymeer/pipeline-forecast-synthesizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <img src="assets/pipeline-output.png" alt="Pipeline Synthesizer — Executive Summary output" class="tool-item-image" loading="eager" decoding="async" />
-    </div>
-    <div class="tool-item fade-in">
-      <div class="tool-item-cols">
-        <div>
-          <div class="tool-number">04</div>
-          <div class="tool-name">Initiative Intelligence</div>
-          <div class="tool-tagline">Are we doing what we said we'd do?</div>
-          <div class="tool-status"><span class="status-dot live"></span> Live</div>
-          <p class="tool-desc">Every organization above fifteen people has two artifacts that are never compared: a strategy document and a project management system. This tool compares them — uploading a CSV from Jira, Linear, Asana, or Notion against five strategy questions and producing a structured audit of where execution still reflects intent, and where it doesn't.</p>
-          <p class="tool-insight">"Organizations don't suffer from a shortage of initiatives. They suffer from an inability to distinguish motion from strategic progress."</p>
-          <div class="tool-links">
-            <a href="https://initiative-intelligence.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-            <a href="https://github.com/tommymeer/initiative-intelligence" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <img src="assets/initiative-output.png" alt="Initiative Intelligence — Drift Analysis output" class="tool-item-image" loading="eager" decoding="async" />
-    </div>
-    <div class="tool-item fade-in">
-      <div class="tool-item-cols">
-        <div>
-          <div class="tool-number">05</div>
-          <div class="tool-name">Executive Attention Synthesizer</div>
-          <div class="tool-tagline">What matters now?</div>
-          <div class="tool-status"><span class="status-dot live"></span> Live</div>
-          <p class="tool-desc">The first four tools create signal — performance, decisions, pipeline, execution. This one triangulates it to determine the most consequential drift. Upload outputs from any combination of the four tools and the Synthesizer identifies where multiple organizational domains are independently pointing at the same underlying problem — the pattern none of them can surface alone.</p>
-          <p class="tool-insight">"Every system tells a different story. The job isn't collecting more stories. It's finding the one they're all trying to tell."</p>
-          <div class="tool-links">
-            <a href="https://executive-attention.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener">Live App</a>
-            <a href="https://github.com/tommymeer/executive-attention" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <img src="assets/executive-attention-output.png" alt="Executive Attention Synthesizer — What the Signals Suggest output" class="tool-item-image" loading="eager" decoding="async" />
+
+<header class="hero">
+  <div>
+    <div class="hero-kicker">Enterprise AI Deployment · NYC</div>
+
+    <h1>
+      I build AI systems for
+      <em>real business workflows.</em>
+    </h1>
+
+    <p class="hero-summary">
+      A model call is only one part of the job. The system still needs the right
+      data, clear rules, safe tool access, useful tests, and a way to recover when
+      something fails.
+    </p>
+
+    <p class="hero-ownership">
+      I build those pieces too: the workflow, the model boundary, the control layer,
+      the evals, and the rollout plan.
+    </p>
+
+    <p class="hero-background">
+      I started in revenue operations and moved into product at Artsy, ASAPP,
+      and Braze. Now I am focused on enterprise AI deployment and the work it takes
+      to turn a business process into a system people can trust and use.
+    </p>
+
+    <div class="hero-links">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+      <a href="assets/Thomas_Meerschwam_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Resume</a>
+      <a href="mailto:thomasmeerschwam@gmail.com" class="btn btn-secondary">Contact</a>
     </div>
   </div>
-</section>
-<section id="story">
-  <div class="section-label">The Arc</div>
-  <h2 class="section-heading fade-in">Three companies.<br>One pattern underneath all of them.</h2>
-  <div class="section-body fade-in">
-    <p>Across Artsy, ASAPP, and Braze, the surface problems changed. The underlying pattern didn't.</p>
-    <p>Each company had strong people, strong tools, and strong data. And still struggled with alignment over time.</p>
-    <p>In every case, the constraint wasn't information or intelligence. It was that context lived in fragments. Different teams saw different versions of truth, and there was no system that continuously reconciled them.</p>
+
+  <div class="hero-photo-wrap">
+    <img
+      src="assets/headshot.jpg"
+      alt="Thomas Meerschwam"
+      class="hero-photo"
+      loading="eager"
+      decoding="async"
+    />
   </div>
-  <div class="timeline">
-    <div class="timeline-item fade-in">
-      <div class="timeline-meta">
-        <div class="timeline-company">Braze</div>
-        <div class="timeline-period">2024 – 2025</div>
-        <div class="timeline-tag">Scale through complexity</div>
+</header>
+
+<section id="about">
+  <div class="section-label">About Me</div>
+
+  <div class="about-grid">
+    <div class="about-copy">
+      <h2 class="section-heading">
+        Enterprise software has been the throughline.
+      </h2>
+
+      <p>
+        I started in sales and revenue operations at Artsy, then moved into product
+        at ASAPP and Braze.
+      </p>
+
+      <p>
+        The products were different. The work kept coming back to the same questions.
+        How does the process actually work? Where does it break? What has to change
+        for the software to make it better?
+      </p>
+
+      <p>
+        At ASAPP, that meant AI-powered customer support. At Braze, it meant messaging
+        infrastructure used by large enterprises. At Artsy, it meant rebuilding
+        revenue systems and workflows.
+      </p>
+
+      <p>
+        Now I want to build systems that can do useful parts of the workflow themselves.
+        The model has to fit inside a larger system. Rules, tool access, state, and
+        human handoffs all matter.
+      </p>
+    </div>
+
+    <div class="about-facts">
+      <div class="about-fact">
+        <span class="about-fact-label">Background</span>
+        <span class="about-fact-value">Product · Revenue Operations · Enterprise Software</span>
       </div>
-      <div class="timeline-content">
-        <h4>Product Manager, SMS &amp; RCS · $3.5B public company</h4>
-        <p>Owned GTM strategy for a high-eight-figure ARR product line and led an 11-market RCS launch — 40 enterprise customers in 90 days, <strong>Google's first official RCS for Business partner</strong>, 50%+ YoY ARR growth.</p>
-        <div class="timeline-beat">
-          <div class="timeline-beat-label">The more durable proof point</div>
-          <p>Support volume was growing faster than revenue, and the team treated it as a resourcing problem. The real issue was structural: no one could see patterns across tickets. I built a lightweight tagging system that made those patterns visible in under 30 seconds per ticket. Once we could see the distribution of issues clearly, we identified a small set of root causes driving most of the volume — and fixed those directly. <span class="leverage-proof">The system stayed in place after I left.</span></p>
-        </div>
-        <div class="timeline-metrics">
-          <div class="metric"><span class="metric-num">11</span><span class="metric-label">Markets launched</span></div>
-          <div class="metric"><span class="metric-num">40</span><span class="metric-label">Enterprise customers, 90 days</span></div>
-          <div class="metric"><span class="metric-num">6 wks</span><span class="metric-label">Text-only MVP vs. 4-month alternative</span></div>
-          <div class="metric"><span class="metric-num">50%+</span><span class="metric-label">YoY ARR growth</span></div>
-        </div>
+
+      <div class="about-fact">
+        <span class="about-fact-label">Companies</span>
+        <span class="about-fact-value">Braze · ASAPP · Artsy</span>
+      </div>
+
+      <div class="about-fact">
+        <span class="about-fact-label">Current Focus</span>
+        <span class="about-fact-value">Enterprise AI deployment &amp; agentic systems</span>
+      </div>
+
+      <div class="about-fact">
+        <span class="about-fact-label">Technical Work</span>
+        <span class="about-fact-value">Python · SQL · APIs · LLM orchestration · evals</span>
+      </div>
+
+      <div class="about-fact">
+        <span class="about-fact-label">Location</span>
+        <span class="about-fact-value">New York City</span>
       </div>
     </div>
-    <div class="timeline-item fade-in">
-      <div class="timeline-meta">
-        <div class="timeline-company">ASAPP</div>
-        <div class="timeline-period">2022 – 2023</div>
-        <div class="timeline-tag">Align competing worlds</div>
+  </div>
+
+  <div class="principles">
+    <div class="principles-title">How I build AI systems</div>
+
+    <div class="principles-grid">
+      <div class="principle">
+        <span class="principle-num">01</span>
+        Use the model where judgment is actually needed.
       </div>
-      <div class="timeline-content">
-        <h4>Product Manager &amp; Strategic Advisor to CPO · Conversational AI, Fortune 500</h4>
-        <p class="timeline-throughline">At ASAPP, I worked on high-velocity enterprise AI systems where I first saw how fragmented context across teams and tools led to inconsistent decision-making even in highly data-rich environments.</p>
-        <p>The structural tension at ASAPP: enterprise customers needed deep customization; the product needed coherent architecture. I operated at that seam — making the product decisions that kept both sides intact. When a large F500 customer threatened churn over a critical configuration requirement, I worked with engineering to modularize the core product rather than build a one-off fix — virtualizing the state layer in a way that protected the account, closed the expansion, and created a reusable configuration pattern for future customers.</p>
-        <div class="timeline-metrics">
-          <div class="metric"><span class="metric-num">2M</span><span class="metric-label">Users in 30 days</span></div>
-          <div class="metric"><span class="metric-num">F500</span><span class="metric-label">Enterprise accounts retained and expanded</span></div>
-        </div>
+
+      <div class="principle">
+        <span class="principle-num">02</span>
+        Keep policy, permissions, money, and state explicit.
       </div>
-    </div>
-    <div class="timeline-item fade-in">
-      <div class="timeline-meta">
-        <div class="timeline-company">Artsy</div>
-        <div class="timeline-period">2020 – 2022</div>
-        <div class="timeline-tag">Built the infrastructure from scratch</div>
+
+      <div class="principle">
+        <span class="principle-num">03</span>
+        Make every real-world action traceable.
       </div>
-      <div class="timeline-content">
-        <h4>Revenue Operations &amp; Product · Fine art marketplace</h4>
-        <p class="timeline-throughline">At Artsy, working across product and operations, I saw the same issue in a more ambiguous environment: teams were making strong local decisions, but lacked a shared system for translating information into coordinated action.</p>
-        <p>The revenue infrastructure had been patched for years — 15+ fragmented data sources, no single source of truth. Built three things that didn't exist:</p>
-        <p><strong>Revenue intelligence dashboard</strong> — consolidated the data layer and cut board prep from days to hours.</p>
-        <p><strong>Contract management system</strong> — automated approval logic that ended the Sales/Finance conflict and cut contract management time by 50%.</p>
-        <p><strong>Commissions analytics</strong> — a daily ETL pipeline from Redshift into Salesforce that let 65+ reps model "if I close these three deals, I earn $X" in real time. <span style="font-style:italic; color:var(--ink)">Reps changed behavior because they could finally see reality.</span></p>
-        <div class="timeline-metrics">
-          <div class="metric"><span class="metric-num">15+</span><span class="metric-label">Data sources consolidated</span></div>
-          <div class="metric"><span class="metric-num">50%</span><span class="metric-label">Reduction in contract mgmt time</span></div>
-          <div class="metric"><span class="metric-num">100+</span><span class="metric-label">Hours/quarter saved</span></div>
-        </div>
+
+      <div class="principle">
+        <span class="principle-num">04</span>
+        Test the whole path, including failure and recovery.
       </div>
     </div>
   </div>
 </section>
-<section id="thesis">
-  <div class="section-label">The Argument</div>
-  <h2 class="section-heading fade-in">Why organizations accumulate execution debt despite having more information than ever</h2>
-  <div class="thesis-block fade-in">
-    <p>Over the last two decades, the tech industry treated organizational alignment as a data problem: if everything could be captured (tasks, metrics, customer data, meetings) then execution would follow. So we built systems of record for nearly everything.</p>
-    <p>Despite this, increasing levels of information did not produce proportional gains in decision quality or execution coherence. This is because the constraint was how the information is interpreted, how decisions are formed, how ownership is assigned, and how alignment is maintained as conditions change.</p>
-    <p>Organizations are therefore not limited by information, but by the absence of a reliable system that converts distributed signals into coordinated action. As complexity increases, direction fragments, decisions get re-litigated, ownership becomes implicit, and teams lose a shared, continuously updated picture of reality.</p>
-    <p>This accumulation of unresolved decisions and disconnected signals is execution debt. It forces organizations to operate on informal memory rather than durable systems of state.</p>
-    <p>And now, with the advent of advanced AI systems, this failure mode is bound to intensify.</p>
-    <p>By reducing the cost of generating analysis, text, and code, AI increases organizational output without improving coherence. More artifacts are produced, but they are harder to reconcile. The bottleneck shifts from production to synthesis: the ability to integrate fragmented signals into a single, actionable understanding of reality.</p>
-    <p>When information becomes effectively infinite, coherence becomes the scarce resource.</p>
-    <p>Across my career in RevOps and Product at Artsy, ASAPP, and Braze, the pattern has been remarkably consistent: strong teams with strong data repeatedly lost alignment as complexity scaled. Internal systems failed to continuously connect signals, decisions, ownership, and intent into a coherent operational model.</p>
-    <p>My work focuses on building a connected decisioning layer that turns fragmented organizational signals into structured reality — infrastructure for organizational coherence embedded directly into the systems companies already use, so alignment is continuously maintained rather than periodically reconstructed.</p>
+
+<section id="projects">
+  <div class="section-label">Selected Work</div>
+
+  <h2 class="section-heading">
+    The hard part is the system around the model.
+  </h2>
+
+  <p class="section-intro">
+    The projects below focus on that system. They cover workflow design, controls,
+    evals, and rollout.
+  </p>
+
+  <div class="project-category">
+    <div class="category-header">
+      <h3 class="category-title">Enterprise AI Deployment Lab</h3>
+      <div class="category-note">System design, controls, evals, rollout</div>
+    </div>
+
+    <article class="featured-project">
+      <div class="project-meta">
+        <span class="tag tag-accent">Flagship</span>
+        <span class="tag">Synthetic Deployment Case</span>
+        <span class="tag">Ecommerce Support</span>
+      </div>
+
+      <h3>Support Agent | Delivered-Not-Received Workflow</h3>
+
+      <p class="project-lede">
+        I built this so the LLM has one job: turn a messy customer message into
+        structured case data. The rest of the workflow is explicit.
+      </p>
+
+      <p class="project-lede">
+        When a customer says a package was marked delivered but never arrived,
+        the system retrieves the evidence, applies policy, checks authority, and
+        either issues an idempotent refund or routes the case to a human.
+      </p>
+
+      <div class="simulation-note">
+        <strong>This is a synthetic deployment case.</strong>
+        The retailer, data, policies, integrations, and economics are simulated.
+        The application is real and runnable. I used the case to build and test
+        controls, failure handling, evals, and rollout logic.
+      </div>
+
+      <div class="project-summary-grid">
+        <div class="project-summary-item">
+          <div class="project-summary-label">Problem</div>
+          <p>
+            A missing-package claim can end in a refund. The system needs to make
+            a good decision without giving the model uncontrolled access to money
+            or customer state.
+          </p>
+        </div>
+
+        <div class="project-summary-item">
+          <div class="project-summary-label">What I Built</div>
+          <p>
+            Customer message → structured case → evidence lookup → policy checks
+            → authorization → refund or human review.
+          </p>
+        </div>
+
+        <div class="project-summary-item">
+          <div class="project-summary-label">What I Tested</div>
+          <p>
+            Workflow behavior, authorization, duplicate actions, failure recovery,
+            model extraction, tracing, and a staged rollout plan.
+          </p>
+        </div>
+      </div>
+
+      <div class="business-case">
+        <div class="business-case-title">Modeled Business Case</div>
+        <div class="business-case-question">What would make this worth deploying?</div>
+        <p>
+          In the synthetic base case, the workflow covers 70% of eligible cases.
+          It frees roughly <strong>1,200 hours of support and review work each month</strong>
+          and produces about <strong>$46K in monthly net value</strong> in the model.
+          These are modeled results. I would validate the assumptions with a real
+          customer before expanding the deployment.
+        </p>
+      </div>
+
+      <div class="project-thesis">
+        The model interprets the evidence. The system owns the process.
+      </div>
+
+      <p class="project-thesis-explain">
+        The LLM can classify the case. Policy and authority live elsewhere.
+        Money moves only after the workflow passes those checks.
+      </p>
+
+      <div class="project-signals">
+        <span class="signal">LLM extraction</span>
+        <span class="signal">Policy rules</span>
+        <span class="signal">State</span>
+        <span class="signal">Tool permissions</span>
+        <span class="signal">Authorization</span>
+        <span class="signal">Idempotency</span>
+        <span class="signal">Human review</span>
+        <span class="signal">Tracing</span>
+        <span class="signal">Evals</span>
+        <span class="signal">Rollout plan</span>
+        <span class="signal">Economics</span>
+      </div>
+
+      <div class="project-actions">
+        <a
+          href="https://github.com/tommymeer/enterprise-ai-deployment-lab/tree/main/projects/support-agent"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Project README
+        </a>
+
+        <a
+          href="https://github.com/tommymeer/enterprise-ai-deployment-lab"
+          class="btn btn-secondary"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub Repository
+        </a>
+      </div>
+
+      <figure class="screenshot-primary">
+        <img
+          src="assets/support-agent/demo-overview.png"
+          alt="Support agent end-to-end workflow overview"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>
+          One run from evidence lookup through authorization and execution.
+        </figcaption>
+      </figure>
+
+      <div class="screenshot-secondary">
+        <figure>
+          <img
+            src="assets/support-agent/authorization-trace.png"
+            alt="Support agent authorization trace"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            <span class="screenshot-caption-title">A correct decision still may not be allowed.</span>
+            The system can conclude that a refund is appropriate and still refuse
+            to issue it if the amount is outside its authority.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="assets/support-agent/evaluation-inspector.png"
+            alt="Support agent evaluation inspector"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            <span class="screenshot-caption-title">I test how the system got to the answer.</span>
+            A run fails if actions happen in the wrong order, authority is exceeded,
+            a duplicate write occurs, or recovery breaks.
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+
+  <div class="project-category">
+    <div class="category-header">
+      <h3 class="category-title">Live AI Projects</h3>
+      <div class="category-note">Public tools you can open and use</div>
+    </div>
+
+    <p class="other-projects-intro">
+      These are smaller tools I built before the deployment lab. Each starts with
+      a recurring operating problem and turns it into a working product. They are
+      live and publicly usable.
+    </p>
+
+    <div class="other-projects-grid">
+      <article class="small-project">
+        <div class="small-project-type">Live AI Tool</div>
+        <h3>WBR Generator</h3>
+        <p>
+          Turns operating metrics into a weekly review of what changed, what matters,
+          and what decisions need to be made.
+        </p>
+        <div class="small-project-links">
+          <a href="https://wbr-generator.streamlit.app/" target="_blank" rel="noopener">Live App</a>
+          <a href="https://github.com/tommymeer/wbr-generator" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="small-project">
+        <div class="small-project-type">Live AI Tool</div>
+        <h3>Meeting Intelligence</h3>
+        <p>
+          Pulls decisions, owners, blockers, and unresolved questions out of
+          meeting transcripts.
+        </p>
+        <div class="small-project-links">
+          <a href="https://meeting-intelligence.streamlit.app/" target="_blank" rel="noopener">Live App</a>
+          <a href="https://github.com/tommymeer/meeting-intelligence" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="small-project">
+        <div class="small-project-type">Live AI Tool</div>
+        <h3>Initiative Intelligence</h3>
+        <p>
+          Compares what a company says matters with what teams are actually
+          working on.
+        </p>
+        <div class="small-project-links">
+          <a href="https://initiative-intelligence.streamlit.app/" target="_blank" rel="noopener">Live App</a>
+          <a href="https://github.com/tommymeer/initiative-intelligence" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="github-more">
+      More projects and source code on
+      <a href="https://github.com/tommymeer" target="_blank" rel="noopener">GitHub →</a>
+    </p>
+  </div>
+
+  <div class="project-category">
+    <div class="category-header">
+      <h3 class="category-title">Personal Agents</h3>
+      <div class="category-note">Real workflows · repeated use</div>
+    </div>
+
+    <div class="next-project">
+      <div class="next-project-status">Building now</div>
+
+      <h3>Agents for workflows I actually run.</h3>
+
+      <p>
+        Next, I am building agents around recurring workflows in my own life and work.
+        They will use real integrations and changing state. I want to see whether
+        they stay useful after the first demo.
+      </p>
+
+      <div class="next-project-test">
+        The test is simple: do I keep using it?
+      </div>
+    </div>
   </div>
 </section>
+
 <section id="contact">
-  <div class="contact-inner">
-    <div>
-      <div class="section-label">Get in Touch</div>
-      <h2 class="contact-heading fade-in">Get in touch.</h2>
-      <p class="contact-sub fade-in">I enjoy working on problems that sit at the intersection of organizational design, execution, and decision-making.</p>
-      <p class="contact-sub fade-in" style="margin-top:8px">If you're building through complexity, scaling cross-functional teams, or trying to create better organizational alignment, I'd love to connect.</p>
-      <p class="contact-fastest fade-in">The fastest way to reach me is by email.</p>
-      <a href="mailto:thomasmeerschwam@gmail.com" class="btn btn-primary" style="display:inline-block; margin-top:16px">Send an email</a>
+  <div class="contact-grid">
+    <div class="contact-copy">
+      <div class="section-label">Contact</div>
+
+      <h2 class="section-heading">
+        Let's talk.
+      </h2>
+
+      <p>
+        I am looking for teams building AI into real enterprise workflows.
+        I want work where I can spend time with customers, design the system,
+        help implement it, and own the outcome.
+      </p>
     </div>
-    <div class="fade-in">
-      <div class="contact-links">
-        <a href="mailto:thomasmeerschwam@gmail.com" class="contact-link">
-          <span class="contact-link-label">Email</span>
-          <span class="contact-link-value">thomasmeerschwam@gmail.com</span>
-          <span class="contact-link-arrow">→</span>
-        </a>
-        <a href="https://linkedin.com/in/thomasmeerschwam" class="contact-link" target="_blank" rel="noopener">
-          <span class="contact-link-label">LinkedIn</span>
-          <span class="contact-link-value">/in/thomasmeerschwam</span>
-          <span class="contact-link-arrow">→</span>
-        </a>
-        <a href="https://x.com/TMeerschwam" class="contact-link" target="_blank" rel="noopener">
-          <span class="contact-link-label">X</span>
-          <span class="contact-link-value">@TMeerschwam</span>
-          <span class="contact-link-arrow">→</span>
-        </a>
-        <a href="https://github.com/tommymeer" class="contact-link" target="_blank" rel="noopener">
-          <span class="contact-link-label">GitHub</span>
-          <span class="contact-link-value">github.com/tommymeer</span>
-          <span class="contact-link-arrow">→</span>
-        </a>
-        <a href="https://thomasmeerschwam.substack.com" class="contact-link" target="_blank" rel="noopener">
-          <span class="contact-link-label">Substack</span>
-          <span class="contact-link-value">thomasmeerschwam.substack.com</span>
-          <span class="contact-link-arrow">→</span>
-        </a>
-      </div>
+
+    <div class="contact-links">
+      <a href="mailto:thomasmeerschwam@gmail.com" class="contact-link">
+        <span class="contact-link-name">Email</span>
+        <span class="contact-link-value">thomasmeerschwam@gmail.com →</span>
+      </a>
+
+      <a href="https://linkedin.com/in/thomasmeerschwam" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-link-name">LinkedIn</span>
+        <span class="contact-link-value">/in/thomasmeerschwam →</span>
+      </a>
+
+      <a href="https://x.com/TMeerschwam" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-link-name">X</span>
+        <span class="contact-link-value">@TMeerschwam →</span>
+      </a>
+
+      <a href="https://github.com/tommymeer" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-link-name">GitHub</span>
+        <span class="contact-link-value">tommymeer →</span>
+      </a>
+
+      <a href="https://thomasmeerschwam.substack.com" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-link-name">Substack</span>
+        <span class="contact-link-value">thomasmeerschwam.substack.com →</span>
+      </a>
     </div>
   </div>
 </section>
+
 <footer>
-  <p>Thomas Meerschwam · NYC</p>
-  <p><a href="assets/Thomas_Meerschwam_Resume.pdf" target="_blank" rel="noopener">Download Resume</a> · Updated June 2026</p>
+  <span>Thomas Meerschwam · New York City</span>
+  <span><a href="https://thomasmeerschwam.substack.com" target="_blank" rel="noopener" style="text-decoration:none;">Substack</a> · Enterprise AI Deployment</span>
 </footer>
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
+
 </body>
 </html>
