@@ -514,7 +514,14 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .demo-hosting-note {
       margin-bottom: 38px;
+      color: var(--ink-faint);
+      font-size: 0.72rem;
+      line-height: 1.55;
     }
 
     .screenshot-primary,
@@ -668,7 +675,6 @@
       font-size: 1rem;
       font-style: italic;
     }
-
 
     .contact-grid {
       display: grid;
@@ -1044,8 +1050,17 @@
 
       <div class="project-actions">
         <a
-          href="https://github.com/tommymeer/enterprise-ai-deployment-lab/tree/main/projects/support-agent"
+          href="https://support-agent-demo-maxa.onrender.com"
           class="btn btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Try Demo
+        </a>
+
+        <a
+          href="https://github.com/tommymeer/enterprise-ai-deployment-lab/tree/main/projects/support-agent"
+          class="btn btn-secondary"
           target="_blank"
           rel="noopener"
         >
@@ -1058,9 +1073,14 @@
           target="_blank"
           rel="noopener"
         >
-          GitHub Repository
+          View Code
         </a>
       </div>
+
+      <p class="demo-hosting-note">
+        Public demo uses scripted extraction and makes no provider calls.
+        Free hosting may take about 30–60 seconds to wake after inactivity.
+      </p>
 
       <figure class="screenshot-primary">
         <img
