@@ -1,41 +1,23 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Thomas Meerschwam | Enterprise AI Deployment</title>
-
-  <meta
-    name="description"
-    content="Thomas Meerschwam builds AI systems for real enterprise workflows, with a focus on workflow design, controls, evals, rollout, and business value."
-  />
-
-  <meta property="og:title" content="Thomas Meerschwam | Enterprise AI Deployment" />
-  <meta
-    property="og:description"
-    content="AI systems for real enterprise workflows. Clear model boundaries, safe actions, useful evals, and rollout plans."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thomasmeerschwam.com" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@TMeerschwam" />
-  <meta name="twitter:title" content="Thomas Meerschwam | Enterprise AI Deployment" />
-  <meta
-    name="twitter:description"
-    content="AI systems for real enterprise workflows. Clear model boundaries, safe actions, useful evals, and rollout plans."
-  />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thomas Meerschwam | Product Marketing · Enterprise Software &amp; AI</title>
+<meta content="Product marketing and GTM for complex enterprise software and AI. Thomas Meerschwam brings product launch experience at Braze and ASAPP, commercial experience at Artsy, and hands-on technical fluency." name="description"/>
+<meta content="Thomas Meerschwam | Product Marketing · Enterprise Software &amp; AI" property="og:title"/>
+<meta content="Enterprise launches, market insights, product storytelling, and hands-on AI fluency." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://thomasmeerschwam.com" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@TMeerschwam" name="twitter:site"/>
+<meta content="Thomas Meerschwam | Product Marketing · Enterprise Software &amp; AI" name="twitter:title"/>
+<meta content="Enterprise launches, market insights, product storytelling, and hands-on AI fluency." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --ink: #1a1a18;
       --ink-soft: #4a4a46;
@@ -241,6 +223,87 @@
       background: var(--paper-warm);
     }
 
+    /* Launches */
+
+    .launch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 44px;
+    }
+
+    .launch-case {
+      display: flex;
+      flex-direction: column;
+      padding: 34px;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      background: var(--white);
+    }
+
+    .launch-case h3 {
+      margin-bottom: 22px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 2.2vw, 1.55rem);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .launch-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding: 16px 0;
+      margin-bottom: 24px;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .launch-stat-num {
+      display: block;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      line-height: 1.1;
+    }
+
+    .launch-stat-label {
+      display: block;
+      max-width: 170px;
+      margin-top: 4px;
+      color: var(--ink-faint);
+      font-size: 0.72rem;
+      line-height: 1.45;
+    }
+
+    .launch-block + .launch-block { margin-top: 18px; }
+
+    .launch-block-label {
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .launch-block p {
+      color: var(--ink-soft);
+      font-size: 0.86rem;
+      line-height: 1.7;
+    }
+
+    .launch-block p + p { margin-top: 10px; }
+
+    .launch-note {
+      margin-top: 8px;
+      color: var(--ink-faint);
+      font-size: 0.74rem;
+      line-height: 1.55;
+    }
+
+    /* About */
+
     .about-grid {
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
@@ -279,48 +342,10 @@
       font-size: 0.87rem;
     }
 
-    .principles {
-      margin-top: 44px;
-      padding: 28px 30px;
-      border: 1px solid var(--rule);
-      background: var(--paper-warm);
-      border-radius: 4px;
-    }
+    /* Product and market approach */
 
-    .principles-title {
-      margin-bottom: 16px;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-    }
 
-    .principles-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-
-    .principle {
-      padding: 0 18px;
-      color: var(--ink-soft);
-      font-size: 0.82rem;
-      line-height: 1.6;
-    }
-
-    .principle:first-child { padding-left: 0; }
-
-    .principle + .principle {
-      border-left: 1px solid var(--rule);
-    }
-
-    .principle-num {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--accent);
-      font-family: 'Playfair Display', serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-    }
+    /* AI work */
 
     .project-category { margin-top: 68px; }
     .project-category:first-of-type { margin-top: 52px; }
@@ -577,7 +602,7 @@
     .small-project {
       display: flex;
       flex-direction: column;
-      min-height: 230px;
+      min-height: 200px;
       padding: 25px;
       border: 1px solid var(--rule);
       border-radius: 4px;
@@ -638,43 +663,7 @@
 
     .github-more a:hover { color: var(--accent); }
 
-    .next-project {
-      padding: 30px 32px;
-      border: 1px dashed var(--rule);
-      border-radius: 4px;
-      background: var(--paper-warm);
-    }
-
-    .next-project-status {
-      margin-bottom: 8px;
-      color: var(--accent);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
-    .next-project h3 {
-      margin-bottom: 9px;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-    }
-
-    .next-project p {
-      max-width: 730px;
-      color: var(--ink-soft);
-      font-size: 0.9rem;
-      line-height: 1.7;
-    }
-
-    .next-project-test {
-      margin-top: 12px;
-      color: var(--ink);
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-style: italic;
-    }
+    /* Contact */
 
     .contact-grid {
       display: grid;
@@ -689,6 +678,8 @@
       font-size: 0.95rem;
       line-height: 1.75;
     }
+
+    .contact-copy p + p { margin-top: 16px; }
 
     .contact-links {
       border-top: 1px solid var(--rule);
@@ -751,19 +742,14 @@
 
       section { padding: 64px 24px; }
 
+      .launch-grid { grid-template-columns: 1fr; }
+
+      .launch-case { padding: 26px 20px; }
+
       .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 36px;
-      }
-
-      .principles-grid { grid-template-columns: 1fr; }
-
-      .principle { padding: 14px 0; }
-
-      .principle + .principle {
-        border-left: none;
-        border-top: 1px solid var(--rule);
       }
 
       .project-summary-grid { grid-template-columns: 1fr; }
@@ -793,471 +779,396 @@
         padding: 22px 24px;
       }
     }
-  </style>
+  
+</style>
 </head>
-
 <body>
-
 <nav>
-  <a href="#" class="nav-name">Thomas Meerschwam</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="assets/Thomas_Meerschwam_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<a class="nav-name" href="#">Thomas Meerschwam</a>
+<ul class="nav-links">
+<li><a href="#launches">Launches</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#ai-work">AI Work</a></li>
+<li><a href="assets/ThomasMeerschwam.pdf" rel="noopener" target="_blank">Resume</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
-
 <header class="hero">
-  <div>
-    <div class="hero-kicker">Enterprise AI Deployment · NYC</div>
-
-    <h1>
-      I build AI systems for
-      <em>real business workflows.</em>
-    </h1>
-
-    <p class="hero-summary">
-      A model call is only one part of the job. The system still needs the right
-      data, clear rules, safe tool access, useful tests, and a way to recover when
-      something fails.
-    </p>
-
-    <p class="hero-ownership">
-      I build those pieces too: the workflow, the model boundary, the control layer,
-      the evals, and the rollout plan.
-    </p>
-
-    <p class="hero-background">
-      I started in revenue operations and moved into product at Artsy, ASAPP,
-      and Braze. Now I am focused on enterprise AI deployment and the work it takes
-      to turn a business process into a system people can trust and use.
-    </p>
-
-    <div class="hero-links">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="https://github.com/tommymeer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-      <a href="assets/Thomas_Meerschwam_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Resume</a>
-      <a href="mailto:thomasmeerschwam@gmail.com" class="btn btn-secondary">Contact</a>
-    </div>
-  </div>
-
-  <div class="hero-photo-wrap">
-    <img
-      src="assets/headshot.jpg"
-      alt="Thomas Meerschwam"
-      class="hero-photo"
-      loading="eager"
-      decoding="async"
-    />
-  </div>
+<div>
+<div class="hero-kicker">Product Marketing · Enterprise Software &amp; AI · NYC</div>
+<h1>
+      I help complex products
+      <em>find their market.</em>
+</h1>
+<p class="hero-summary">I've spent six-plus years working across product management and commercial operations at Braze, ASAPP, and Artsy. The work that has interested me most sits between the product and the market: understanding customer needs, identifying where a product can win, and explaining why a customer should care.</p>
+<p class="hero-ownership">At Braze, I built the market-selection criteria and analysis behind an RCS launch across 11 US and European markets, then worked with product marketing and customer-facing teams on positioning and launch readiness.</p>
+<p class="hero-background">I'm now moving into product marketing, bringing hands-on experience with enterprise launches and with building AI applications myself.</p>
+<div class="hero-links">
+<a class="btn btn-primary" href="#launches">Explore My Work</a>
+<a class="btn btn-secondary" href="assets/ThomasMeerschwam.pdf" rel="noopener" target="_blank">Resume</a>
+<a class="btn btn-secondary" href="https://linkedin.com/in/thomasmeerschwam" rel="noopener" target="_blank">LinkedIn</a>
+<a class="btn btn-secondary" href="mailto:thomasmeerschwam@gmail.com">Email</a>
+</div>
+</div>
+<div class="hero-photo-wrap">
+<img alt="Thomas Meerschwam" class="hero-photo" decoding="async" loading="eager" src="assets/headshot.jpg"/>
+</div>
 </header>
-
+<section id="launches">
+<div class="section-label">Launches</div>
+<h2 class="section-heading">
+    Bringing new channels to enterprise customers.
+  </h2>
+<p class="section-intro">
+    Both launches put a new messaging channel in front of large enterprises. In each,
+    the product question came with a market question: where to launch first, why a
+    customer should adopt it, and whether the economics worked.
+  </p>
+<div class="launch-grid">
+<article class="launch-case">
+<div class="project-meta">
+<span class="tag tag-accent">Braze</span>
+<span class="tag">Product Manager · SMS &amp; RCS</span>
+</div>
+<h3>Launching RCS across 11 US and European markets</h3>
+<div class="launch-stats">
+<div>
+<span class="launch-stat-num">11</span>
+<span class="launch-stat-label">US and European markets at launch</span>
+</div>
+<div>
+<span class="launch-stat-num">40</span>
+<span class="launch-stat-label">enterprise customers began deployments within 90 days</span>
+</div>
+</div>
+<div class="launch-block">
+<div class="launch-block-label">The market question</div>
+<p>
+          RCS readiness isn't uniform from country to country. Which markets should
+          go first, and what would each customer-facing team need to sell it?
+        </p>
+</div>
+<div class="launch-block">
+<div class="launch-block-label">What I did</div>
+<p>Developed market-selection criteria and analysis to recommend launch sequencing. Contributed to go-to-market planning and cross-functional readiness with marketing, sales, customer success, and external partners.</p>
+<p>
+          Worked with product marketing on positioning, messaging, sales enablement,
+          collateral, announcements, and conference materials.
+        </p>
+</div>
+<div class="launch-block">
+<div class="launch-block-label">Result</div>
+<p>
+          40 enterprise customers initiated RCS deployments within 90 days of launch.
+        </p>
+<p class="launch-note">The broader SMS/RCS portfolio grew ARR approximately 50% year over year. This was a portfolio-level result with multiple contributors, not a direct measure of the RCS launch.</p>
+</div>
+</article>
+<article class="launch-case">
+<div class="project-meta">
+<span class="tag tag-accent">ASAPP</span>
+<span class="tag">Product Manager · Enterprise AI</span>
+</div>
+<h3>Adding WhatsApp as an enterprise customer-service channel</h3>
+<div class="launch-stats">
+<div>
+<span class="launch-stat-num">2M+</span>
+<span class="launch-stat-label">end users reached in the first 30 days</span>
+</div>
+</div>
+<div class="launch-block">
+<div class="launch-block-label">The market question</div>
+<p>
+          Why would an enterprise add WhatsApp to its customer-service mix, and did
+          the channel economics justify building it?
+        </p>
+</div>
+<div class="launch-block">
+<div class="launch-block-label">What I did</div>
+<p>Developed the customer case for WhatsApp as an enterprise service channel. Worked with pricing and finance to understand the channel economics and inform the build decision.</p>
+<p>Navigated Meta platform requirements, integrations, and launch readiness to bring the new channel to enterprise customers.</p>
+</div>
+<div class="launch-block">
+<div class="launch-block-label">Result</div>
+<p>
+          More than 2 million end users reached within the first 30 days.
+        </p>
+</div>
+</article>
+</div>
+</section>
 <section id="about">
-  <div class="section-label">About Me</div>
-
-  <div class="about-grid">
-    <div class="about-copy">
-      <h2 class="section-heading">
+<div class="section-label">About Me</div>
+<div class="about-grid">
+<div class="about-copy">
+<h2 class="section-heading">
         Enterprise software has been the throughline.
       </h2>
-
-      <p>
+<p>
         I started in sales and revenue operations at Artsy, then moved into product
         at ASAPP and Braze.
       </p>
-
-      <p>
-        The products were different. The work kept coming back to the same questions.
-        How does the process actually work? Where does it break? What has to change
-        for the software to make it better?
+<p>
+        At Artsy, I rebuilt revenue systems and worked closely with sales and other
+        customer-facing teams. It taught me how a product gets sold and supported,
+        not just how it gets built.
+      </p>
+<p>
+        At ASAPP and Braze, the work I cared most about was the part that touched the
+        market: which customers a product was for, why they would adopt it, and what
+        the teams selling it needed to know.
       </p>
 
-      <p>
-        At ASAPP, that meant AI-powered customer support. At Braze, it meant messaging
-        infrastructure used by large enterprises. At Artsy, it meant rebuilding
-        revenue systems and workflows.
-      </p>
-
-      <p>
-        Now I want to build systems that can do useful parts of the workflow themselves.
-        The model has to fit inside a larger system. Rules, tool access, state, and
-        human handoffs all matter.
-      </p>
-    </div>
-
-    <div class="about-facts">
-      <div class="about-fact">
-        <span class="about-fact-label">Background</span>
-        <span class="about-fact-value">Product · Revenue Operations · Enterprise Software</span>
-      </div>
-
-      <div class="about-fact">
-        <span class="about-fact-label">Companies</span>
-        <span class="about-fact-value">Braze · ASAPP · Artsy</span>
-      </div>
-
-      <div class="about-fact">
-        <span class="about-fact-label">Current Focus</span>
-        <span class="about-fact-value">Enterprise AI deployment &amp; agentic systems</span>
-      </div>
-
-      <div class="about-fact">
-        <span class="about-fact-label">Technical Work</span>
-        <span class="about-fact-value">Python · SQL · APIs · LLM orchestration · evals</span>
-      </div>
-
-      <div class="about-fact">
-        <span class="about-fact-label">Location</span>
-        <span class="about-fact-value">New York City</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="principles">
-    <div class="principles-title">How I build AI systems</div>
-
-    <div class="principles-grid">
-      <div class="principle">
-        <span class="principle-num">01</span>
-        Use the model where judgment is actually needed.
-      </div>
-
-      <div class="principle">
-        <span class="principle-num">02</span>
-        Keep policy, permissions, money, and state explicit.
-      </div>
-
-      <div class="principle">
-        <span class="principle-num">03</span>
-        Make every real-world action traceable.
-      </div>
-
-      <div class="principle">
-        <span class="principle-num">04</span>
-        Test the whole path, including failure and recovery.
-      </div>
-    </div>
-  </div>
+</div>
+<div class="about-facts">
+<div class="about-fact">
+<span class="about-fact-label">Background</span>
+<span class="about-fact-value">Product · Revenue Operations · Enterprise Software</span>
+</div>
+<div class="about-fact">
+<span class="about-fact-label">Companies</span>
+<span class="about-fact-value">Braze · ASAPP · Artsy</span>
+</div>
+<div class="about-fact">
+<span class="about-fact-label">Focus</span>
+<span class="about-fact-value">Product marketing · Positioning · Launches · GTM</span>
+</div>
+<div class="about-fact">
+<span class="about-fact-label">Industry Depth</span>
+<span class="about-fact-value">Enterprise messaging · Customer engagement · AI</span>
+</div>
+<div class="about-fact">
+<span class="about-fact-label">Technical Fluency</span>
+<span class="about-fact-value">Python · SQL · APIs · LLM applications · evals</span>
+</div>
+<div class="about-fact">
+<span class="about-fact-label">Location</span>
+<span class="about-fact-value">New York City</span>
+</div>
+</div>
+</div>
 </section>
-
-<section id="projects">
-  <div class="section-label">Selected Work</div>
-
-  <h2 class="section-heading">
-    The hard part is the system around the model.
+<section id="ai-work">
+<div class="section-label">Hands-on AI Work</div>
+<h2 class="section-heading">
+    Understanding AI products from the inside.
   </h2>
-
-  <p class="section-intro">
-    The projects below focus on that system. They cover workflow design, controls,
-    evals, and rollout.
-  </p>
-
-  <div class="project-category">
-    <div class="category-header">
-      <h3 class="category-title">Enterprise AI Deployment Lab</h3>
-      <div class="category-note">System design, controls, evals, rollout</div>
-    </div>
-
-    <article class="featured-project">
-      <div class="project-meta">
-        <span class="tag tag-accent">Flagship</span>
-        <span class="tag">Synthetic Deployment Case</span>
-        <span class="tag">Ecommerce Support</span>
-      </div>
-
-      <h3>Support Agent | Delivered-Not-Received Workflow</h3>
-
-      <p class="project-lede">
+<p class="section-intro">I build AI applications to understand what emerging technology can actually do, where it fails, and what a customer would need to trust it. These are engineering projects—not marketing campaigns—but they give me firsthand experience with product capabilities, limitations, and enterprise buyer questions.</p>
+<div class="project-category">
+<div class="category-header">
+<h3 class="category-title">Flagship Project</h3>
+<div class="category-note">LLM application · controls · evals · business case</div>
+</div>
+<article class="featured-project">
+<div class="project-meta">
+<span class="tag">Synthetic Case</span>
+<span class="tag">Ecommerce Support</span>
+</div>
+<h3>Support Agent | Delivered-Not-Received Workflow</h3>
+<p class="project-lede">
         I built this so the LLM has one job: turn a messy customer message into
         structured case data. The rest of the workflow is explicit.
       </p>
-
-      <p class="project-lede">
+<p class="project-lede">
         When a customer says a package was marked delivered but never arrived,
         the system retrieves the evidence, applies policy, checks authority, and
         either issues an idempotent refund or routes the case to a human.
       </p>
-
-      <div class="simulation-note">
-        <strong>This is a synthetic deployment case.</strong>
+<div class="simulation-note">
+<strong>This is a synthetic case.</strong>
         The retailer, data, policies, integrations, and economics are simulated.
         The application is real and runnable. I used the case to build and test
         controls, failure handling, evals, and rollout logic.
       </div>
-
-      <div class="project-summary-grid">
-        <div class="project-summary-item">
-          <div class="project-summary-label">Problem</div>
-          <p>
+<div class="project-summary-grid">
+<div class="project-summary-item">
+<div class="project-summary-label">Problem</div>
+<p>
             A missing-package claim can end in a refund. The system needs to make
             a good decision without giving the model uncontrolled access to money
             or customer state.
           </p>
-        </div>
-
-        <div class="project-summary-item">
-          <div class="project-summary-label">What I Built</div>
-          <p>
+</div>
+<div class="project-summary-item">
+<div class="project-summary-label">What I Built</div>
+<p>
             Customer message → structured case → evidence lookup → policy checks
             → authorization → refund or human review.
           </p>
-        </div>
-
-        <div class="project-summary-item">
-          <div class="project-summary-label">What I Tested</div>
-          <p>
+</div>
+<div class="project-summary-item">
+<div class="project-summary-label">What I Tested</div>
+<p>
             Workflow behavior, authorization, duplicate actions, failure recovery,
             model extraction, tracing, and a staged rollout plan.
           </p>
-        </div>
-      </div>
-
-      <div class="business-case">
-        <div class="business-case-title">Modeled Business Case</div>
-        <div class="business-case-question">What would make this worth deploying?</div>
-        <p>
+</div>
+</div>
+<div class="business-case">
+<div class="business-case-title">Modeled Business Case</div>
+<div class="business-case-question">What would make this worth buying?</div>
+<p>
           In the synthetic base case, the workflow covers 70% of eligible cases.
           It frees roughly <strong>1,200 hours of support and review work each month</strong>
           and produces about <strong>$46K in monthly net value</strong> in the model.
-          These are modeled results. I would validate the assumptions with a real
-          customer before expanding the deployment.
+          These are modeled results. With a real customer, I would validate the
+          assumptions before making the case.
         </p>
-      </div>
-
-      <div class="project-thesis">
+</div>
+<div class="project-thesis">
         The model interprets the evidence. The system owns the process.
       </div>
-
-      <p class="project-thesis-explain">
+<p class="project-thesis-explain">
         The LLM can classify the case. Policy and authority live elsewhere.
-        Money moves only after the workflow passes those checks.
+        Money moves only after the workflow passes those checks. That separation
+        is what makes an AI system something a risk-averse enterprise can say yes to.
       </p>
-
-      <div class="project-signals">
-        <span class="signal">LLM extraction</span>
-        <span class="signal">Policy rules</span>
-        <span class="signal">State</span>
-        <span class="signal">Tool permissions</span>
-        <span class="signal">Authorization</span>
-        <span class="signal">Idempotency</span>
-        <span class="signal">Human review</span>
-        <span class="signal">Tracing</span>
-        <span class="signal">Evals</span>
-        <span class="signal">Rollout plan</span>
-        <span class="signal">Economics</span>
-      </div>
-
-      <div class="project-actions">
-        <a
-          href="https://support-agent-demo-maxa.onrender.com"
-          class="btn btn-primary"
-          target="_blank"
-          rel="noopener"
-        >
+<div class="project-signals">
+<span class="signal">LLM extraction</span>
+<span class="signal">Policy rules</span>
+<span class="signal">Tool permissions</span>
+<span class="signal">Authorization</span>
+<span class="signal">Idempotency</span>
+<span class="signal">Human review</span>
+<span class="signal">Tracing</span>
+<span class="signal">Evals</span>
+<span class="signal">Rollout plan</span>
+<span class="signal">Economics</span>
+</div>
+<div class="project-actions">
+<a class="btn btn-primary" href="https://support-agent-demo-maxa.onrender.com" rel="noopener" target="_blank">
           Try Demo
         </a>
-
-        <a
-          href="https://github.com/tommymeer/enterprise-ai-deployment-lab/tree/main/projects/support-agent"
-          class="btn btn-secondary"
-          target="_blank"
-          rel="noopener"
-        >
+<a class="btn btn-secondary" href="https://github.com/tommymeer/enterprise-ai-deployment-lab/tree/main/projects/support-agent" rel="noopener" target="_blank">
           Project README
         </a>
-
-        <a
-          href="https://github.com/tommymeer/enterprise-ai-deployment-lab"
-          class="btn btn-secondary"
-          target="_blank"
-          rel="noopener"
-        >
+<a class="btn btn-secondary" href="https://github.com/tommymeer/enterprise-ai-deployment-lab" rel="noopener" target="_blank">
           View Code
         </a>
-      </div>
-
-      <p class="demo-hosting-note">
+</div>
+<p class="demo-hosting-note">
         Public demo uses scripted extraction and makes no provider calls.
         Free hosting may take about 30–60 seconds to wake after inactivity.
       </p>
-
-      <figure class="screenshot-primary">
-        <img
-          src="assets/demo-overview.png"
-          alt="Support agent end-to-end workflow overview"
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
+<figure class="screenshot-primary">
+<img alt="Support agent end-to-end workflow overview" decoding="async" loading="lazy" src="assets/demo-overview.png"/>
+<figcaption>
           One run from evidence lookup through authorization and execution.
         </figcaption>
-      </figure>
-
-      <div class="screenshot-secondary">
-        <figure>
-          <img
-            src="assets/authorization-trace.png"
-            alt="Support agent authorization trace"
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span class="screenshot-caption-title">A correct decision still may not be allowed.</span>
+</figure>
+<div class="screenshot-secondary">
+<figure>
+<img alt="Support agent authorization trace" decoding="async" loading="lazy" src="assets/authorization-trace.png"/>
+<figcaption>
+<span class="screenshot-caption-title">A correct decision still may not be allowed.</span>
             The system can conclude that a refund is appropriate and still refuse
             to issue it if the amount is outside its authority.
           </figcaption>
-        </figure>
-
-        <figure>
-          <img
-            src="assets/evaluation-inspector.png"
-            alt="Support agent evaluation inspector"
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span class="screenshot-caption-title">I test how the system got to the answer.</span>
+</figure>
+<figure>
+<img alt="Support agent evaluation inspector" decoding="async" loading="lazy" src="assets/evaluation-inspector.png"/>
+<figcaption>
+<span class="screenshot-caption-title">I test how the system got to the answer.</span>
             A run fails if actions happen in the wrong order, authority is exceeded,
             a duplicate write occurs, or recovery breaks.
           </figcaption>
-        </figure>
-      </div>
-    </article>
-  </div>
-
-  <div class="project-category">
-    <div class="category-header">
-      <h3 class="category-title">Live AI Projects</h3>
-      <div class="category-note">Public tools you can open and use</div>
-    </div>
-
-    <p class="other-projects-intro">
-      These are smaller tools I built before the deployment lab. Each starts with
-      a recurring operating problem and turns it into a working product. They are
-      live and publicly usable.
+</figure>
+</div>
+</article>
+</div>
+<div class="project-category">
+<div class="category-header">
+<h3 class="category-title">Smaller AI Tools</h3>
+<div class="category-note">Live and publicly usable</div>
+</div>
+<p class="other-projects-intro">
+      Earlier tools, each built around a recurring operating problem.
     </p>
-
-    <div class="other-projects-grid">
-      <article class="small-project">
-        <div class="small-project-type">Live AI Tool</div>
-        <h3>WBR Generator</h3>
-        <p>
+<div class="other-projects-grid">
+<article class="small-project">
+<div class="small-project-type">Live AI Tool</div>
+<h3>WBR Generator</h3>
+<p>
           Turns operating metrics into a weekly review of what changed, what matters,
           and what decisions need to be made.
         </p>
-        <div class="small-project-links">
-          <a href="https://wbr-generator.streamlit.app/" target="_blank" rel="noopener">Live App</a>
-          <a href="https://github.com/tommymeer/wbr-generator" target="_blank" rel="noopener">Source</a>
-        </div>
-      </article>
-
-      <article class="small-project">
-        <div class="small-project-type">Live AI Tool</div>
-        <h3>Meeting Intelligence</h3>
-        <p>
+<div class="small-project-links">
+<a href="https://wbr-generator.streamlit.app/" rel="noopener" target="_blank">Live App</a>
+<a href="https://github.com/tommymeer/wbr-generator" rel="noopener" target="_blank">Source</a>
+</div>
+</article>
+<article class="small-project">
+<div class="small-project-type">Live AI Tool</div>
+<h3>Meeting Intelligence</h3>
+<p>
           Pulls decisions, owners, blockers, and unresolved questions out of
           meeting transcripts.
         </p>
-        <div class="small-project-links">
-          <a href="https://meeting-intelligence.streamlit.app/" target="_blank" rel="noopener">Live App</a>
-          <a href="https://github.com/tommymeer/meeting-intelligence" target="_blank" rel="noopener">Source</a>
-        </div>
-      </article>
-
-      <article class="small-project">
-        <div class="small-project-type">Live AI Tool</div>
-        <h3>Initiative Intelligence</h3>
-        <p>
+<div class="small-project-links">
+<a href="https://meeting-intelligence.streamlit.app/" rel="noopener" target="_blank">Live App</a>
+<a href="https://github.com/tommymeer/meeting-intelligence" rel="noopener" target="_blank">Source</a>
+</div>
+</article>
+<article class="small-project">
+<div class="small-project-type">Live AI Tool</div>
+<h3>Initiative Intelligence</h3>
+<p>
           Compares what a company says matters with what teams are actually
           working on.
         </p>
-        <div class="small-project-links">
-          <a href="https://initiative-intelligence.streamlit.app/" target="_blank" rel="noopener">Live App</a>
-          <a href="https://github.com/tommymeer/initiative-intelligence" target="_blank" rel="noopener">Source</a>
-        </div>
-      </article>
-    </div>
-
-    <p class="github-more">
+<div class="small-project-links">
+<a href="https://initiative-intelligence.streamlit.app/" rel="noopener" target="_blank">Live App</a>
+<a href="https://github.com/tommymeer/initiative-intelligence" rel="noopener" target="_blank">Source</a>
+</div>
+</article>
+</div>
+<p class="github-more">
       More projects and source code on
-      <a href="https://github.com/tommymeer" target="_blank" rel="noopener">GitHub →</a>
-    </p>
-  </div>
-
-  <div class="project-category">
-    <div class="category-header">
-      <h3 class="category-title">Personal Agents</h3>
-      <div class="category-note">Real workflows · repeated use</div>
-    </div>
-
-    <div class="next-project">
-      <div class="next-project-status">Building now</div>
-
-      <h3>Agents for workflows I actually run.</h3>
-
-      <p>
-        Next, I am building agents around recurring workflows in my own life and work.
-        They will use real integrations and changing state. I want to see whether
-        they stay useful after the first demo.
-      </p>
-
-      <div class="next-project-test">
-        The test is simple: do I keep using it?
-      </div>
-    </div>
-  </div>
+      <a href="https://github.com/tommymeer" rel="noopener" target="_blank">GitHub →</a>
+</p>
+</div>
 </section>
-
 <section id="contact">
-  <div class="contact-grid">
-    <div class="contact-copy">
-      <div class="section-label">Contact</div>
-
-      <h2 class="section-heading">
+<div class="contact-grid">
+<div class="contact-copy">
+<div class="section-label">Contact</div>
+<h2 class="section-heading">
         Let's talk.
       </h2>
+<p>I'm interested in product marketing and go-to-market roles at B2B software companies, especially in enterprise AI, communications, and customer engagement. I'd welcome conversations about positioning, customer insights, product launches, and technical storytelling.</p>
 
-      <p>
-        I am looking for teams building AI into real enterprise workflows.
-        I want work where I can spend time with customers, design the system,
-        help implement it, and own the outcome.
-      </p>
-    </div>
-
-    <div class="contact-links">
-      <a href="mailto:thomasmeerschwam@gmail.com" class="contact-link">
-        <span class="contact-link-name">Email</span>
-        <span class="contact-link-value">thomasmeerschwam@gmail.com →</span>
-      </a>
-
-      <a href="https://linkedin.com/in/thomasmeerschwam" class="contact-link" target="_blank" rel="noopener">
-        <span class="contact-link-name">LinkedIn</span>
-        <span class="contact-link-value">/in/thomasmeerschwam →</span>
-      </a>
-
-      <a href="https://x.com/TMeerschwam" class="contact-link" target="_blank" rel="noopener">
-        <span class="contact-link-name">X</span>
-        <span class="contact-link-value">@TMeerschwam →</span>
-      </a>
-
-      <a href="https://github.com/tommymeer" class="contact-link" target="_blank" rel="noopener">
-        <span class="contact-link-name">GitHub</span>
-        <span class="contact-link-value">tommymeer →</span>
-      </a>
-
-      <a href="https://thomasmeerschwam.substack.com" class="contact-link" target="_blank" rel="noopener">
-        <span class="contact-link-name">Substack</span>
-        <span class="contact-link-value">thomasmeerschwam.substack.com →</span>
-      </a>
-    </div>
-  </div>
+</div>
+<div class="contact-links">
+<a class="contact-link" href="mailto:thomasmeerschwam@gmail.com">
+<span class="contact-link-name">Email</span>
+<span class="contact-link-value">thomasmeerschwam@gmail.com →</span>
+</a>
+<a class="contact-link" href="https://linkedin.com/in/thomasmeerschwam" rel="noopener" target="_blank">
+<span class="contact-link-name">LinkedIn</span>
+<span class="contact-link-value">/in/thomasmeerschwam →</span>
+</a>
+<a class="contact-link" href="assets/ThomasMeerschwam.pdf" rel="noopener" target="_blank">
+<span class="contact-link-name">Resume</span>
+<span class="contact-link-value">PDF →</span>
+</a>
+<a class="contact-link" href="https://github.com/tommymeer" rel="noopener" target="_blank">
+<span class="contact-link-name">GitHub</span>
+<span class="contact-link-value">tommymeer →</span>
+</a>
+<a class="contact-link" href="https://x.com/TMeerschwam" rel="noopener" target="_blank">
+<span class="contact-link-name">X</span>
+<span class="contact-link-value">@TMeerschwam →</span>
+</a>
+<a class="contact-link" href="https://thomasmeerschwam.substack.com" rel="noopener" target="_blank">
+<span class="contact-link-name">Substack</span>
+<span class="contact-link-value">thomasmeerschwam.substack.com →</span>
+</a>
+</div>
+</div>
 </section>
-
 <footer>
-  <span>Thomas Meerschwam · New York City</span>
-  <span><a href="https://thomasmeerschwam.substack.com" target="_blank" rel="noopener" style="text-decoration:none;">Substack</a> · Enterprise AI Deployment</span>
+<span>Thomas Meerschwam · New York City</span>
+<span>Product Marketing · Enterprise &amp; AI</span>
 </footer>
-
 </body>
 </html>
